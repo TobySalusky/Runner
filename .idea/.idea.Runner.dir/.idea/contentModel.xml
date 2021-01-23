@@ -41,12 +41,14 @@
       <e p="src" t="Include">
         <e p="Camera.cs" t="Include" />
         <e p="Drawable3D.cs" t="Include" />
-        <e p="Entity.cs" t="Include" />
+        <e p="Entity" t="Include">
+          <e p="Entity.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+        </e>
         <e p="KeyInfo.cs" t="Include" />
         <e p="Logger.cs" t="Include" />
         <e p="Maths.cs" t="Include" />
         <e p="Paths.cs" t="Include" />
-        <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Runner.cs" t="Include" />
         <e p="Terrain" t="Include">

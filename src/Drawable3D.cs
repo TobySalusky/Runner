@@ -25,7 +25,6 @@ namespace Runner {
 
         public virtual void render(Camera camera, SpriteBatch spriteBatch) {
             
-            Logger.log("" + drawLocation(camera));
             spriteBatch.Draw(texture, drawLocation(camera), Color.White);
             
         }

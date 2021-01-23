@@ -19,6 +19,7 @@ namespace Runner
         public static KeyboardState lastKeyState;
 
         public static ChunkMap map;
+        public static Player player;
 
         public Runner()
         {
@@ -56,6 +57,7 @@ namespace Runner
             map = new ChunkMap();
 
             camera = new Camera(new Vector2(0, 50), 3);
+            player = new Player(new Vector2(20, 30));
             for (int i = 10; i >= 0; i--) {
                 drawables.Add(new Entity(new Vector2(0, 10), -i * 0.7F));
             }
@@ -83,16 +85,13 @@ namespace Runner
             if (keys.down(Keys.Escape))
                 Exit();
 
-            const float sped = 20;
-            if (keys.down(Keys.A))
-                camera.pos -= Vector2.UnitX * deltaTime * sped;
-            
-            if (keys.down(Keys.D))
-                camera.pos += Vector2.UnitX * deltaTime * sped;
-
-
             lastKeyState = keyState;
             // TODO: Add your update logic here
+
+            player.input(keys, deltaTime);
+            player.update(deltaTime);
+
+            camera.pos = player.pos - Vector2.UnitY * 5;
 
             base.Update(gameTime);
         }
@@ -116,6 +115,8 @@ namespace Runner
             map.render(camera, spriteBatch, 1);
             map.render(camera, spriteBatch, 2);
 
+            player.render(camera, spriteBatch);
+            
             spriteBatch.End();
             
             base.Draw(gameTime);
