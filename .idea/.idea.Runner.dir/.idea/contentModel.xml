@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Textures" t="Include">
           <e p="button.png" t="Include" />
+          <e p="d00r.png" t="Include" />
           <e p="glASS.png" t="Include" />
           <e p="Ice.png" t="Include" />
           <e p="MapData0.png" t="Include" />
