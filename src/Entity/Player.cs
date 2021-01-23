@@ -23,6 +23,14 @@ namespace Runner {
             jumpTime = jumpTimeStart;
         }
 
+        public void tryMoveToZ(float toZ) {
+            if (toZ <= 0 && toZ >= -2) {
+                if (!collidesAt(pos, getLayer(toZ))) {
+                    zPos = toZ;
+                }
+            }
+        }
+
         public void input(KeyInfo keys, float deltaTime) {
 
             int inputX = 0;
@@ -31,13 +39,19 @@ namespace Runner {
             if (keys.down(Keys.D))
                 inputX++;
             
+            if (keys.pressed(Keys.W))
+                tryMoveToZ(zPos - 1);
+            
+            if (keys.pressed(Keys.S))
+                tryMoveToZ(zPos + 1);
+            
             float accelSpeed = (inputX == 0 && grounded) ? 5 : 2.5F;
             vel.X += ((inputX * speed) - vel.X) * deltaTime * accelSpeed;
 
 
             jumpTime -= deltaTime;
             
-            if (grounded && keys.down(Keys.Space) && jumpTime < jumpTimeStart - 0.1F) {
+            if (grounded && vel.Y >= 0 && keys.down(Keys.Space) && jumpTime < jumpTimeStart - 0.1F) {
 
                 jump(jumpHeight);
             }

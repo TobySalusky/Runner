@@ -5,7 +5,7 @@ namespace Runner {
 
         public Vector2 pos;
         public float zPos;
-        public float scale = 20;
+        public float scale = 40;
         public Vector2 screenCenter = new Vector2(1920, 1080) / 2;
 
         public Camera(Vector2 pos, float zPos) {

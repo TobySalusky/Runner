@@ -14,13 +14,16 @@ namespace Runner {
         public Texture2D texture;
         private Rectangle atlasRect; // TODO:
 
-        public const int pixelCount = 8;
-        public const float pixelSize = 1 / 8F;
+        public const int pixelCount = 16;
+        public const float pixelSize = 1 / 16F;
 
         public int layer;
         
         public bool solid;
 
+        public static Color[] baseLayerColors = {new Color(179, 153, 218), new Color(172, 195, 214), new Color(166, 202, 162)};
+        public static Color[] layerColors = new Color[3];
+        
         static Tile() {
             genAtlas();
         }
@@ -45,7 +48,7 @@ namespace Runner {
 
             var types = Util.GetValues<type>();
 
-            fullAtlas = new Texture2D(Runner.getGraphicsDeviceManager(), 24, 24 * (types.Count() - 1));
+            fullAtlas = new Texture2D(Runner.getGraphicsDeviceManager(), 48, 48 * (types.Count() - 1));
             var colorArr = new Color[fullAtlas.Width * fullAtlas.Height];
 
             int i = 0;
@@ -128,15 +131,14 @@ namespace Runner {
         public void render(Camera camera, SpriteBatch spriteBatch) { // TODO: make more efficient
             
             if (tileType == type.Air) return;
-            
-            
+
             float mult = camera.farMult(zPos());
-            int drawSize = (int) (camera.scale * mult);
+            int drawSize = (int) Math.Round(camera.scale * mult);
             Vector2 drawPos = camera.screenCenter + (pos - camera.pos) * camera.scale * mult;
             
-            Rectangle rect = new Rectangle((int) drawPos.X, (int) drawPos.Y, drawSize, drawSize);
+            Rectangle rect = new Rectangle((int) Math.Round(drawPos.X), (int) Math.Round(drawPos.Y), drawSize, drawSize);
                 
-            spriteBatch.Draw(texture, rect, atlasRect, Color.White);
+            spriteBatch.Draw(texture, rect, atlasRect, layerColors[layer]);
         }
 
         /*public Rectangle textureAtlasRect() {
@@ -152,7 +154,7 @@ namespace Runner {
             int size = texture.Width / cols; // assumes square blocks
 
             atlasRect = new Rectangle(size * col, size * row, size, size);
-            atlasRect.Y += 24 * (int) (tileType - 1);
+            atlasRect.Y += 48 * (int) (tileType - 1);
         }
 
         private int findAtlasIndex() {

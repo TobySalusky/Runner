@@ -56,7 +56,7 @@ namespace Runner
             
             map = new ChunkMap();
 
-            camera = new Camera(new Vector2(0, 50), 3);
+            camera = new Camera(new Vector2(0, 50), 5);
             player = new Player(new Vector2(20, 30));
             for (int i = 10; i >= 0; i--) {
                 drawables.Add(new Entity(new Vector2(0, 10), -i * 0.7F));
@@ -92,6 +92,7 @@ namespace Runner
             player.update(deltaTime);
 
             camera.pos = player.pos - Vector2.UnitY * 5;
+            //camera.zPos = player.zPos + 6;
 
             base.Update(gameTime);
         }

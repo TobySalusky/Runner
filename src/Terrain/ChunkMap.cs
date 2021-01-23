@@ -63,7 +63,13 @@ namespace Runner {
         }
 
         public void render(Camera camera, SpriteBatch spriteBatch, int layer) {
-            
+
+            for (int i = 0; i < 3; i++) {
+                Tile.layerColors[i] = Runner.player.getLayer() == i
+                    ? Tile.baseLayerColors[i]
+                    : Color.Lerp(Tile.baseLayerColors[i], Color.Black, 0.5F);
+            }
+
             Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(layer - 2));
             Point from = chunkIndices(camera.pos - diff);
             Point to = chunkIndices(camera.pos + diff);
