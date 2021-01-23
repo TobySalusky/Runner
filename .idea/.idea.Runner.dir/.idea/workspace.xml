@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/ball.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC542A5C-3AD0-4C34-A080-02E941B52719/62/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/src/Paths.cs" />
@@ -22,29 +33,25 @@
       <option value="$PROJECT_DIR$/src/Logger.cs" />
       <option value="$PROJECT_DIR$/src/Maths.cs" />
       <option value="$PROJECT_DIR$/src/Player.cs" />
-      <option value="$PROJECT_DIR$/src/Util.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
       <option value="$PROJECT_DIR$/src/Entity.cs" />
       <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/src/Drawable3D.cs" />
-      <option value="$PROJECT_DIR$/src/Textures.cs" />
       <option value="$PROJECT_DIR$/src/Camera.cs" />
-      <option value="$PROJECT_DIR$/src/Runner.cs" />
-      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
+      <option value="$PROJECT_DIR$/src/Runner.cs" />
+      <option value="$PROJECT_DIR$/src/Textures.cs" />
+      <option value="$PROJECT_DIR$/src/Util.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -87,6 +94,7 @@
       <workItem from="1611418733702" duration="13000" />
       <workItem from="1611418765165" duration="2836000" />
       <workItem from="1611421623804" duration="7591000" />
+      <workItem from="1611436706735" duration="4716000" />
     </task>
     <servers />
   </component>
@@ -108,7 +116,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

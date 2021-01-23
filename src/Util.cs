@@ -10,6 +10,13 @@ namespace Runner {
 
         private static Random rand = new Random();
 
+        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
+            
+            Vector2 textureSize = textureVec(texture);
+            Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
+            spriteBatch.Draw(texture, camera.toScreen(pos, zPos), null, Color.White, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
+        }
+        
         public static float nearestAngle(float angle, float targetAngle) {
             float diff = targetAngle - angle;
             if (Math.Abs(diff) < Maths.PI) {
@@ -21,6 +28,10 @@ namespace Runner {
             }
 
             return angle - Maths.twoPI;
+        }
+
+        public static Vector2 dimen(Texture2D texture) {
+            return textureVec(texture) * Tile.pixelSize;
         }
 
         public static Vector2 setMag(Vector2 vec, float mag) {

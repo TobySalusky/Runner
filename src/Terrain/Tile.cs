@@ -32,14 +32,23 @@ namespace Runner {
             
             // blocks
             Air,
-            StoneBrick
+            StoneBrick,
+            Glass,
+            Spike,
 
         }
+
+        public static type[] nonSolid = {
+            type.Air,
+            type.Spike,
+        };
 
         public static Dictionary<Color, int> genTileTable() {
             var table = new Dictionary<Color, int>();
 
             tableAdd(table, Color.Red, type.StoneBrick);
+            tableAdd(table, Color.White, type.Glass);
+            tableAdd(table, Color.Black, type.Spike);
 
             return table;
         }
@@ -106,8 +115,7 @@ namespace Runner {
 
             this.tileType = tileType;
             this.pos = pos;
-            
-            solid = tileType != type.Air;
+            solid = !nonSolid.Contains(tileType);
 
             this.layer = layer;
         }
@@ -158,6 +166,18 @@ namespace Runner {
         }
 
         private int findAtlasIndex() {
+
+            if (tileType == type.Spike) { // DIRECTIONAL BLOCKS
+                if (airAbove() && !airBelow() && airLeft() && airRight())
+                    return 1;
+                if (airAbove() && airBelow() && airLeft() && !airRight())
+                    return 3;
+                if (airAbove() && airBelow() && !airLeft() && airRight())
+                    return 5;
+                if (!airAbove() && airBelow() && airLeft() && airRight())
+                    return 7;
+                return 1;
+            }
 
             if (airAbove() && !airBelow() && airLeft() && !airRight())
                 return 0;

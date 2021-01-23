@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\joshu\Documents\GitHub\Runner" t="IncludeRecursive">
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Toby\Documents\GitHub\Runner" t="IncludeRecursive">
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="Textures" t="Include">
-          <e p="ball.png" t="Include" />
+          <e p="autosaves" t="Include">
+            <e p="autosave Untitled 3160.art" t="Include" />
+            <e p="autosave Untitled 3836.art" t="Include" />
+          </e>
           <e p="button.png" t="Include" />
           <e p="d00r.png" t="Include" />
           <e p="glASS.png" t="Include" />
@@ -18,7 +21,8 @@
           <e p="MapData1.png" t="Include" />
           <e p="MapData2.png" t="Include" />
           <e p="null.png" t="Include" />
-          <e p="pointyBoi.png" t="Include" />
+          <e p="Player.png" t="Include" />
+          <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
         </e>
       </e>
