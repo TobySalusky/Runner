@@ -4,12 +4,7 @@
     <projectFile>Runner.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Drawable3D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Camera.cs" afterDir="false" />
-    </list>
+    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +91,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
