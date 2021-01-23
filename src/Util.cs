@@ -23,6 +23,10 @@ namespace Runner {
             return angle - Maths.twoPI;
         }
 
+        public static Vector2 dimen(Texture2D texture) {
+            return textureVec(texture) * Tile.pixelSize;
+        }
+
         public static Vector2 setMag(Vector2 vec, float mag) {
             return Vector2.Normalize(vec) * mag;
         }

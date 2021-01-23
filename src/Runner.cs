@@ -56,11 +56,15 @@ namespace Runner
             
             map = new ChunkMap();
 
-            camera = new Camera(new Vector2(0, 50), 5);
-            player = new Player(new Vector2(20, 30));
+            camera = new Camera(Vector2.Zero, 5);
+            player = new Player(playerStartPos());
             for (int i = 10; i >= 0; i--) {
                 drawables.Add(new Entity(new Vector2(0, 10), -i * 0.7F));
             }
+        }
+
+        public static Vector2 playerStartPos() {
+            return new Vector2(30, 40);
         }
 
         protected override void LoadContent()

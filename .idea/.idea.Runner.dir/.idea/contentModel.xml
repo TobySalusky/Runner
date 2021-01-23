@@ -8,11 +8,16 @@
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="Textures" t="Include">
+          <e p="autosaves" t="Include">
+            <e p="autosave Untitled 3160.art" t="Include" />
+          </e>
+          <e p="glASS.png" t="Include" />
           <e p="Ice.png" t="Include" />
           <e p="MapData0.png" t="Include" />
           <e p="MapData1.png" t="Include" />
           <e p="MapData2.png" t="Include" />
           <e p="null.png" t="Include" />
+          <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
         </e>
       </e>
