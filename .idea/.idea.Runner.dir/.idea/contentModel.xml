@@ -7,7 +7,9 @@
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
-        <e p="Textures" t="Include" />
+        <e p="Textures" t="Include">
+          <e p="bricc.png" t="Include" />
+        </e>
       </e>
       <e p="bin" t="ExcludeRecursive" />
       <e p="Content" t="Include">
