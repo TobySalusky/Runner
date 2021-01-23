@@ -8,6 +8,7 @@
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="Textures" t="Include">
+          <e p="bricc.png" t="Include" />
           <e p="MapData0.png" t="Include" />
           <e p="MapData1.png" t="Include" />
           <e p="MapData2.png" t="Include" />
