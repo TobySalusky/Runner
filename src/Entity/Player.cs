@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace Runner {
@@ -15,13 +16,26 @@ namespace Runner {
         public float switchTime;
         public float switchFrom, switchTo;
 
+        public float rotation;
+        public float rotSpeed;
+
         public Player(Vector2 pos) : base(pos, -1) {
 
+            texture = Textures.get("Player");
+            dimen = Util.dimen(texture);
+            
             hasStep = false;
         }
 
         public override void update(float deltaTime) {
 
+            float rotMult = (grounded) ? 1 : 0.5F;
+            float toRotSpeed = (vel.X / 20) * Maths.twoPI * rotMult;
+            float rotAccelMult = (grounded) ? 10 : 3F;
+
+            rotSpeed += (toRotSpeed - rotSpeed) * deltaTime * rotAccelMult;
+            rotation += rotSpeed * deltaTime;
+            
             deathTime -= deltaTime;
             if (dead && deathTime <= 0) {
                 dead = false;
@@ -74,6 +88,9 @@ namespace Runner {
             zPos = -1;
             vel = Vector2.Zero;
             texture = Textures.get("Player");
+
+            rotation = 0;
+            rotSpeed = 0;
         }
 
         public virtual void jump(float jumpHeight) {
@@ -87,6 +104,11 @@ namespace Runner {
                     zPos = toZ;
                 }
             }
+        }
+
+        public override void render(Camera camera, SpriteBatch spriteBatch) {
+            
+            Util.render(texture, pos, dimen, zPos, rotation, camera, spriteBatch);
         }
 
         public void input(KeyInfo keys, float deltaTime) {

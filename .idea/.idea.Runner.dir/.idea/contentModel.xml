@@ -10,13 +10,18 @@
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
             <e p="autosave Untitled 3160.art" t="Include" />
+            <e p="autosave Untitled 3836.art" t="Include" />
           </e>
+          <e p="button.png" t="Include" />
+          <e p="d00r.png" t="Include" />
           <e p="glASS.png" t="Include" />
           <e p="Ice.png" t="Include" />
+          <e p="lEvEr.png" t="Include" />
           <e p="MapData0.png" t="Include" />
           <e p="MapData1.png" t="Include" />
           <e p="MapData2.png" t="Include" />
           <e p="null.png" t="Include" />
+          <e p="Player.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
         </e>
