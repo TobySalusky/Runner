@@ -4,6 +4,7 @@ namespace Runner {
     public class Camera {
 
         public Vector2 pos;
+        public float zPos;
         public float scale;
         public Vector2 screenCenter = new Vector2(1920, 1080) / 2;
         
@@ -26,6 +27,10 @@ namespace Runner {
 
         public Rectangle toScreen(Vector2 centerPos, Vector2 dimen) {
             return Util.center(toScreen(centerPos), dimen * scale);
+        }
+
+        public float farMult(float zPos) {
+            return 1 / (this.zPos - zPos);
         }
     }
 }

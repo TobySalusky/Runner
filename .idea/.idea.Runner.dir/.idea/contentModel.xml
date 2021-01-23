@@ -34,6 +34,7 @@
       <e p="Runner.csproj" t="IncludeRecursive" />
       <e p="src" t="Include">
         <e p="Camera.cs" t="Include" />
+        <e p="Drawable3D.cs" t="Include" />
         <e p="KeyInfo.cs" t="Include" />
         <e p="Logger.cs" t="Include" />
         <e p="Maths.cs" t="Include" />
