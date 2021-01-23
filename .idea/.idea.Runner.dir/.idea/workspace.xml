@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Outside/Simplex.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Particles/Particle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Particles/PixelParticle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Particles/RubbleParticle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/ball.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Player.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,14 +41,19 @@
       <option value="$PROJECT_DIR$/src/Player.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
       <option value="$PROJECT_DIR$/src/Entity.cs" />
-      <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/src/Drawable3D.cs" />
       <option value="$PROJECT_DIR$/src/Camera.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
-      <option value="$PROJECT_DIR$/src/Runner.cs" />
       <option value="$PROJECT_DIR$/src/Textures.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
+      <option value="$PROJECT_DIR$/src/Particles/Particle.cs" />
+      <option value="$PROJECT_DIR$/src/Particles/PixelParticle.cs" />
       <option value="$PROJECT_DIR$/src/Util.cs" />
+      <option value="$PROJECT_DIR$/src/Particles/SnowPuffParticle.cs" />
+      <option value="$PROJECT_DIR$/src/Particles/RubbleParticle.cs" />
+      <option value="$PROJECT_DIR$/src/Outside/Simplex.cs" />
+      <option value="$PROJECT_DIR$/src/Runner.cs" />
       <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
     </changedPaths>
   </component>
@@ -94,7 +105,7 @@
       <workItem from="1611418733702" duration="13000" />
       <workItem from="1611418765165" duration="2836000" />
       <workItem from="1611421623804" duration="7591000" />
-      <workItem from="1611436706735" duration="4716000" />
+      <workItem from="1611436706735" duration="8680000" />
     </task>
     <servers />
   </component>

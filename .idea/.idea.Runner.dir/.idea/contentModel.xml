@@ -59,6 +59,14 @@
         <e p="KeyInfo.cs" t="Include" />
         <e p="Logger.cs" t="Include" />
         <e p="Maths.cs" t="Include" />
+        <e p="Outside" t="Include">
+          <e p="Simplex.cs" t="Include" />
+        </e>
+        <e p="Particles" t="Include">
+          <e p="Particle.cs" t="Include" />
+          <e p="PixelParticle.cs" t="Include" />
+          <e p="RubbleParticle.cs" t="Include" />
+        </e>
         <e p="Paths.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Runner.cs" t="Include" />

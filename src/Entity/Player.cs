@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -51,6 +52,7 @@ namespace Runner {
             collideInsides();
 
             if (pos.Y > Chunk.mapData[0].GetLength(1)) {
+                vel = -Vector2.UnitY * 20;
                 die();
             }
         }
@@ -70,6 +72,36 @@ namespace Runner {
                 }
             }
         }
+        
+        public void puffDeath() {
+
+            var colorArray = Util.colorArray(texture);
+            
+            Vector2 tMid = new Vector2(texture.Width, texture.Height) / 2;
+            float angle = Util.angle(vel);
+            float mag = Math.Clamp(Util.mag(vel) / 10, 3, 7);
+            
+            for (int i = 0; i < texture.Width; i++) {
+                for (int j = 0; j < texture.Height; j++) {
+                    int index = i + j * texture.Width;
+
+                    Color color = colorArray[index];
+
+                    if (color.A != 0) {
+                        Vector2 add = (new Vector2(i, j) - tMid) * Tile.pixelSize;
+                        /*if (!facingLeft) {
+                            add.X *= -1;
+                        }*/
+
+                        Vector2 pPos = pos + Util.rotate(add, rotation);
+
+                        Particle particle = new RubbleParticle(pPos, zPos, vel + Util.polar(1, Util.randomAngle()), color);
+                        
+                        Runner.particles[getLayer(zPos)].Add(particle);
+                    }
+                }
+            }
+        }
 
         public void collideInside(Tile tile) {
             if (tile.tileType == Tile.type.Spike) {
@@ -80,7 +112,11 @@ namespace Runner {
         public void die() {
             deathTime = 1;
             dead = true;
+            
+            puffDeath();
             texture = Textures.get("invis");
+            
+            Runner.shakeScreen(0.4F, 0.6F);
         }
 
         public void deathReset() {

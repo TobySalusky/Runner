@@ -26,7 +26,7 @@ namespace Runner {
             return getLayer(zPos);
         }
         
-        public int getLayer(float zPos) {
+        public static int getLayer(float zPos) {
             if (zPos > -0.5F) return 2;
             if (zPos > -1.5F) return 1;
             return 0;
