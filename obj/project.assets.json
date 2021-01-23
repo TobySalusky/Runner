@@ -175,19 +175,19 @@
   },
   "packageFolders": {
     "C:\\Users\\Toby\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toby\\source\\repos\\Runner\\Runner\\Runner.csproj",
+      "projectUniqueName": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\Runner.csproj",
       "projectName": "Runner",
-      "projectPath": "C:\\Users\\Toby\\source\\repos\\Runner\\Runner\\Runner.csproj",
+      "projectPath": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\Runner.csproj",
       "packagesPath": "C:\\Users\\Toby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toby\\source\\repos\\Runner\\Runner\\obj\\",
+      "outputPath": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet"
       ],
       "configFilePaths": [
         "C:\\Users\\Toby\\AppData\\Roaming\\NuGet\\NuGet.Config",

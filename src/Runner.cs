@@ -6,14 +6,21 @@ namespace Runner
 {
     public class Runner : Game
     {
-        private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+
+        public static Runner instance;
 
         public Runner()
         {
-            _graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            instance = this;
+        }
+
+        public static GraphicsDevice getGraphicsDeviceManager() {
+            return instance.GraphicsDevice;
         }
 
         protected override void Initialize()
@@ -25,7 +32,7 @@ namespace Runner
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
         }
