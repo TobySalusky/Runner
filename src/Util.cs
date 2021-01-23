@@ -96,13 +96,6 @@ namespace Runner {
         public static float mag(Vector2 vector) {
             return Vector2.Distance(Vector2.Zero, vector);
         }
-        
-        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float rotation, Camera camera, SpriteBatch spriteBatch) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
-            
-            Vector2 textureSize = new Vector2(texture.Width, texture.Height);
-            Vector2 scale = dimen * camera.scale / textureSize;
-            spriteBatch.Draw(texture, camera.toScreen(pos), null, Color.White, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
-        }
 
         public static float lessDiff(float val, float op1, float op2) {
             if (Math.Abs(val - op1) < Math.Abs(val - op2)) {
@@ -111,24 +104,7 @@ namespace Runner {
 
             return op2;
         }
-
-        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float rotation, Camera camera, SpriteBatch spriteBatch, bool flipped) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
-            
-            SpriteEffects effects = flipped ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-
-            Vector2 textureSize = new Vector2(texture.Width, texture.Height);
-            Vector2 scale = dimen * camera.scale / textureSize;
-            spriteBatch.Draw(texture, camera.toScreen(pos), null, Color.White, rotation, textureSize / 2F, scale,  effects, 0);
-        }
         
-        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float rotation, Camera camera, SpriteBatch spriteBatch, bool flipped, Color tint) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
-            
-            SpriteEffects effects = flipped ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-
-            Vector2 textureSize = new Vector2(texture.Width, texture.Height);
-            Vector2 scale = dimen * camera.scale / textureSize;
-            spriteBatch.Draw(texture, camera.toScreen(pos), null, tint, rotation, textureSize / 2F, scale,  effects, 0);
-        }
 
         public static string spacedName(string UnSpaced) {
 
@@ -161,15 +137,6 @@ namespace Runner {
 
         public static Vector2 textureVec(Texture2D texture) {
             return new Vector2(texture.Width, texture.Height);
-        }
-
-        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float rotation, Camera camera, SpriteBatch spriteBatch, bool flipped, Vector2 origin) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
-            
-            SpriteEffects effects = flipped ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-
-            Vector2 textureSize = new Vector2(texture.Width, texture.Height);
-            Vector2 scale = dimen * camera.scale / textureSize;
-            spriteBatch.Draw(texture, camera.toScreen(pos), null, Color.White, rotation, origin, scale,  effects, 0);
         }
 
         public static int randInt(int startInc, int endExc) {
@@ -266,10 +233,6 @@ namespace Runner {
             return new Vector2(rect.X + rect.Width / 2F, rect.Y + rect.Height / 2F);
         }
 
-        public static void debugDot(Vector2 pos, Camera camera, SpriteBatch spriteBatch) {
-            render(Textures.get("bush"), pos, Vector2.One * 0.5F,  0, camera, spriteBatch);
-        }
-        
         // FROM: https://stackoverflow.com/questions/972307/how-to-loop-through-all-enum-values-in-c
         public static IEnumerable<T> GetValues<T>() {
             return Enum.GetValues(typeof(T)).Cast<T>();

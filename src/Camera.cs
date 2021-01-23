@@ -5,32 +5,21 @@ namespace Runner {
 
         public Vector2 pos;
         public float zPos;
-        public float scale;
+        public float scale = 20;
         public Vector2 screenCenter = new Vector2(1920, 1080) / 2;
-        
-        public Camera(Vector2 pos, float scale = 1F) {
+
+        public Camera(Vector2 pos, float zPos) {
             this.pos = pos;
-            this.scale = scale;
+            this.zPos = zPos;
         }
 
-        public Rectangle worldViewRect() {
-            return Util.center(pos, new Vector2(1920, 1080) / scale);
+        public Vector2 toScreen(Vector2 worldPos, float zPos) {
+            return (worldPos - pos) * scale * farMult(zPos) + screenCenter;
         }
 
-        public Vector2 toWorld(Vector2 screenPos) {
-            return (screenPos - screenCenter) / scale + pos;
-        }
-
-        public Vector2 toScreen(Vector2 worldPos) {
-            return (worldPos - pos) * scale + screenCenter;
-        }
-
-        public Rectangle toScreen(Vector2 centerPos, Vector2 dimen) {
-            return Util.center(toScreen(centerPos), dimen * scale);
-        }
 
         public float farMult(float zPos) {
-            return 1 / (this.zPos - zPos);
+            return 1 / ((this.zPos - zPos) * 0.25F);
         }
     }
 }
