@@ -9,6 +9,8 @@
       <e p="Assets" t="Include">
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
+          <e p="calmrunner.wav" t="Include" />
+          <e p="chaosrunner.wav" t="Include" />
           <e p="Explosion.wav" t="Include" />
           <e p="Jump.wav" t="Include" />
           <e p="Whoosh.wav" t="Include" />
