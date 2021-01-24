@@ -170,6 +170,26 @@ namespace Runner
             }
         }
 
+        public void setMusicFade(float calmVol) {
+            calmI.Volume = calmVol;
+            chaosI.Volume = 1 - calmVol;
+        }
+
+        public void adjustMusicFade() {
+            float calmVol = 1;
+            float xWallDiff = Math.Abs(player.pos.X - midDeathWall.pos.X);
+            const float musicFadeStart = 40, musicFadeEnd = 70;
+            if (xWallDiff < musicFadeEnd) {
+                if (xWallDiff < musicFadeStart) {
+                    calmVol = 0;
+                }
+                else {
+                    calmVol = Util.sinSmooth((xWallDiff - musicFadeStart), (musicFadeEnd - musicFadeStart));
+                }
+            }
+            setMusicFade(calmVol);
+        }
+
         protected override void Update(GameTime gameTime) {
 
             float deltaTime = delta(gameTime);
@@ -183,12 +203,13 @@ namespace Runner
 
             lastKeyState = keyState;
 
-            if (keys.pressed(Keys.Q)) 
+            /*if (keys.pressed(Keys.Q)) 
             {
                 calmI.Volume = (-1.0F) * calmI.Volume + 1.0F;
                 chaosI.Volume = (-1.0F) * chaosI.Volume + 1.0F;
-            }
-            // TODO: Add your update logic here
+            }*/
+
+            adjustMusicFade();
 
             player.input(keys, deltaTime);
 

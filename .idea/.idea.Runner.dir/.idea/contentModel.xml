@@ -13,6 +13,7 @@
           <e p="chaosrunner.wav" t="Include" />
           <e p="Explosion.wav" t="Include" />
           <e p="Jump.wav" t="Include" />
+          <e p="roll.wav" t="Include" />
           <e p="Whoosh.wav" t="Include" />
         </e>
         <e p="Textures" t="Include">
