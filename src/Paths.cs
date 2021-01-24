@@ -3,7 +3,7 @@
 namespace Runner {
     public static class Paths {
 
-        public static string solutionPath, assetPath, texturePath, effectPath;
+        public static string solutionPath, assetPath, texturePath, effectPath, dataPath;
 
         static Paths() {
             string path = Path.GetFullPath("hi");
@@ -11,6 +11,7 @@ namespace Runner {
             assetPath = solutionPath + "Assets\\";
             texturePath = assetPath + "Textures\\";
             effectPath = assetPath + "SoundEffects\\";
+            dataPath = assetPath + "GameData\\";
         }
 
     }

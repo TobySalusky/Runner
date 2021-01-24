@@ -174,23 +174,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Toby\\.nuget\\packages\\": {},
+    "C:\\Users\\joshu\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\Runner.csproj",
+      "projectUniqueName": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj",
       "projectName": "Runner",
-      "projectPath": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\Runner.csproj",
-      "packagesPath": "C:\\Users\\Toby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\obj\\",
+      "projectPath": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj",
+      "packagesPath": "C:\\Users\\joshu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet"
       ],
       "configFilePaths": [
-        "C:\\Users\\Toby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joshu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/FileUtil.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MouseInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SelectRect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Settings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/WiringEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Runner.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Runner.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paths.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +32,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/src/Paths.cs" />
       <option value="$PROJECT_DIR$/src/KeyInfo.cs" />
       <option value="$PROJECT_DIR$/src/Logger.cs" />
       <option value="$PROJECT_DIR$/src/Maths.cs" />
@@ -42,9 +50,16 @@
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
       <option value="$PROJECT_DIR$/src/Textures.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
-      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
       <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+      <option value="$PROJECT_DIR$/src/FileUtil.cs" />
+      <option value="$PROJECT_DIR$/src/MouseInfo.cs" />
+      <option value="$PROJECT_DIR$/src/Paths.cs" />
+      <option value="$PROJECT_DIR$/src/SelectRect.cs" />
+      <option value="$PROJECT_DIR$/src/Settings.cs" />
+      <option value="$PROJECT_DIR$/src/WiringEditor.cs" />
       <option value="$PROJECT_DIR$/src/Runner.cs" />
+      <option value="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
@@ -103,7 +118,8 @@
       <workItem from="1611455157324" duration="1695000" />
       <workItem from="1611457328282" duration="1071000" />
       <workItem from="1611464374686" duration="879000" />
-      <workItem from="1611467537818" duration="2076000" />
+      <workItem from="1611467537818" duration="2227000" />
+      <workItem from="1611500285719" duration="12997000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,7 @@ namespace Runner
         public static Camera camera;
 
         public static KeyboardState lastKeyState;
+        public static MouseState lastMouseState;
 
         public static ChunkMap map;
         public static Player player;
@@ -36,6 +37,8 @@ namespace Runner
         public static SoundEffectInstance calmI;
         public static SoundEffectInstance chaosI;
 
+
+        public static WiringEditor wiringEditor;
 
         public Runner()
         {
@@ -84,7 +87,7 @@ namespace Runner
             graphics.ApplyChanges();
             
             base.Initialize();
-            
+
             Textures.loadTextures();
             SoundPlayer.loadEffects();
             Chunk.loadMapData();
@@ -111,6 +114,10 @@ namespace Runner
             for (int i = 0; i < particles.Length; i++) {
                 particles[i] = new List<Particle>();
             }
+
+            wiringEditor = new WiringEditor();
+            wiringEditor.rects = new List<SelectRect>();
+            wiringEditor.connections = new List<WireConnection>();
             
             resetLevel();
         }
@@ -190,29 +197,53 @@ namespace Runner
             setMusicFade(calmVol);
         }
 
+        public void startEditMode() {
+            backDeathWall.vel = Vector2.Zero;
+            midDeathWall.vel = Vector2.Zero;
+            frontDeathWall.vel = Vector2.Zero;
+
+            Vector2 pos = new Vector2(-1000000, 0);
+            backDeathWall.pos = pos;
+            midDeathWall.pos = pos;
+            frontDeathWall.pos = pos;
+            
+        }
+
         protected override void Update(GameTime gameTime) {
 
             float deltaTime = delta(gameTime);
 
             KeyboardState keyState = Keyboard.GetState();
+            MouseState mouseState = Mouse.GetState();
 
             KeyInfo keys = new KeyInfo(keyState, lastKeyState);
+            MouseInfo mouse = new MouseInfo(mouseState, lastMouseState);
 
             if (keys.down(Keys.Escape))
                 Exit();
+            if (keys.pressed(Keys.P))
+                startEditMode();
+            if (keys.pressed(Keys.S) && keys.down(Keys.LeftControl))
+                wiringEditor?.saveWiring();
+
+            if (keys.pressed(Keys.T)) {
+                wiringEditor = DataSerializer.Deserialize<WiringEditor>("Wiring");
+            }
+
+            if (keys.pressed(Keys.G)) {
+                Settings settings = new Settings(3);
+                settings.save();
+            }
 
             lastKeyState = keyState;
-
-            /*if (keys.pressed(Keys.Q)) 
-            {
-                calmI.Volume = (-1.0F) * calmI.Volume + 1.0F;
-                chaosI.Volume = (-1.0F) * chaosI.Volume + 1.0F;
-            }*/
+            lastMouseState = mouseState;
 
             adjustMusicFade();
 
             player.input(keys, deltaTime);
 
+            wiringEditor?.input(mouse, keys, deltaTime);
+            
             updateEntities(deltaTime);
             
             updateParticles(deltaTime);
@@ -269,6 +300,8 @@ namespace Runner
             map.render(camera, spriteBatch, 2);
             renderEntities(entities[2]);
             renderParticles(particles[2]);
+            
+            wiringEditor?.render(camera, spriteBatch);
             
             spriteBatch.End();
             
