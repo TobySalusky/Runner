@@ -4,9 +4,7 @@
     <projectFile>Runner.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
-    </list>
+    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1611436706735" duration="8989000" />
       <workItem from="1611445793068" duration="8878000" />
       <workItem from="1611455157324" duration="1695000" />
-      <workItem from="1611457328282" duration="756000" />
+      <workItem from="1611457328282" duration="1071000" />
     </task>
     <servers />
   </component>

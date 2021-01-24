@@ -205,6 +205,7 @@ namespace Runner {
 
         public virtual void jump(float jumpHeight) {
             vel.Y -= Util.heightToJumpPower(jumpHeight, gravity);
+            SoundPlayer.play("Jump");
             jumpTime = jumpTimeStart;
         }
         
