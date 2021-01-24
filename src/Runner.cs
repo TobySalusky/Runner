@@ -46,7 +46,7 @@ namespace Runner
 
         public static string[] levels = {
             "Old",
-            "LevelOne"
+            "Sam"
         };
 
         public static int levelIndex = 0;
@@ -125,6 +125,8 @@ namespace Runner
             
             // level settings
             levelSettingsDict["Old"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
+            levelSettingsDict["Sam"] = new LevelSettings { playerStartPos = new Vector2(300, 40) };
+            
             foreach (var level in levels) {
                 if (!levelSettingsDict.Keys.Contains(level)) {
                     levelSettingsDict[level] = new LevelSettings();
