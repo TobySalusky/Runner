@@ -19,8 +19,8 @@ namespace Runner {
 
             crusher = Textures.get("DeathWallCrusher");
             armSegment = Textures.get("DeathWallArm");
-            crusherDimen = new Vector2(12, 4);
-            armDimen = new Vector2(6, 3);
+            crusherDimen = Util.dimen(crusher);
+            armDimen = Util.dimen(armSegment);
         }
 
         public float crushAmount() {
