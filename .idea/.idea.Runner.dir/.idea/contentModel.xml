@@ -7,12 +7,18 @@
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
+        <e p="GameData" t="Include">
+          <e p="Settings.xml" t="Include" />
+          <e p="Wiring.xml" t="Include" />
+        </e>
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
           <e p="calmrunner.wav" t="Include" />
           <e p="chaosrunner.wav" t="Include" />
+          <e p="door.wav" t="Include" />
           <e p="Explosion.wav" t="Include" />
           <e p="Jump.wav" t="Include" />
+          <e p="pressureplate.wav" t="Include" />
           <e p="roll.wav" t="Include" />
           <e p="Whoosh.wav" t="Include" />
         </e>
@@ -83,11 +89,14 @@
           <e p="Entity.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
+        <e p="FileUtil.cs" t="Include" />
         <e p="KeyInfo.cs" t="Include" />
         <e p="Logger.cs" t="Include" />
         <e p="Maths.cs" t="Include" />
+        <e p="MouseInfo.cs" t="Include" />
         <e p="Outside" t="Include">
           <e p="Simplex.cs" t="Include" />
+          <e p="XnaSerializer.cs" t="Include" />
         </e>
         <e p="Particles" t="Include">
           <e p="Particle.cs" t="Include" />
@@ -97,6 +106,8 @@
         <e p="Paths.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Runner.cs" t="Include" />
+        <e p="SelectRect.cs" t="Include" />
+        <e p="Settings.cs" t="Include" />
         <e p="SoundEffects" t="Include">
           <e p="SoundPlayer.cs" t="Include" />
         </e>
@@ -107,6 +118,7 @@
         </e>
         <e p="Textures.cs" t="Include" />
         <e p="Util.cs" t="Include" />
+        <e p="WiringEditor.cs" t="Include" />
       </e>
     </e>
   </component>
