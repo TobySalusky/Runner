@@ -81,6 +81,9 @@ namespace Runner
             calmI = calm.CreateInstance();
             chaosI = chaos.CreateInstance();
 
+            calmI.IsLooped = true;
+            chaosI.IsLooped = true;
+
             calmI.Play();
             calmI.Volume = 1.0F;
             chaosI.Play();
