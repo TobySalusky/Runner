@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qRzxde13bZ12bVQJ3CeCDAD/6ugZ2b4ASTCNstyol1ZI4ETr7CBhE4FmzzxFyJfnXeG6aqW6xHMfYWYzjOEoAQ==",
+  "dgSpecHash": "GXEb7JzWQdl6mr/EGXcSFz5PUFeGFjOuv4HoXvGc7cy+FTOvLEj9V72hMOtigGzvdAZnskC9hLbz/d8KuK7dyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Toby\\Documents\\GitHub\\Runner\\Runner.csproj",
+  "projectFilePath": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Toby\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\Toby\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    "C:\\Users\\joshu\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\joshu\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }
