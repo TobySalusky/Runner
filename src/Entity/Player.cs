@@ -55,7 +55,7 @@ namespace Runner {
             
             collideInsides();
 
-            if (pos.Y > Chunk.mapData[0].GetLength(1) - 10) {
+            if (pos.Y > ChunkMap.mapHeight() - 10) {
                 vel = -Vector2.UnitY * 20;
                 die();
             }
@@ -201,6 +201,8 @@ namespace Runner {
 
             rotation = 0;
             rotSpeed = 0;
+            
+            Runner.resetLevel();
         }
 
         public virtual void jump(float jumpHeight) {

@@ -41,6 +41,10 @@ namespace Runner
             instance = this;
         }
 
+        public static void resetLevel() {
+            
+        }
+
         public static void shakeScreen(float time, float intensity) {
             screenShakeStart = time;
             screenShakeTime = time;
@@ -147,7 +151,7 @@ namespace Runner
             }
 
             Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(-2));
-            float clampCameraY = Chunk.mapData[0].GetLength(1) - 1 - diff.Y;
+            float clampCameraY = ChunkMap.mapHeight() - 1 - diff.Y;
             camera.pos.Y = Math.Min(camera.pos.Y,clampCameraY);
 
             base.Update(gameTime);

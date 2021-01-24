@@ -22,6 +22,14 @@ namespace Runner {
             return chunk;
         }
 
+        public static int mapWidth() {
+            return Chunk.mapData[0].GetLength(0);
+        }
+        
+        public static int mapHeight() {
+            return Chunk.mapData[0].GetLength(1);
+        }
+
         public Chunk getRawChunk(Point indices) { // returns chunk without fully loading it (generates texture-less tiles)
             chunks.TryGetValue(indices, out var chunk);
 
