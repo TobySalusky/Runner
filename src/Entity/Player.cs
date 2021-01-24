@@ -46,7 +46,7 @@ namespace Runner {
             deathTime -= deltaTime;
             if (dead && deathTime <= 0) {
                 dead = false;
-                deathReset();
+                Runner.resetLevel();
             }
 
             if (dead) {
@@ -204,6 +204,10 @@ namespace Runner {
             if (tile.tileType == Tile.type.Button) {
                 (tile as ButtonTile).activate();
             }
+
+            if (tile.tileType == Tile.type.NextStage) {
+                Runner.nextLevel();
+            }
         }
 
         public void die() {
@@ -235,8 +239,6 @@ namespace Runner {
 
             rotation = 0;
             rotSpeed = 0;
-            
-            Runner.resetLevel();
         }
 
         public virtual void jump(float jumpHeight) {

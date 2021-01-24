@@ -37,13 +37,14 @@ namespace Runner {
             Spike,
             Button,
             Door,
-
+            NextStage
         }
 
         public static type[] nonSolid = {
             type.Air,
             type.Spike,
-            type.Button
+            type.Button,
+            type.NextStage
         };
         
         public static type[] nonFullBlock = {
@@ -54,6 +55,8 @@ namespace Runner {
         public static type[] transparent = {
             type.Air,
             type.Glass,
+            type.NextStage,
+            type.Door,
         };
 
         public static Dictionary<Color, int> genTileTable() {
@@ -64,6 +67,7 @@ namespace Runner {
             tableAdd(table, Color.Black, type.Spike);
             tableAdd(table, Color.Blue, type.Button);
             tableAdd(table, new Color(0F, 1F, 0F, 1F), type.Door);
+            tableAdd(table, new Color(1F, 1F, 0F, 1F), type.NextStage);
 
             return table;
         }
@@ -153,7 +157,7 @@ namespace Runner {
 
         public void render(Camera camera, SpriteBatch spriteBatch) { // TODO: make more efficient
             
-            if (tileType == type.Air) return;
+            if (tileType == type.Air || tileType == type.NextStage) return;
 
             float mult = camera.farMult(zPos());
             int drawSize = (int) Math.Round(camera.scale * mult);
