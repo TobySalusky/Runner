@@ -42,6 +42,11 @@ namespace Runner {
             type.Air,
             type.Spike,
         };
+        
+        public static type[] nonFullBlock = {
+            type.Air,
+            type.Spike,
+        };
 
         public static Dictionary<Color, int> genTileTable() {
             var table = new Dictionary<Color, int>();
@@ -201,8 +206,7 @@ namespace Runner {
 
         private bool isAirAt(Vector2 pos, int layer) {
 
-            return
-                Runner.map.getRawTile(pos, layer).tileType == type.Air;
+            return nonFullBlock.Contains(Runner.map.getRawTile(pos, layer).tileType);
         }
         
         private bool solidAt(Vector2 pos, int layer) {
