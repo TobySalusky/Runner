@@ -24,6 +24,8 @@ namespace Runner {
 
         public float frontPercentOcluded, midPercentOcluded;
 
+        public float animationTimer = 3;
+
         public Player(Vector2 pos) : base(pos, -1) {
 
             texture = Textures.get("Player");
@@ -33,7 +35,7 @@ namespace Runner {
         }
 
         public override void update(float deltaTime) {
-
+            
             float rotMult = (grounded) ? 1 : 0.5F;
             float toRotSpeed = (vel.X / 20) * Maths.twoPI * rotMult;
             float rotAccelMult = (grounded) ? 10 : 3F;
@@ -59,6 +61,28 @@ namespace Runner {
                 vel = -Vector2.UnitY * 20;
                 die();
             }
+
+
+            if (!dead) {
+                animationTimer -= deltaTime;
+                const float blinkStart = 0.4F;
+                if (animationTimer > 0 && animationTimer < blinkStart) {
+                    int index = (int) ((blinkStart - animationTimer) / blinkStart * 5);
+                    if (index > 2) {
+                        index = Math.Max(0, 5 - index);
+                    }
+
+                    texture = Textures.get("Blink" + index);
+                }
+                else {
+                    texture = Textures.get("Player");
+
+                    if (animationTimer < 0) {
+                        animationTimer = Util.random(3, 10);
+                    }
+                }
+            }
+
 
             switchTime -= deltaTime;
             if (switchTime > 0) {
@@ -179,6 +203,11 @@ namespace Runner {
         }
 
         public void die() {
+
+            if (dead) {
+                return;
+            }
+
             deathTime = 1;
             dead = true;
 

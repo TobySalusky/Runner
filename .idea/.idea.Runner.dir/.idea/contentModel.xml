@@ -29,10 +29,6 @@
             <e p="autosave Untitled 8259.art" t="Include" />
             <e p="autosave Untitled 8479.art" t="Include" />
           </e>
-          <e p="blink-181.png" t="Include" />
-          <e p="blink-182.png" t="Include" />
-          <e p="blink-183.png" t="Include" />
-          <e p="blink-184.png" t="Include" />
           <e p="brokenRocc.png" t="Include" />
           <e p="button.png" t="Include" />
           <e p="Crusher_body.png" t="Include" />
@@ -43,7 +39,12 @@
           <e p="MapData1.png" t="Include" />
           <e p="MapData2.png" t="Include" />
           <e p="null.png" t="Include" />
-          <e p="Player.png" t="Include" />
+          <e p="Player" t="Include">
+            <e p="Blink0.png" t="Include" />
+            <e p="Blink1.png" t="Include" />
+            <e p="Blink2.png" t="Include" />
+            <e p="Player.png" t="Include" />
+          </e>
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
         </e>

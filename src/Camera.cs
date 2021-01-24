@@ -20,6 +20,16 @@ namespace Runner {
         public Vector2 toScreen(Vector2 worldPos, float zPos) {
             return (worldPos - pos) * scaleAt(zPos) + screenCenter;
         }
+        
+        public Rectangle toScreen(Vector2 worldPos, float zPos, Vector2 dimen) {
+            Vector2 screenPos = (worldPos - pos) * scaleAt(zPos) + screenCenter;
+            return Util.center(screenPos, dimen * scaleAt(zPos));
+        }
+        
+        public Rectangle toScreenRounded(Vector2 worldPos, float zPos, Vector2 dimen) {
+            Vector2 screenPos = (worldPos - pos) * scaleAt(zPos) + screenCenter;
+            return Util.centerRounded(screenPos, dimen * scaleAt(zPos));
+        }
 
         public Vector2 toWorld(Vector2 screenPos, float zPos) {
             return (screenPos - screenCenter) / scaleAt(zPos) + pos;
