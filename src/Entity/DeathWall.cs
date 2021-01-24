@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,10 +10,10 @@ namespace Runner {
         public Texture2D crusher, armSegment;
 
         public float crushTimer;
+        public Vector2 topCrush, bottomCrush;
         
         public DeathWall(float xPos, float zPos) : base(new Vector2(xPos, ChunkMap.mapHeight() / 2F), zPos) {
-            dimen = new Vector2(10, ChunkMap.mapHeight());
-            
+
             vel = Vector2.UnitX * 10;
             hasGravity = false;
             hasCollision = false;
@@ -21,6 +22,8 @@ namespace Runner {
             armSegment = Textures.get("DeathWallArm");
             crusherDimen = Util.dimen(crusher);
             armDimen = Util.dimen(armSegment);
+            
+            dimen = new Vector2(armDimen.X, ChunkMap.mapHeight());
         }
 
         public float crushAmount() {
@@ -29,12 +32,27 @@ namespace Runner {
 
         public override void update(float deltaTime) {
             base.update(deltaTime);
-            if (collidesWith(Runner.player)) {
-                Runner.player.vel = Vector2.UnitX * 20;
-                Runner.player.die();
-            }
+            Player player = Runner.player;
 
             crushTimer += deltaTime * 2;
+            
+            float extend = dimen.Y / 2 - crusherDimen.Y / 2;
+            float amount = crushAmount();
+            topCrush = new Vector2(pos.X, extend * amount);
+            bottomCrush = new Vector2(pos.X, ChunkMap.mapHeight() - extend * amount);
+            
+            if (collidesWith(player, topCrush, crusherDimen)) { // collides with top crusher
+                Runner.player.vel = Vector2.UnitY * 20;
+                Runner.player.die();
+            }
+            else if (collidesWith(player, bottomCrush, crusherDimen)) { // collides with top crusher
+                Runner.player.vel = -Vector2.UnitY * 20;
+                Runner.player.die();
+            }
+            else if (collidesWith(player) && !collidesWith(player, pos, new Vector2(dimen.X, bottomCrush.Y - topCrush.Y))) { // collides with arm
+                Runner.player.vel = Vector2.UnitX * 20 * Math.Sign(player.pos.X - pos.X);
+                Runner.player.die();
+            }
         }
 
         public void renderArm(Camera camera, SpriteBatch spriteBatch, Vector2 start, int dir) {
@@ -54,12 +72,6 @@ namespace Runner {
         }
 
         public override void render(Camera camera, SpriteBatch spriteBatch) {
-            //base.render(camera, spriteBatch);
-
-            float extend = dimen.Y / 2 - crusherDimen.Y / 2;
-            float amount = crushAmount();
-            Vector2 topCrush = new Vector2(pos.X, extend * amount);
-            Vector2 bottomCrush = new Vector2(pos.X, ChunkMap.mapHeight() - extend * amount);
             
             renderArm(camera, spriteBatch, topCrush - Vector2.UnitY * (crusherDimen.Y / 2 + armDimen.Y / 2), -1);
             renderArm(camera, spriteBatch, bottomCrush + Vector2.UnitY * (crusherDimen.Y / 2 + armDimen.Y / 2), 1);

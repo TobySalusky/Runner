@@ -46,6 +46,7 @@
             <e p="Blink2.png" t="Include" />
             <e p="Player.png" t="Include" />
           </e>
+          <e p="SmallBrokenRocc.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
         </e>
