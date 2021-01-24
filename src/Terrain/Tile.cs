@@ -211,7 +211,8 @@ namespace Runner {
 
         private bool isAirAt(Vector2 pos, int layer) {
 
-            return nonFullBlock.Contains(Runner.map.getRawTile(pos, layer).tileType);
+            type tileType = Runner.map.getRawTile(pos, layer).tileType;
+            return nonFullBlock.Contains(tileType);
         }
         
         private bool solidAt(Vector2 pos, int layer) {
