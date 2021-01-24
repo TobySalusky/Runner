@@ -160,10 +160,13 @@ namespace Runner {
         }
         
         public bool tryMoveToZ(float toZ) {
+            //Checks if player can move to next layer
             if (!collidesAt(pos, getLayer(toZ))) {
+                //moves to next layer if possible
                 zPos = toZ;
                 return true;
             }
+            //fail case
 
             return false;
         }
@@ -174,6 +177,7 @@ namespace Runner {
         }
 
         public void input(KeyInfo keys, float deltaTime) {
+            //control scheme
 
             if (dead) {
                 return;
@@ -190,6 +194,7 @@ namespace Runner {
             
             if (keys.pressed(Keys.S))
                 startSwitchTo(zPos + 1);
+           
             
             float accelSpeed = (inputX == 0 && grounded) ? 5 : 2.5F;
             vel.X += ((inputX * speed) - vel.X) * deltaTime * accelSpeed;

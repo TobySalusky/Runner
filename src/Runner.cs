@@ -63,6 +63,7 @@ namespace Runner
             base.Initialize();
             
             Textures.loadTextures();
+            SoundPlayer.loadEffects();
             Chunk.loadMapData();
             
             map = new ChunkMap();

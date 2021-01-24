@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/SoundEffects/Bonk Sound Effect  2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SoundEffects/Bonk Sound Effect #2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +29,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/src/Paths.cs" />
       <option value="$PROJECT_DIR$/src/KeyInfo.cs" />
       <option value="$PROJECT_DIR$/src/Logger.cs" />
       <option value="$PROJECT_DIR$/src/Maths.cs" />
@@ -28,7 +39,6 @@
       <option value="$PROJECT_DIR$/src/Camera.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
       <option value="$PROJECT_DIR$/src/Textures.cs" />
-      <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
       <option value="$PROJECT_DIR$/src/Particles/Particle.cs" />
       <option value="$PROJECT_DIR$/src/Particles/PixelParticle.cs" />
       <option value="$PROJECT_DIR$/src/Particles/SnowPuffParticle.cs" />
@@ -36,8 +46,11 @@
       <option value="$PROJECT_DIR$/src/Outside/Simplex.cs" />
       <option value="$PROJECT_DIR$/src/Util.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
+      <option value="$PROJECT_DIR$/src/Paths.cs" />
       <option value="$PROJECT_DIR$/src/Runner.cs" />
       <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+      <option value="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
@@ -49,6 +62,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -93,6 +107,9 @@
       <workItem from="1611421623804" duration="7591000" />
       <workItem from="1611436706735" duration="8989000" />
       <workItem from="1611445793068" duration="2875000" />
+      <workItem from="1611452720065" duration="330000" />
+      <workItem from="1611453581581" duration="71000" />
+      <workItem from="1611453659206" duration="3100000" />
     </task>
     <servers />
   </component>
@@ -114,6 +131,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>
