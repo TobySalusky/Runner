@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="GameData" t="Include">
           <e p="OldWiring.xml" t="Include" />
+          <e p="SamWiring.xml" t="Include" />
           <e p="Settings.xml" t="Include" />
         </e>
         <e p="SoundEffects" t="Include">
