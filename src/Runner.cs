@@ -183,7 +183,7 @@ namespace Runner
 
             lastKeyState = keyState;
 
-            if (keys.down(Keys.Q)) 
+            if (keys.pressed(Keys.Q)) 
             {
                 calmI.Volume = (-1.0F) * calmI.Volume + 1.0F;
                 chaosI.Volume = (-1.0F) * chaosI.Volume + 1.0F;
