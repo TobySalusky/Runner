@@ -16,9 +16,9 @@ namespace Runner
         public SoundPlayer() { }
 
         //effectName is the filename
-        public static void play(string effectName) {
+        public static void play(string effectName, float volume = 1.0F) {
             curEffect = getEffect(effectName);
-            curEffect.Play();
+            curEffect.Play(volume, 0.0F, 0.0F);
         }
         
         
