@@ -8,6 +8,7 @@
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="GameData" t="Include">
+          <e p="OldWiring.xml" t="Include" />
           <e p="Settings.xml" t="Include" />
         </e>
         <e p="SoundEffects" t="Include">
@@ -25,18 +26,30 @@
           <e p="autosaves" t="Include">
             <e p="autosave Untitled 1028.art" t="Include" />
             <e p="autosave Untitled 1861.art" t="Include" />
+            <e p="autosave Untitled 196.art" t="Include" />
             <e p="autosave Untitled 2121.art" t="Include" />
+            <e p="autosave Untitled 2321.art" t="Include" />
             <e p="autosave Untitled 3160.art" t="Include" />
+            <e p="autosave Untitled 3206.art" t="Include" />
+            <e p="autosave Untitled 3233.art" t="Include" />
             <e p="autosave Untitled 3400.art" t="Include" />
+            <e p="autosave Untitled 3645.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
             <e p="autosave Untitled 4105.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
+            <e p="autosave Untitled 4858.art" t="Include" />
+            <e p="autosave Untitled 5148.art" t="Include" />
+            <e p="autosave Untitled 5410.art" t="Include" />
             <e p="autosave Untitled 5751.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
             <e p="autosave Untitled 6880.art" t="Include" />
+            <e p="autosave Untitled 7458.art" t="Include" />
             <e p="autosave Untitled 783.art" t="Include" />
             <e p="autosave Untitled 8259.art" t="Include" />
             <e p="autosave Untitled 8479.art" t="Include" />
+            <e p="autosave Untitled 8551.art" t="Include" />
+            <e p="autosave Untitled 9083.art" t="Include" />
+            <e p="autosave Untitled 9182.art" t="Include" />
           </e>
           <e p="brokenRocc.png" t="Include" />
           <e p="button.png" t="Include" />
@@ -57,6 +70,7 @@
             <e p="SamMapData1.png" t="Include" />
             <e p="SamMapData2.png" t="Include" />
           </e>
+          <e p="NextStage.png" t="Include" />
           <e p="null.png" t="Include" />
           <e p="Player" t="Include">
             <e p="Blink0.png" t="Include" />
@@ -67,6 +81,7 @@
           <e p="SmallBrokenRocc.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
+          <e p="SubmissionGoogleDriveDownloadLink.txt" t="Include" />
         </e>
       </e>
       <e p="bin" t="ExcludeRecursive" />

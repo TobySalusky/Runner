@@ -204,6 +204,10 @@ namespace Runner {
             if (tile.tileType == Tile.type.Button) {
                 (tile as ButtonTile).activate();
             }
+
+            if (tile.tileType == Tile.type.NextStage) {
+                Runner.nextLevel();
+            }
         }
 
         public void die() {

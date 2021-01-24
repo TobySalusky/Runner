@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/NextStage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData0.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Maps/OldMapData2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Tile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +51,13 @@
       <option value="$PROJECT_DIR$/src/Settings.cs" />
       <option value="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
-      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
-      <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
       <option value="$PROJECT_DIR$/src/WiringEditor.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
       <option value="$PROJECT_DIR$/src/SelectRect.cs" />
       <option value="$PROJECT_DIR$/src/LevelSettings.cs" />
       <option value="$PROJECT_DIR$/src/Runner.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+      <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
@@ -113,6 +119,7 @@
       <workItem from="1611467537818" duration="2227000" />
       <workItem from="1611500285719" duration="13160000" />
       <workItem from="1611513551894" duration="7605000" />
+      <workItem from="1611521460690" duration="2533000" />
     </task>
     <servers />
   </component>
