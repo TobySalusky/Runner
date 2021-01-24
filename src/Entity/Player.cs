@@ -65,6 +65,7 @@ namespace Runner {
                 float toZ = Util.revSinLerp(switchTime, switchTimeStart, switchFrom, switchTo);
                 if (!tryMoveToZ(toZ)) {
                     startSwitchTo(switchFrom);
+                    SoundPlayer.play("Bonk");
                 }
             }
             
