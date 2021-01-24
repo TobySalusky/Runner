@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +14,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BC542A5C-3AD0-4C34-A080-02E941B52719/62/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -50,6 +41,9 @@
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
