@@ -9,7 +9,6 @@
       <e p="Assets" t="Include">
         <e p="GameData" t="Include">
           <e p="Settings.xml" t="Include" />
-          <e p="Wiring.xml" t="Include" />
         </e>
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
@@ -30,6 +29,7 @@
             <e p="autosave Untitled 3160.art" t="Include" />
             <e p="autosave Untitled 3400.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
+            <e p="autosave Untitled 4105.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
             <e p="autosave Untitled 5751.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
@@ -45,6 +45,13 @@
           <e p="DeathWallCrusher.png" t="Include" />
           <e p="Door.png" t="Include" />
           <e p="glASS.png" t="Include" />
+          <e p="Level Maps" t="Include">
+            <e p="LevelOne" t="Include">
+              <e p="LevelOneMapData0.png" t="Include" />
+              <e p="LevelOneMapData1.png" t="Include" />
+              <e p="LevelOneMapData2.png" t="Include" />
+            </e>
+          </e>
           <e p="lEvEr.png" t="Include" />
           <e p="MapData0.png" t="Include" />
           <e p="MapData1.png" t="Include" />
@@ -94,6 +101,7 @@
         </e>
         <e p="FileUtil.cs" t="Include" />
         <e p="KeyInfo.cs" t="Include" />
+        <e p="LevelSettings.cs" t="Include" />
         <e p="Logger.cs" t="Include" />
         <e p="Maths.cs" t="Include" />
         <e p="MouseInfo.cs" t="Include" />

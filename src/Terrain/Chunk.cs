@@ -21,11 +21,11 @@ namespace Runner {
             genTiles();
         }
 
-        public static void loadMapData() { // TODO: change colors to ints here
+        public static void loadMapData(string levelName) {
 
             mapData = new int[3][,];
             for (int k = 0; k < 3; k++) {
-                mapData[k] = loadColorMap(Textures.get("MapData" + k), Tile.genTileTable());
+                mapData[k] = loadColorMap(Textures.get(levelName + "MapData" + k), Tile.genTileTable());
             }
         }
 

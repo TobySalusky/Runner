@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
@@ -41,6 +42,15 @@ namespace Runner
         public static WiringEditor wiringEditor;
         public static bool editMode;
 
+        public static Dictionary<string, LevelSettings> levelSettingsDict = new Dictionary<string, LevelSettings>();
+
+        public static string[] levels = {
+            "LevelOne",
+            "LevelTwo"
+        };
+
+        public static string levelName = levels[0];
+
         public Runner()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -76,6 +86,21 @@ namespace Runner
             return instance.GraphicsDevice;
         }
 
+        public static void loadLevelMap() {
+            Chunk.loadMapData(levelName);
+            map = new ChunkMap();
+            try {
+                wiringEditor = DataSerializer.Deserialize<WiringEditor>(levelName + "Wiring");
+            }
+            catch (Exception e) {
+                wiringEditor = new WiringEditor {
+                    rects = new List<SelectRect>(), 
+                    connections = new List<WireConnection>()
+                };
+            }
+            wiringEditor.applyWiring();
+        }
+
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -87,12 +112,23 @@ namespace Runner
 
             graphics.ApplyChanges();
             
+            
+            // level settings
+            levelSettingsDict["LevelOne"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
+            foreach (var level in levels) {
+                if (!levelSettingsDict.Keys.Contains(level)) {
+                    levelSettingsDict[level] = new LevelSettings();
+                }
+            }
+            
+            
             base.Initialize();
 
             Textures.loadTextures();
             SoundPlayer.loadEffects();
-            Chunk.loadMapData();
-
+            
+            loadLevelMap();
+            
             calm = SoundPlayer.getEffect("calmrunner");
             chaos = SoundPlayer.getEffect("chaosrunner");
 
@@ -107,8 +143,6 @@ namespace Runner
             chaosI.Play();
             chaosI.Volume = 0.0F;
 
-            map = new ChunkMap();
-
             camera = new Camera(Vector2.Zero, 5);
             player = new Player(playerStartPos());
 
@@ -116,14 +150,15 @@ namespace Runner
                 particles[i] = new List<Particle>();
             }
 
-            wiringEditor = DataSerializer.Deserialize<WiringEditor>("Wiring");
-            wiringEditor.applyWiring();
-            
             resetLevel();
         }
 
         public static Vector2 playerStartPos() {
-            return new Vector2(30, 75);
+            return currentLevelSettings().playerStartPos;
+        }
+
+        public static LevelSettings currentLevelSettings() {
+            return levelSettingsDict[levelName];
         }
 
         protected override void LoadContent()
@@ -225,7 +260,7 @@ namespace Runner
             if (keys.pressed(Keys.P))
                 startEditMode();
             if (keys.pressed(Keys.S) && keys.down(Keys.LeftControl))
-                wiringEditor?.saveWiring();
+                wiringEditor?.saveWiring(levelName);
 
             if (keys.pressed(Keys.T)) {
                 wiringEditor?.applyWiring();

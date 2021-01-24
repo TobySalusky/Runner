@@ -34,12 +34,10 @@ namespace Runner {
             
             if (wiring)
                 genWire().render(camera, spriteBatch);
-            
-            Logger.log(rects.Count + " " + connections.Count);
         }
 
-        public void saveWiring() {
-            DataSerializer.Serialize("Wiring", this);
+        public void saveWiring(string levelName) {
+            DataSerializer.Serialize(levelName + "Wiring", this);
         }
 
         public void applyWiring() {
