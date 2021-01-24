@@ -8,7 +8,7 @@
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="SoundEffects" t="Include">
-          <e p="Bonk Sound Effect #2.mp3" t="Include" />
+          <e p="Bonk.wav" t="Include" />
         </e>
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
@@ -86,6 +86,9 @@
         <e p="Paths.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Runner.cs" t="Include" />
+        <e p="SoundEffects" t="Include">
+          <e p="SoundPlayer.cs" t="Include" />
+        </e>
         <e p="Terrain" t="Include">
           <e p="Chunk.cs" t="Include" />
           <e p="ChunkMap.cs" t="Include" />
