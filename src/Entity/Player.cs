@@ -89,7 +89,7 @@ namespace Runner {
                 float toZ = Util.revSinLerp(switchTime, switchTimeStart, switchFrom, switchTo);
                 if (!tryMoveToZ(toZ)) {
                     startSwitchTo(switchFrom);
-                    SoundPlayer.play("Bonk");
+                    SoundPlayer.play("Bonk", 0.5F);
                 }
             }
             
@@ -103,7 +103,7 @@ namespace Runner {
             if (to >= -2 && to <= 0) {
                 switchTime = switchTimeStart;
                 switchFrom = zPos;
-                SoundPlayer.play("Whoosh");
+                SoundPlayer.play("Whoosh",0.8F);
                 this.switchTo = to;
             }
         }
@@ -221,7 +221,7 @@ namespace Runner {
             }
 
             puffDeath();
-            SoundPlayer.play("Explosion");
+            SoundPlayer.play("Explosion", 0.6F);
             texture = Textures.get("invis");
             
             Runner.shakeScreen(0.4F, 0.6F);
@@ -241,7 +241,7 @@ namespace Runner {
 
         public virtual void jump(float jumpHeight) {
             vel.Y -= Util.heightToJumpPower(jumpHeight, gravity);
-            SoundPlayer.play("Jump");
+            SoundPlayer.play("Jump",0.7F);
             jumpTime = jumpTimeStart;
         }
         
