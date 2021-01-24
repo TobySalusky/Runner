@@ -103,6 +103,7 @@ namespace Runner {
             if (to >= -2 && to <= 0) {
                 switchTime = switchTimeStart;
                 switchFrom = zPos;
+                SoundPlayer.play("Whoosh");
                 this.switchTo = to;
             }
         }
@@ -236,6 +237,7 @@ namespace Runner {
 
         public virtual void jump(float jumpHeight) {
             vel.Y -= Util.heightToJumpPower(jumpHeight, gravity);
+            SoundPlayer.play("Jump");
             jumpTime = jumpTimeStart;
         }
         
