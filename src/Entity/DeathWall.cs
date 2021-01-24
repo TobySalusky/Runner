@@ -53,6 +53,25 @@ namespace Runner {
                 Runner.player.vel = Vector2.UnitX * 20 * Math.Sign(player.pos.X - pos.X);
                 Runner.player.die();
             }
+            
+            Point from = ChunkMap.blockIndices(topCrush - crusherDimen / 2);
+            Point to = ChunkMap.blockIndices(topCrush + crusherDimen / 2);
+
+            for (int x = from.X; x <= to.X; x++) {
+                for (int y = from.Y; y <= to.Y; y++) {
+                    Vector2 blockPos = new Vector2(x, y);
+                    Runner.map.removeBlocks(blockPos);
+                }
+            }
+            from = ChunkMap.blockIndices(bottomCrush - crusherDimen / 2);
+            to = ChunkMap.blockIndices(bottomCrush + crusherDimen / 2);
+            for (int x = from.X; x <= to.X; x++) {
+                for (int y = from.Y; y <= to.Y; y++) {
+                    Vector2 blockPos = new Vector2(x, y);
+                    Runner.map.removeBlocks(blockPos);
+                }
+            }
+
         }
 
         public void renderArm(Camera camera, SpriteBatch spriteBatch, Vector2 start, int dir) {

@@ -41,11 +41,13 @@ namespace Runner {
         public void removeBlocks(Vector2 position) {
 
             Point blockInd = ChunkMap.blockIndices(position);
+            var (blockX, blockY) = blockInd;
+
             Point block = new Point(Util.intMod(blockInd.X, Chunk.chunkSize),
                 Util.intMod(blockInd.Y, Chunk.chunkSize));
             var (x, y) = block;
 
-            if (x < 0 || x >= mapWidth() || y < 0 || y >= mapHeight()) return;
+            if (blockX < 0 || blockX >= mapWidth() || blockY < 0 || blockY >= mapHeight()) return;
             
             if (chunks.Keys.Contains(chunkIndices(position))) {
 
@@ -59,7 +61,7 @@ namespace Runner {
 
             int ID = (int) Tile.type.Air;
             for (int i = 0; i < 3; i++) {
-                Chunk.mapData[i][blockInd.X, blockInd.Y] = ID;
+                Chunk.mapData[i][blockX, blockY] = ID;
             }
         }
 

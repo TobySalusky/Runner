@@ -75,6 +75,8 @@ namespace Runner
             
             loadLevelMap();
             
+            player.deathReset();
+            
             updatedEntities.Clear();
             updatedEntities.Add(player);
 
