@@ -46,7 +46,7 @@ namespace Runner {
             deathTime -= deltaTime;
             if (dead && deathTime <= 0) {
                 dead = false;
-                deathReset();
+                Runner.resetLevel();
             }
 
             if (dead) {
@@ -239,8 +239,6 @@ namespace Runner {
 
             rotation = 0;
             rotSpeed = 0;
-            
-            Runner.resetLevel();
         }
 
         public virtual void jump(float jumpHeight) {
