@@ -55,7 +55,7 @@ namespace Runner {
             
             collideInsides();
 
-            if (pos.Y > Chunk.mapData[0].GetLength(1) - 10) {
+            if (pos.Y > ChunkMap.mapHeight() - 10) {
                 vel = -Vector2.UnitY * 20;
                 die();
             }
@@ -65,6 +65,7 @@ namespace Runner {
                 float toZ = Util.revSinLerp(switchTime, switchTimeStart, switchFrom, switchTo);
                 if (!tryMoveToZ(toZ)) {
                     startSwitchTo(switchFrom);
+                    SoundPlayer.play("Bonk");
                 }
             }
             
@@ -186,6 +187,7 @@ namespace Runner {
             }
 
             puffDeath();
+            SoundPlayer.play("Explosion");
             texture = Textures.get("invis");
             
             Runner.shakeScreen(0.4F, 0.6F);
@@ -199,10 +201,13 @@ namespace Runner {
 
             rotation = 0;
             rotSpeed = 0;
+            
+            Runner.resetLevel();
         }
 
         public virtual void jump(float jumpHeight) {
             vel.Y -= Util.heightToJumpPower(jumpHeight, gravity);
+            SoundPlayer.play("Jump");
             jumpTime = jumpTimeStart;
         }
         
