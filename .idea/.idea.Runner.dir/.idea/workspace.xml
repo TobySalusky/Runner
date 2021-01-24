@@ -4,14 +4,7 @@
     <projectFile>Runner.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +30,12 @@
       <option value="$PROJECT_DIR$/src/Particles/RubbleParticle.cs" />
       <option value="$PROJECT_DIR$/src/Outside/Simplex.cs" />
       <option value="$PROJECT_DIR$/src/Util.cs" />
+      <option value="$PROJECT_DIR$/src/Runner.cs" />
       <option value="$PROJECT_DIR$/src/Camera.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
       <option value="$PROJECT_DIR$/src/Textures.cs" />
       <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
       <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
-      <option value="$PROJECT_DIR$/src/Runner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
@@ -99,8 +92,7 @@
       <workItem from="1611436706735" duration="8989000" />
       <workItem from="1611445793068" duration="8878000" />
       <workItem from="1611455157324" duration="1695000" />
-      <workItem from="1611457328282" duration="1295000" />
-      <workItem from="1611458647838" duration="2712000" />
+      <workItem from="1611457328282" duration="1071000" />
     </task>
     <servers />
   </component>

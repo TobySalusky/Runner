@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\joshu\Documents\GitHub\Runner" t="IncludeRecursive">
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Toby\Documents\GitHub\Runner" t="IncludeRecursive">
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
@@ -13,7 +13,6 @@
           <e p="chaosrunner.wav" t="Include" />
           <e p="Explosion.wav" t="Include" />
           <e p="Jump.wav" t="Include" />
-          <e p="Whoosh.wav" t="Include" />
         </e>
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
