@@ -28,6 +28,13 @@ namespace Runner
 
         public static float screenShakeTime, screenShakeStart, screenShakeIntensity;
 
+        public static SoundEffect calm;
+        public static SoundEffect chaos;
+
+        public static SoundEffectInstance calmI;
+        public static SoundEffectInstance chaosI;
+
+
         public Runner()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -67,7 +74,18 @@ namespace Runner
             Textures.loadTextures();
             SoundPlayer.loadEffects();
             Chunk.loadMapData();
-            
+
+            calm = SoundPlayer.getEffect("calmrunner");
+            chaos = SoundPlayer.getEffect("chaosrunner");
+
+            calmI = calm.CreateInstance();
+            chaosI = chaos.CreateInstance();
+
+            calmI.Play();
+            calmI.Volume = 1.0F;
+            chaosI.Play();
+            chaosI.Volume = 0.0F;
+
             map = new ChunkMap();
 
             camera = new Camera(Vector2.Zero, 5);
@@ -127,11 +145,17 @@ namespace Runner
             KeyboardState keyState = Keyboard.GetState();
 
             KeyInfo keys = new KeyInfo(keyState, lastKeyState);
-            
+
             if (keys.down(Keys.Escape))
                 Exit();
 
             lastKeyState = keyState;
+
+            if (keys.down(Keys.Q)) 
+            {
+                calmI.Volume = (-1.0F) * calmI.Volume + 1.0F;
+                chaosI.Volume = (-1.0F) * chaosI.Volume + 1.0F;
+            }
             // TODO: Add your update logic here
 
             player.input(keys, deltaTime);
