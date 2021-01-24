@@ -23,6 +23,21 @@ namespace Runner {
             return chunk;
         }
 
+        public void update(float deltaTime) {
+            for (int layer = 0; layer < 3; layer++) {
+                Camera camera = Runner.camera;
+                Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(layer - 2));
+                Point from = chunkIndices(camera.pos - diff);
+                Point to = chunkIndices(camera.pos + diff);
+
+                for (int i = from.X; i <= to.X; i++) {
+                    for (int j = from.Y; j <= to.Y; j++) {
+                        getChunk(new Point(i, j)).update(deltaTime);
+                    }
+                }
+            }
+        }
+
         public void removeBlocks(Vector2 position) {
 
             Point blockInd = ChunkMap.blockIndices(position);

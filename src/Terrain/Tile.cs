@@ -35,12 +35,15 @@ namespace Runner {
             StoneBrick,
             Glass,
             Spike,
+            Button,
+            Door,
 
         }
 
         public static type[] nonSolid = {
             type.Air,
             type.Spike,
+            type.Button
         };
         
         public static type[] nonFullBlock = {
@@ -59,6 +62,8 @@ namespace Runner {
             tableAdd(table, Color.Red, type.StoneBrick);
             tableAdd(table, Color.White, type.Glass);
             tableAdd(table, Color.Black, type.Spike);
+            tableAdd(table, Color.Blue, type.Button);
+            tableAdd(table, new Color(0F, 1F, 0F, 1F), type.Door);
 
             return table;
         }
@@ -175,7 +180,7 @@ namespace Runner {
             atlasRect.Y += 48 * (int) (tileType - 1);
         }
 
-        private int findAtlasIndex() {
+        public virtual int findAtlasIndex() {
 
             if (tileType == type.Spike) { // DIRECTIONAL BLOCKS
                 if (airAbove() && !airBelow() && airLeft() && airRight())
@@ -209,54 +214,129 @@ namespace Runner {
             return 4;
         }
 
-        private bool isAirAt(Vector2 pos, int layer) {
+        public bool isAirAt(Vector2 pos, int layer) {
 
             type tileType = Runner.map.getRawTile(pos, layer).tileType;
             return nonFullBlock.Contains(tileType);
         }
         
-        private bool solidAt(Vector2 pos, int layer) {
+        public bool solidAt(Vector2 pos, int layer) {
 
             return
                 Runner.map.getRawTile(pos, layer).isSolid();
         }
 
-        private bool sameAt(Vector2 pos, int layer) {
+        public bool sameAt(Vector2 pos, int layer) {
 
             return
                 Runner.map.getRawTile(pos, layer).tileType == tileType;
         }
-        private bool sameAbove() {
+        public bool sameAbove() {
             return sameAt(pos - Vector2.UnitY, layer);
         }
         
-        private bool sameBelow() {
+        public bool sameBelow() {
             return sameAt(pos + Vector2.UnitY, layer);
         }
         
-        private bool sameLeft() {
+        public bool sameLeft() {
             return sameAt(pos - Vector2.UnitX, layer);
         }
         
-        private bool sameRight() {
+        public bool sameRight() {
             return sameAt(pos + Vector2.UnitX, layer);
         }
         
         
-        private bool airAbove() {
+        public bool airAbove() {
             return isAirAt(pos - Vector2.UnitY, layer);
         }
         
-        private bool airBelow() {
+        public bool airBelow() {
             return isAirAt(pos + Vector2.UnitY, layer);
         }
         
-        private bool airLeft() {
+        public bool airLeft() {
             return isAirAt(pos - Vector2.UnitX, layer);
         }
         
-        private bool airRight() {
+        public bool airRight() {
             return isAirAt(pos + Vector2.UnitX, layer);
+        }
+
+        public virtual void update(float deltaTime) {
+            
+        }
+
+        public virtual void buttonPulsed() { }
+
+        public virtual bool updateNeeded() {
+            return false;
+        }
+    }
+
+    public class Door : Tile {
+        public Door(type tileType, Vector2 pos, int layer) : base(tileType, pos, layer) {
+        }
+
+
+        public override int findAtlasIndex() {
+            int index;
+            if (sameAbove() && sameBelow())
+                index = 3;
+            else if (sameBelow())
+                index = 0;
+            else
+                index = 6;
+
+            if (solid) index++;
+
+            return index;
+        }
+
+        public override void buttonPulsed() {
+            solid = !solid;
+            findTexture();
+            SoundPlayer.play("DoorFlip");
+        }
+        
+        
+    }
+
+    public class ButtonTile : Tile {
+
+        public Button button = new Button();
+        public ButtonTile(type tileType, Vector2 pos, int layer) : base(tileType, pos, layer) {
+        }
+
+        public override int findAtlasIndex() {
+            if (button.pressed) {
+                return 1;
+            }
+            return 0;
+        }
+
+        public void activate() {
+            button.activate();
+            findTexture();
+        }
+
+        public class Button {
+            public List<Action> actions = new List<Action>();
+            public bool pressed;
+
+            public void activate() {
+
+                if (!pressed) {
+                    pressed = true;
+                    foreach (var action in actions) {
+                        action.Invoke();
+                    }
+                    
+                    SoundPlayer.play("ButtonPress");
+                }
+
+            }
         }
     }
 }

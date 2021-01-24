@@ -17,7 +17,6 @@ namespace Runner {
         public bool selecting, wiring;
 
         public WiringEditor() {
-            Logger.log(rects == null);
         }
 
         public void render(Camera camera, SpriteBatch spriteBatch) {
@@ -35,12 +34,46 @@ namespace Runner {
             
             if (wiring)
                 genWire().render(camera, spriteBatch);
+            
+            Logger.log(rects.Count + " " + connections.Count);
         }
 
         public void saveWiring() {
             DataSerializer.Serialize("Wiring", this);
         }
-        
+
+        public void applyWiring() {
+            var organized = genOrganization();
+
+            foreach (var (key, value) in organized) {
+                key.applyTrigger(value);
+            }
+        }
+
+        public List<KeyValuePair<SelectRect, List<SelectRect>>> genOrganization() {
+            var fullList = new List<KeyValuePair<SelectRect, List<SelectRect>>>();
+
+            foreach (var rect in rects) {
+                var list = new List<SelectRect>();
+                foreach (var wire in connections) {
+                    if (rect.rect.Contains(wire.from)) {
+                        foreach (var otherRect in rects) {
+                            if (otherRect == rect) continue;
+                            
+                            if (otherRect.rect.Contains(wire.to))
+                                list.Add(otherRect);
+                        }
+                    }
+                }
+
+                if (list.Count > 0) {
+                    fullList.Add(new KeyValuePair<SelectRect, List<SelectRect>>(rect, list));
+                }
+            }
+
+            return fullList;
+        }
+
         public SelectRect genRect() {
 
             int sX, sY, eX, eY;

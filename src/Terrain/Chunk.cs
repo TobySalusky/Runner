@@ -13,7 +13,7 @@ namespace Runner {
         
         private readonly Vector2 indices; // should always be ints
 
-        public bool loaded;
+        public bool loaded, updateNeeded;
         
         public Chunk(Vector2 indices) {
             this.indices = indices;
@@ -52,7 +52,10 @@ namespace Runner {
             for (int i = 0; i < chunkSize; i++) {
                 for (int j = 0; j < chunkSize; j++) {
                     for (int k = 0; k < 3; k++) {
-                        tiles[i, j, k] = genTile((int) (topLeft.X + i), (int) (topLeft.Y + j), k);
+                        Tile tile = genTile((int) (topLeft.X + i), (int) (topLeft.Y + j), k);
+                        tiles[i, j, k] = tile;
+                        if (tile.updateNeeded())
+                            updateNeeded = true;
                     }
                 }
             }
@@ -71,6 +74,19 @@ namespace Runner {
             loaded = true;
         }
 
+        public void update(float deltaTime) {
+
+            if (!updateNeeded) return;
+            
+            for (int i = 0; i < chunkSize; i++) {
+                for (int j = 0; j < chunkSize; j++) {
+                    for (int k = 0; k < 3; k++) {
+                        tiles[i, j, k].update(deltaTime);
+                    }
+                }
+            }
+        }
+
         private Tile genTile(int x, int y, int layer) {
             const int airID = (int) Tile.type.Air;
             int ID = airID;
@@ -82,7 +98,16 @@ namespace Runner {
 
             //ID = (int) ((y > 5) ? Tile.type.StoneBrick : Tile.type.Air);
 
-            return new Tile((Tile.type) ID, new Vector2(x, y), layer);
+            Tile.type tileType = (Tile.type) ID;
+
+            if (tileType == Tile.type.Button)
+                return new ButtonTile(tileType, new Vector2(x, y), layer);
+            
+            if (tileType == Tile.type.Door)
+                return new Door(tileType, new Vector2(x, y), layer);
+            
+
+            return new Tile(tileType, new Vector2(x, y), layer);
         }
 
         private static int colorToID(Dictionary<Color, int> table, Color color) {

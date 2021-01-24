@@ -200,6 +200,10 @@ namespace Runner {
             if (tile.tileType == Tile.type.Spike) {
                 die();
             }
+            
+            if (tile.tileType == Tile.type.Button) {
+                (tile as ButtonTile).activate();
+            }
         }
 
         public void die() {

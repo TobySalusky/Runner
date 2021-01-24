@@ -39,6 +39,7 @@ namespace Runner
 
 
         public static WiringEditor wiringEditor;
+        public static bool editMode;
 
         public Runner()
         {
@@ -115,9 +116,8 @@ namespace Runner
                 particles[i] = new List<Particle>();
             }
 
-            wiringEditor = new WiringEditor();
-            wiringEditor.rects = new List<SelectRect>();
-            wiringEditor.connections = new List<WireConnection>();
+            wiringEditor = DataSerializer.Deserialize<WiringEditor>("Wiring");
+            wiringEditor.applyWiring();
             
             resetLevel();
         }
@@ -206,7 +206,8 @@ namespace Runner
             backDeathWall.pos = pos;
             midDeathWall.pos = pos;
             frontDeathWall.pos = pos;
-            
+
+            editMode = true;
         }
 
         protected override void Update(GameTime gameTime) {
@@ -227,7 +228,7 @@ namespace Runner
                 wiringEditor?.saveWiring();
 
             if (keys.pressed(Keys.T)) {
-                wiringEditor = DataSerializer.Deserialize<WiringEditor>("Wiring");
+                wiringEditor?.applyWiring();
             }
 
             if (keys.pressed(Keys.G)) {
@@ -242,11 +243,14 @@ namespace Runner
 
             player.input(keys, deltaTime);
 
-            wiringEditor?.input(mouse, keys, deltaTime);
+            if (editMode)
+                wiringEditor?.input(mouse, keys, deltaTime);
             
             updateEntities(deltaTime);
             
             updateParticles(deltaTime);
+            
+            map.update(deltaTime);
 
             camera.pos = player.pos - Vector2.UnitY * 5;
             // screen shake
@@ -301,7 +305,8 @@ namespace Runner
             renderEntities(entities[2]);
             renderParticles(particles[2]);
             
-            wiringEditor?.render(camera, spriteBatch);
+            if (editMode)
+                wiringEditor?.render(camera, spriteBatch);
             
             spriteBatch.End();
             

@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -19,6 +21,54 @@ namespace Runner {
             Vector2 drawTL = camera.toScreen(new Vector2(rect.X, rect.Y), layer - 2);
 
             spriteBatch.Draw(Textures.get("pixel"), Util.tl(drawTL, drawDimen), Color.Lerp(new Color(1F, 0F, 0F, 0.5F), Tile.baseLayerColors[layer], 0.5F));
+        }
+
+        public void applyAll(Action<Tile> tileFunc) {
+            Point from = new Point(rect.X, rect.Y);
+            Point to = from + new Point(rect.Width, rect.Height);
+
+            for (int x = from.X; x <= to.X; x++) {
+                for (int y = from.Y; y <= to.Y; y++) {
+                    Tile tile = Runner.map.getRawTile(new Point(x, y), layer);
+                    tileFunc.Invoke(tile);
+                }
+            }
+        }
+        
+        public void applyTrigger(List<SelectRect> wiredTo) {
+            Point from = new Point(rect.X, rect.Y);
+            Point to = from + new Point(rect.Width, rect.Height);
+
+            Tile first = Runner.map.getRawTile(from, layer);
+
+            Action<Tile> tileFunc;
+
+            
+            switch (first.tileType) {
+                
+                case Tile.type.Button:
+                    ButtonTile.Button button = new ButtonTile.Button();
+                    void wiredFunc(Tile tile) => tile.buttonPulsed();
+                    foreach (var shouldTrigger in wiredTo) {
+                        button.actions.Add(() => shouldTrigger.applyAll(wiredFunc));
+                    }
+
+                    tileFunc = tile => ((ButtonTile)tile).button = button;
+                    break;
+                
+                default:
+                    tileFunc = tile => Logger.log("Activation Select Rect marking nothing!!?");
+                    break;
+            }
+
+            for (int x = from.X; x < to.X; x++) {
+                for (int y = from.Y; y < to.Y; y++) {
+                    Tile tile = Runner.map.getRawTile(new Point(x, y), layer);
+                    if (tile.tileType == first.tileType) {
+                        tileFunc.Invoke(tile);
+                    }
+                }
+            }
         }
     }
 
@@ -58,7 +108,6 @@ namespace Runner {
 
                 spriteBatch.Draw(Textures.get("pixel"), Util.tl(drawTL, drawDimen), Color.Lerp(new Color(0F, 0F, 1F, 0.5F), Tile.baseLayerColors[layer], 0.5F));
             }
-        
         }
     }
 }
