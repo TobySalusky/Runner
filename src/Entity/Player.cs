@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -20,6 +21,8 @@ namespace Runner {
 
         public float rotation;
         public float rotSpeed;
+
+        public float frontPercentOcluded, midPercentOcluded;
 
         public Player(Vector2 pos) : base(pos, -1) {
 
@@ -64,6 +67,8 @@ namespace Runner {
                     startSwitchTo(switchFrom);
                 }
             }
+            
+            checkOclusion();
         }
 
         public void startSwitchTo(float switchTo) {
@@ -81,13 +86,55 @@ namespace Runner {
             Vector2 diff = dimen / 2;
             Point from = ChunkMap.blockIndices(pos - diff);
             Point to = ChunkMap.blockIndices(pos + diff);
-            
+
             for (int i = from.X; i <= to.X; i++) {
                 for (int j = from.Y; j <= to.Y; j++) {
                     Tile tile = Runner.map.getTile(new Point(i, j), getLayer(zPos));
 
                     if (tile.tileType != Tile.type.Air) {
                         collideInside(tile);
+                    }
+                }
+            }
+        }
+        
+        public void checkOclusion() {
+            Camera camera = Runner.camera;
+            Vector2 diff = dimen / 2 * camera.scaleAt(zPos);
+            Vector2 tl = camera.toScreen(pos, zPos) - diff;
+            Vector2 br = tl + diff * 2;
+
+            frontPercentOcluded = 0;
+            midPercentOcluded = 0;
+
+            if (getLayer() == 2) return;
+            
+            Point from = ChunkMap.blockIndices(camera.toWorld(tl, 0));
+            Point to = ChunkMap.blockIndices(camera.toWorld(br, 0));
+            
+            int blockCount = (to.X - from.X + 1) * (to.Y - from.Y + 1);
+            
+            for (int i = from.X; i <= to.X; i++) {
+                for (int j = from.Y; j <= to.Y; j++) {
+                    Tile.type tileType = Runner.map.getTile(new Point(i, j), 2).tileType;
+
+                    if (!Tile.nonFullBlock.Contains(tileType) && !Tile.transparent.Contains(tileType)) {
+                        frontPercentOcluded += 1F / blockCount;
+                    }
+                }
+            }
+            
+            if (getLayer() == 1) return;
+            from = ChunkMap.blockIndices(camera.toWorld(tl, -1));
+            to = ChunkMap.blockIndices(camera.toWorld(br, -1));
+            blockCount = (to.X - from.X + 1) * (to.Y - from.Y + 1);
+            
+            for (int i = from.X; i <= to.X; i++) {
+                for (int j = from.Y; j <= to.Y; j++) {
+                    Tile.type tileType = Runner.map.getTile(new Point(i, j), 1).tileType;
+
+                    if (!Tile.nonFullBlock.Contains(tileType) && !Tile.transparent.Contains(tileType)) {
+                        midPercentOcluded += 1F / blockCount;
                     }
                 }
             }

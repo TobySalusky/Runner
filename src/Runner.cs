@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace Runner
 {
@@ -15,8 +17,8 @@ namespace Runner
 
         public static Runner instance;
 
-        public static List<Drawable3D> drawables = new List<Drawable3D>();
         public static List<Particle>[] particles = new List<Particle>[3];
+        public static List<Entity>[] entities = new List<Entity>[3];
         public static Camera camera;
 
         public static KeyboardState lastKeyState;
@@ -69,9 +71,6 @@ namespace Runner
 
             camera = new Camera(Vector2.Zero, 5);
             player = new Player(playerStartPos());
-            for (int i = 10; i >= 0; i--) {
-                drawables.Add(new Entity(new Vector2(0, 10), -i * 0.7F));
-            }
 
             for (int i = 0; i < particles.Length; i++) {
                 particles[i] = new List<Particle>();
@@ -96,6 +95,12 @@ namespace Runner
         public void renderParticles(List<Particle> list) {
             foreach (var particle in list) {
                 particle.render(camera, spriteBatch);
+            }
+        }
+        
+        public void renderEntities(List<Entity> list) {
+            foreach (var entity in list) {
+                entity.render(camera, spriteBatch);
             }
         }
         
@@ -145,6 +150,16 @@ namespace Runner
             camera.pos.Y = Math.Min(camera.pos.Y,clampCameraY);
 
             base.Update(gameTime);
+
+
+            for (int i = 0; i < entities.Length; i++) {
+                entities[i] = new List<Entity>();
+            }
+            sortIntoEntities(player);
+        }
+
+        public void sortIntoEntities(Entity entity) {
+            entities[entity.getLayer()].Add(entity);
         }
 
         protected override void Draw(GameTime gameTime)
@@ -163,13 +178,14 @@ namespace Runner
             }*/
             
             map.render(camera, spriteBatch, 0);
+            renderEntities(entities[0]);
             renderParticles(particles[0]);
             map.render(camera, spriteBatch, 1);
+            renderEntities(entities[1]);
             renderParticles(particles[1]);
             map.render(camera, spriteBatch, 2);
+            renderEntities(entities[2]);
             renderParticles(particles[2]);
-
-            player.render(camera, spriteBatch);
             
             spriteBatch.End();
             
