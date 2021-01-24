@@ -187,6 +187,7 @@ namespace Runner {
             }
 
             puffDeath();
+            SoundPlayer.play("Explosion");
             texture = Textures.get("invis");
             
             Runner.shakeScreen(0.4F, 0.6F);

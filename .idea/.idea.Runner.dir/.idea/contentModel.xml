@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
+          <e p="Explosion.wav" t="Include" />
         </e>
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
