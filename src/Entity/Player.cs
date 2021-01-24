@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -14,6 +15,7 @@ namespace Runner {
         public float deathTime;
 
         public float switchTime;
+        public const float switchTimeStart = 0.1F;
         public float switchFrom, switchTo;
 
         public float rotation;
@@ -51,7 +53,27 @@ namespace Runner {
             collideInsides();
 
             if (pos.Y > Chunk.mapData[0].GetLength(1)) {
+                vel = -Vector2.UnitY * 20;
                 die();
+            }
+
+            switchTime -= deltaTime;
+            if (switchTime > 0) {
+                float toZ = Util.revSinLerp(switchTime, switchTimeStart, switchFrom, switchTo);
+                if (!tryMoveToZ(toZ)) {
+                    startSwitchTo(switchFrom);
+                }
+            }
+        }
+
+        public void startSwitchTo(float switchTo) {
+
+            int to = (int) Math.Round(switchTo);
+
+            if (to >= -2 && to <= 0) {
+                switchTime = switchTimeStart;
+                switchFrom = zPos;
+                this.switchTo = to;
             }
         }
 
@@ -70,6 +92,36 @@ namespace Runner {
                 }
             }
         }
+        
+        public void puffDeath() {
+
+            var colorArray = Util.colorArray(texture);
+            
+            Vector2 tMid = new Vector2(texture.Width, texture.Height) / 2;
+            float angle = Util.angle(vel);
+            float mag = Math.Clamp(Util.mag(vel) / 10, 3, 7);
+            
+            for (int i = 0; i < texture.Width; i++) {
+                for (int j = 0; j < texture.Height; j++) {
+                    int index = i + j * texture.Width;
+
+                    Color color = colorArray[index];
+
+                    if (color.A != 0) {
+                        Vector2 add = (new Vector2(i, j) - tMid) * Tile.pixelSize;
+                        /*if (!facingLeft) {
+                            add.X *= -1;
+                        }*/
+
+                        Vector2 pPos = pos + Util.rotate(add, rotation);
+
+                        Particle particle = new RubbleParticle(pPos, zPos, vel + Util.polar(1, Util.randomAngle()), color);
+                        
+                        Runner.particles[getLayer(zPos)].Add(particle);
+                    }
+                }
+            }
+        }
 
         public void collideInside(Tile tile) {
             if (tile.tileType == Tile.type.Spike) {
@@ -80,7 +132,16 @@ namespace Runner {
         public void die() {
             deathTime = 1;
             dead = true;
+
+            if (switchTime > 0) {
+                zPos = switchTo; // TODO: make this look better (only not noticeable since switch is so fast)
+                switchTime = -1;
+            }
+
+            puffDeath();
             texture = Textures.get("invis");
+            
+            Runner.shakeScreen(0.4F, 0.6F);
         }
 
         public void deathReset() {
@@ -97,13 +158,14 @@ namespace Runner {
             vel.Y -= Util.heightToJumpPower(jumpHeight, gravity);
             jumpTime = jumpTimeStart;
         }
-
-        public void tryMoveToZ(float toZ) {
-            if (toZ <= 0 && toZ >= -2) {
-                if (!collidesAt(pos, getLayer(toZ))) {
-                    zPos = toZ;
-                }
+        
+        public bool tryMoveToZ(float toZ) {
+            if (!collidesAt(pos, getLayer(toZ))) {
+                zPos = toZ;
+                return true;
             }
+
+            return false;
         }
 
         public override void render(Camera camera, SpriteBatch spriteBatch) {
@@ -124,10 +186,10 @@ namespace Runner {
                 inputX++;
             
             if (keys.pressed(Keys.W))
-                tryMoveToZ(zPos - 1);
+                startSwitchTo(zPos - 1);
             
             if (keys.pressed(Keys.S))
-                tryMoveToZ(zPos + 1);
+                startSwitchTo(zPos + 1);
             
             float accelSpeed = (inputX == 0 && grounded) ? 5 : 2.5F;
             vel.X += ((inputX * speed) - vel.X) * deltaTime * accelSpeed;

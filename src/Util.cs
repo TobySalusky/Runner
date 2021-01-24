@@ -10,11 +10,18 @@ namespace Runner {
 
         private static Random rand = new Random();
 
-        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch) { // TODO: perhaps use more efficient drawing unless needed, also add rotation
+        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch) {
             
             Vector2 textureSize = textureVec(texture);
             Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
             spriteBatch.Draw(texture, camera.toScreen(pos, zPos), null, Color.White, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
+        }
+        
+        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch, Color tint) {
+            
+            Vector2 textureSize = textureVec(texture);
+            Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
+            spriteBatch.Draw(texture, camera.toScreen(pos, zPos), null, tint, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
         }
         
         public static float nearestAngle(float angle, float targetAngle) {
@@ -88,6 +95,19 @@ namespace Runner {
             return (float) Math.Sin(val / max * Maths.halfPI);
         }
 
+        public static float sinLerp(float valTime, float maxTime, float from, float to) {
+            return from + sinSmooth(valTime, maxTime) * (to - from);
+        }
+        
+        
+        public static float revSinSmooth(float val, float max) {
+            return (float) Math.Sin((1 - val / max) * Maths.halfPI);
+        }
+
+        public static float revSinLerp(float valTime, float maxTime, float from, float to) {
+            return from + revSinSmooth(valTime, maxTime) * (to - from);
+        }
+        
         public static float modulus(float a, float b) { // floats??
             return (float) (a - b * Math.Floor(a / b));
         }

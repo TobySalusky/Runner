@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -14,12 +15,15 @@ namespace Runner
         public static Runner instance;
 
         public static List<Drawable3D> drawables = new List<Drawable3D>();
+        public static List<Particle>[] particles = new List<Particle>[3];
         public static Camera camera;
 
         public static KeyboardState lastKeyState;
 
         public static ChunkMap map;
         public static Player player;
+
+        public static float screenShakeTime, screenShakeStart, screenShakeIntensity;
 
         public Runner()
         {
@@ -32,6 +36,12 @@ namespace Runner
             IsFixedTimeStep = false;
             
             instance = this;
+        }
+
+        public static void shakeScreen(float time, float intensity) {
+            screenShakeStart = time;
+            screenShakeTime = time;
+            screenShakeIntensity = intensity;
         }
 
         public static GraphicsDevice getGraphicsDeviceManager() {
@@ -61,6 +71,10 @@ namespace Runner
             for (int i = 10; i >= 0; i--) {
                 drawables.Add(new Entity(new Vector2(0, 10), -i * 0.7F));
             }
+
+            for (int i = 0; i < particles.Length; i++) {
+                particles[i] = new List<Particle>();
+            }
         }
 
         public static Vector2 playerStartPos() {
@@ -77,7 +91,28 @@ namespace Runner
         private float delta(GameTime gameTime) {
             return (float) gameTime.ElapsedGameTime.TotalSeconds;
         }
+
+        public void renderParticles(List<Particle> list) {
+            foreach (var particle in list) {
+                particle.render(camera, spriteBatch);
+            }
+        }
         
+        public void updateParticles(float deltaTime) {
+            foreach (var list in particles) {
+                for (int i = list.Count - 1; i >= 0; i--) {
+                    Particle particle = list[i];
+
+                    if (particle.deleteFlag) {
+                        list.RemoveAt(i);
+                        continue;
+                    }
+
+                    particle.update(deltaTime);
+                }
+            }
+        }
+
         protected override void Update(GameTime gameTime) {
 
             float deltaTime = delta(gameTime);
@@ -94,9 +129,15 @@ namespace Runner
 
             player.input(keys, deltaTime);
             player.update(deltaTime);
+            
+            updateParticles(deltaTime);
 
             camera.pos = player.pos - Vector2.UnitY * 5;
-            //camera.zPos = player.zPos + 6;
+            // screen shake
+            if (screenShakeTime > 0) {
+                screenShakeTime -= deltaTime;
+                camera.pos += Util.polar(screenShakeIntensity * screenShakeTime / screenShakeStart, Util.randomAngle());
+            }
 
             base.Update(gameTime);
         }
@@ -117,8 +158,11 @@ namespace Runner
             }*/
             
             map.render(camera, spriteBatch, 0);
+            renderParticles(particles[0]);
             map.render(camera, spriteBatch, 1);
+            renderParticles(particles[1]);
             map.render(camera, spriteBatch, 2);
+            renderParticles(particles[2]);
 
             player.render(camera, spriteBatch);
             
