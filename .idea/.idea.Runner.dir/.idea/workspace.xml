@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LevelSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Wiring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/OldMapData0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/OldMapData1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/OldMapData2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Level Maps/LevelOne/LevelOneMapData2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Terrain/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Chunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WiringEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/WiringEditor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

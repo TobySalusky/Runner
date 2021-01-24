@@ -45,8 +45,8 @@ namespace Runner
         public static Dictionary<string, LevelSettings> levelSettingsDict = new Dictionary<string, LevelSettings>();
 
         public static string[] levels = {
-            "LevelOne",
-            "LevelTwo"
+            "Old",
+            "LevelOne"
         };
 
         public static string levelName = levels[0];
