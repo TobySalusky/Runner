@@ -125,7 +125,7 @@ namespace Runner
             
             // level settings
             levelSettingsDict["Old"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
-            levelSettingsDict["Sam"] = new LevelSettings { playerStartPos = new Vector2(300, 40) };
+            levelSettingsDict["Sam"] = new LevelSettings { playerStartPos = new Vector2(10, 70) };
             
             foreach (var level in levels) {
                 if (!levelSettingsDict.Keys.Contains(level)) {
