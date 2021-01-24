@@ -69,6 +69,11 @@ namespace Runner {
                     ? Tile.baseLayerColors[i]
                     : Color.Lerp(Tile.baseLayerColors[i], Color.Black, 0.5F);
             }
+            
+            Player player = Runner.player;
+            const float min = 0.5F;
+            Tile.layerColors[1] = new Color(Tile.layerColors[1], min + (1 - min) * (1 -player.midPercentOcluded));
+            Tile.layerColors[2] = new Color(Tile.layerColors[2], min + (1 - min) * (1 - player.frontPercentOcluded));
 
             Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(layer - 2));
             Point from = chunkIndices(camera.pos - diff);

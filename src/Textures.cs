@@ -80,7 +80,6 @@ namespace Runner {
         }
         
         public static void exportTexture(Texture2D texture, string absolutePath) {
-            Logger.log("exporting: " + absolutePath);
             Stream stream = File.Create(absolutePath);
             texture.SaveAsPng( stream, texture.Width, texture.Height );
             stream.Dispose();

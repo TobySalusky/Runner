@@ -13,10 +13,17 @@ namespace Runner {
             this.zPos = zPos;
         }
 
-        public Vector2 toScreen(Vector2 worldPos, float zPos) {
-            return (worldPos - pos) * scale * farMult(zPos) + screenCenter;
+        public float scaleAt(float zPos) {
+            return scale * farMult(zPos);
         }
 
+        public Vector2 toScreen(Vector2 worldPos, float zPos) {
+            return (worldPos - pos) * scaleAt(zPos) + screenCenter;
+        }
+
+        public Vector2 toWorld(Vector2 screenPos, float zPos) {
+            return (screenPos - screenCenter) / scaleAt(zPos) + pos;
+        }
 
         public float farMult(float zPos) {
             return 1 / ((this.zPos - zPos) * 0.25F);

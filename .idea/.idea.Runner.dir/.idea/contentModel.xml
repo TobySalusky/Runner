@@ -12,8 +12,17 @@
         </e>
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
+            <e p="autosave Untitled 1028.art" t="Include" />
+            <e p="autosave Untitled 1861.art" t="Include" />
             <e p="autosave Untitled 3160.art" t="Include" />
+            <e p="autosave Untitled 3400.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
+            <e p="autosave Untitled 4379.art" t="Include" />
+            <e p="autosave Untitled 6592.art" t="Include" />
+            <e p="autosave Untitled 6880.art" t="Include" />
+            <e p="autosave Untitled 783.art" t="Include" />
+            <e p="autosave Untitled 8259.art" t="Include" />
+            <e p="autosave Untitled 8479.art" t="Include" />
           </e>
           <e p="blink-181.png" t="Include" />
           <e p="blink-182.png" t="Include" />
@@ -23,7 +32,6 @@
           <e p="button.png" t="Include" />
           <e p="d00r.png" t="Include" />
           <e p="glASS.png" t="Include" />
-          <e p="Ice.png" t="Include" />
           <e p="lEvEr.png" t="Include" />
           <e p="MapData0.png" t="Include" />
           <e p="MapData1.png" t="Include" />

@@ -47,6 +47,11 @@ namespace Runner {
             type.Air,
             type.Spike,
         };
+        
+        public static type[] transparent = {
+            type.Air,
+            type.Glass,
+        };
 
         public static Dictionary<Color, int> genTileTable() {
             var table = new Dictionary<Color, int>();
