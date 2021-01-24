@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
@@ -138,6 +139,10 @@ namespace Runner
                 screenShakeTime -= deltaTime;
                 camera.pos += Util.polar(screenShakeIntensity * screenShakeTime / screenShakeStart, Util.randomAngle());
             }
+
+            Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(-2));
+            float clampCameraY = Chunk.mapData[0].GetLength(1) - 1 - diff.Y;
+            camera.pos.Y = Math.Min(camera.pos.Y,clampCameraY);
 
             base.Update(gameTime);
         }
