@@ -52,7 +52,7 @@ namespace Runner {
             
             collideInsides();
 
-            if (pos.Y > Chunk.mapData[0].GetLength(1)) {
+            if (pos.Y > Chunk.mapData[0].GetLength(1) - 10) {
                 vel = -Vector2.UnitY * 20;
                 die();
             }
@@ -134,7 +134,7 @@ namespace Runner {
             dead = true;
 
             if (switchTime > 0) {
-                zPos = switchTo; // TODO: make this look better (only not noticeable since switch is so fast)
+                zPos = Util.lessDiff(zPos, switchTo, switchFrom); // TODO: make this look better (only not noticeable since switch is so fast)
                 switchTime = -1;
             }
 
