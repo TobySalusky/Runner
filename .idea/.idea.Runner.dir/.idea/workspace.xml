@@ -4,7 +4,10 @@
     <projectFile>Runner.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="" />
+    <list default="true" id="bb046364-ccc3-4e17-8e67-fa33c975bb00" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

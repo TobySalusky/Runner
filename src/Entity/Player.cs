@@ -79,6 +79,7 @@ namespace Runner {
             if (to >= -2 && to <= 0) {
                 switchTime = switchTimeStart;
                 switchFrom = zPos;
+                SoundPlayer.play("Whoosh");
                 this.switchTo = to;
             }
         }

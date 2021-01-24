@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PKMNt\\OneDrive\\Documents\\GitHub\\Runner\\Runner\\Runner.csproj": {}
+    "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PKMNt\\OneDrive\\Documents\\GitHub\\Runner\\Runner\\Runner.csproj": {
+    "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PKMNt\\OneDrive\\Documents\\GitHub\\Runner\\Runner\\Runner.csproj",
+        "projectUniqueName": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj",
         "projectName": "Runner",
-        "projectPath": "C:\\Users\\PKMNt\\OneDrive\\Documents\\GitHub\\Runner\\Runner\\Runner.csproj",
-        "packagesPath": "C:\\Users\\PKMNt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PKMNt\\OneDrive\\Documents\\GitHub\\Runner\\Runner\\obj\\",
+        "projectPath": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\Runner.csproj",
+        "packagesPath": "C:\\Users\\joshu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joshu\\Documents\\GitHub\\Runner\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet"
         ],
         "configFilePaths": [
-          "C:\\Users\\PKMNt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joshu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
