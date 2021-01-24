@@ -12,6 +12,9 @@ namespace Runner {
 
         public bool grounded;
         public const float gravity = 70F;
+
+        public bool deleteFlag;
+        public bool hasGravity = true, hasCollision = true;
         
         public Entity(Vector2 pos, float zPos) {
             this.pos = pos;
@@ -20,6 +23,17 @@ namespace Runner {
             texture = Textures.nullTexture;
 
             this.zPos = zPos;
+        }
+        
+        protected bool collidesWith(Entity entity) {
+            return collidesWith(entity, pos, dimen);
+        }
+        
+        protected bool collidesWith(Entity entity, Vector2 pos, Vector2 dimen) {
+            return entity.getLayer() == getLayer() && (pos.X + dimen.X / 2 > entity.pos.X - entity.dimen.X / 2 &&
+                                                       pos.X - dimen.X / 2 < entity.pos.X + entity.dimen.X / 2 &&
+                                                       pos.Y + dimen.Y / 2 > entity.pos.Y - entity.dimen.Y / 2 &&
+                                                       pos.Y - dimen.Y / 2 < entity.pos.Y + entity.dimen.Y / 2);
         }
 
         public int getLayer() {
@@ -66,8 +80,14 @@ namespace Runner {
         public virtual void update(float deltaTime) {
             
             grounded = collidesAt(pos + Vector2.UnitY * 0.1F);
-            vel.Y += gravity * deltaTime; // gravity
-            collisionMove(vel * deltaTime);
+            if (hasGravity)
+                vel.Y += gravity * deltaTime; // gravity
+
+            if (hasCollision) {
+                collisionMove(vel * deltaTime);
+            } else {
+                pos += vel * deltaTime;
+            }
         }
 
         protected void collisionMove(Vector2 fullDiff) {

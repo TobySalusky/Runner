@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -20,6 +21,31 @@ namespace Runner {
                 chunk.load();
             
             return chunk;
+        }
+
+        public void removeBlocks(Vector2 position) {
+
+            Point blockInd = ChunkMap.blockIndices(position);
+            Point block = new Point(Util.intMod(blockInd.X, Chunk.chunkSize),
+                Util.intMod(blockInd.Y, Chunk.chunkSize));
+            var (x, y) = block;
+
+            if (x < 0 || x >= mapWidth() || y < 0 || y >= mapHeight()) return;
+            
+            if (chunks.Keys.Contains(chunkIndices(position))) {
+
+                Tile[,,] tiles = getChunk(position).tiles;
+
+                Vector2 pos = tiles[x, y, 0].pos;
+                for (int i = 0; i < 3; i++) {
+                    tiles[x, y, i] = new Tile(Tile.type.Air, pos, i);
+                }
+            }
+
+            int ID = (int) Tile.type.Air;
+            for (int i = 0; i < 3; i++) {
+                Chunk.mapData[i][blockInd.X, blockInd.Y] = ID;
+            }
         }
 
         public static int mapWidth() {

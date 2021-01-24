@@ -19,12 +19,14 @@ namespace Runner
 
         public static List<Particle>[] particles = new List<Particle>[3];
         public static List<Entity>[] entities = new List<Entity>[3];
+        public static List<Entity> updatedEntities = new List<Entity>();
         public static Camera camera;
 
         public static KeyboardState lastKeyState;
 
         public static ChunkMap map;
         public static Player player;
+        public static DeathWall backDeathWall, midDeathWall, frontDeathWall;
 
         public static float screenShakeTime, screenShakeStart, screenShakeIntensity;
 
@@ -42,7 +44,15 @@ namespace Runner
         }
 
         public static void resetLevel() {
-            
+            updatedEntities.Clear();
+            updatedEntities.Add(player);
+
+            frontDeathWall = new DeathWall(-5, 0);
+            midDeathWall = new DeathWall(-5, -1);
+            backDeathWall = new DeathWall(-5, -2);
+            updatedEntities.Add(frontDeathWall);
+            updatedEntities.Add(midDeathWall);
+            updatedEntities.Add(backDeathWall);
         }
 
         public static void shakeScreen(float time, float intensity) {
@@ -80,6 +90,8 @@ namespace Runner
             for (int i = 0; i < particles.Length; i++) {
                 particles[i] = new List<Particle>();
             }
+            
+            resetLevel();
         }
 
         public static Vector2 playerStartPos() {
@@ -123,6 +135,19 @@ namespace Runner
                 }
             }
         }
+        
+        public void updateEntities(float deltaTime) {
+            for (int i = updatedEntities.Count - 1; i >= 0; i--) {
+                Entity entity = updatedEntities[i];
+
+                if (entity.deleteFlag) {
+                    updatedEntities.RemoveAt(i);
+                    continue;
+                }
+
+                entity.update(deltaTime);
+            }
+        }
 
         protected override void Update(GameTime gameTime) {
 
@@ -139,7 +164,8 @@ namespace Runner
             // TODO: Add your update logic here
 
             player.input(keys, deltaTime);
-            player.update(deltaTime);
+
+            updateEntities(deltaTime);
             
             updateParticles(deltaTime);
 
@@ -157,10 +183,14 @@ namespace Runner
             base.Update(gameTime);
 
 
+            
             for (int i = 0; i < entities.Length; i++) {
                 entities[i] = new List<Entity>();
             }
-            sortIntoEntities(player);
+
+            foreach (var entity in updatedEntities) {
+                sortIntoEntities(entity);
+            }
         }
 
         public void sortIntoEntities(Entity entity) {
