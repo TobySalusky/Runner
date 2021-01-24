@@ -116,7 +116,7 @@ namespace Runner
         }
 
         public static Vector2 playerStartPos() {
-            return new Vector2(30, 40);
+            return new Vector2(30, 75);
         }
 
         protected override void LoadContent()
