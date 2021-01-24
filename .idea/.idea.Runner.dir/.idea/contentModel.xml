@@ -7,11 +7,18 @@
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
+        <e p="SoundEffects" t="Include">
+          <e p="Bonk Sound Effect #2.mp3" t="Include" />
+        </e>
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
             <e p="autosave Untitled 3160.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
           </e>
+          <e p="blink-181.png" t="Include" />
+          <e p="blink-182.png" t="Include" />
+          <e p="blink-183.png" t="Include" />
+          <e p="blink-184.png" t="Include" />
           <e p="brokenRocc.png" t="Include" />
           <e p="button.png" t="Include" />
           <e p="d00r.png" t="Include" />
