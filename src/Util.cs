@@ -24,6 +24,13 @@ namespace Runner {
             spriteBatch.Draw(texture, camera.toScreen(pos, zPos), null, tint, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
         }
         
+        public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch, Color tint, Rectangle rect) {
+            
+            Vector2 textureSize = textureVec(texture);
+            Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
+            spriteBatch.Draw(texture, camera.toScreen(pos, zPos), rect, tint, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
+        }
+        
         public static float nearestAngle(float angle, float targetAngle) {
             float diff = targetAngle - angle;
             if (Math.Abs(diff) < Maths.PI) {

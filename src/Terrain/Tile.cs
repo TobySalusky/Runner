@@ -12,7 +12,7 @@ namespace Runner {
 
         public static Texture2D fullAtlas;
         public Texture2D texture;
-        private Rectangle atlasRect; // TODO:
+        public Rectangle atlasRect; // TODO:
 
         public const int pixelCount = 16;
         public const float pixelSize = 1 / 16F;
@@ -50,6 +50,8 @@ namespace Runner {
         public static type[] nonFullBlock = {
             type.Air,
             type.Spike,
+            type.Button,
+            type.NextStage
         };
         
         public static type[] transparent = {

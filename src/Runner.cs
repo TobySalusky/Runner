@@ -46,11 +46,12 @@ namespace Runner
 
         public static string[] levels = {
             "Old",
-            "LevelOne",
+            "Sam",
             "Josh"
         };
 
-        public static string levelName = levels[2];
+        public static int levelIndex = 0;
+        public static string levelName = levels[levelIndex];
 
         public Runner()
         {
@@ -65,7 +66,18 @@ namespace Runner
             instance = this;
         }
 
+        public static void changeLevel(string newLevelName) {
+            levelName = newLevelName;
+
+            resetLevel();
+        }
+
         public static void resetLevel() {
+            
+            loadLevelMap();
+            
+            player.deathReset();
+            
             updatedEntities.Clear();
             updatedEntities.Add(player);
 
@@ -115,9 +127,9 @@ namespace Runner
             
             
             // level settings
-            //levelSettingsDict["LevelOne"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
-            levelSettingsDict["Josh"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
-
+            levelSettingsDict["Old"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
+            levelSettingsDict["Sam"] = new LevelSettings { playerStartPos = new Vector2(10, 70) };
+            
             foreach (var level in levels) {
                 if (!levelSettingsDict.Keys.Contains(level)) {
                     levelSettingsDict[level] = new LevelSettings();
@@ -129,8 +141,6 @@ namespace Runner
 
             Textures.loadTextures();
             SoundPlayer.loadEffects();
-            
-            loadLevelMap();
             
             calm = SoundPlayer.getEffect("calmrunner");
             chaos = SoundPlayer.getEffect("chaosrunner");
@@ -312,6 +322,31 @@ namespace Runner
             foreach (var entity in updatedEntities) {
                 sortIntoEntities(entity);
             }
+            
+            
+            // debug change level
+            if (keys.pressed(Keys.Left))
+                nextLevel();
+            if (keys.pressed(Keys.Right))
+                nextLevel();
+        }
+
+        public static void lastLevel() {
+            levelIndex--;
+            if (levelIndex < 0) levelIndex = levels.Length - 1;
+
+            levelName = levels[levelIndex];
+            
+            changeLevel(levelName);
+        }
+        
+        public static void nextLevel() {
+            levelIndex++;
+            levelIndex %= levels.Length;
+
+            levelName = levels[levelIndex];
+            
+            changeLevel(levelName);
         }
 
         public void sortIntoEntities(Entity entity) {

@@ -55,6 +55,11 @@ namespace Runner {
 
                 Vector2 pos = tiles[x, y, 0].pos;
                 for (int i = 0; i < 3; i++) {
+                    Tile tile = tiles[x, y, i];
+                    
+                    //if (tile.tileType != Tile.type.Air)
+                        //Runner.particles[i].Add(new BlockParticle(tile, new Vector2(10, 10)));
+                    
                     tiles[x, y, i] = new Tile(Tile.type.Air, pos, i);
                 }
             }
