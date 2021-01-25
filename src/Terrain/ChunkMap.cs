@@ -38,7 +38,7 @@ namespace Runner {
             }
         }
 
-        public void removeBlocks(Vector2 position, Vector2 vel) {
+        public void removeBlock(Vector2 position, Vector2 vel, int layer) {
 
             Point blockInd = ChunkMap.blockIndices(position);
             var (blockX, blockY) = blockInd;
@@ -50,30 +50,25 @@ namespace Runner {
             if (blockX < 0 || blockX >= mapWidth() || blockY < 0 || blockY >= mapHeight()) return;
             
             if (chunks.Keys.Contains(chunkIndices(position))) {
-
+                
                 Tile[,,] tiles = getChunk(position).tiles;
 
+                Tile tile = tiles[x, y, layer];
+                if (tile.tileType == Tile.type.Air) return;
+
                 Vector2 pos = tiles[x, y, 0].pos;
-                for (int i = 0; i < 3; i++) {
-                    Tile tile = tiles[x, y, i];
+                Camera camera = Runner.camera;
+                Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(layer - 2));
 
-                    Camera camera = Runner.camera;
-                    Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(i - 2));
-                    
-
-                    if (Util.between(pos, camera.pos - diff, camera.pos + diff)) { // checks if on-screen before creating particle
-                        if (tile.tileType != Tile.type.Air)
-                            Runner.particles[i].Add(new BlockParticle(tile, vel));
-                    }
-
-                    tiles[x, y, i] = new Tile(Tile.type.Air, pos, i);
+                if (Util.between(pos, camera.pos - diff, camera.pos + diff)) { // checks if on-screen before creating particle
+                    Runner.particles[layer].Add(new BlockParticle(tile, vel));
                 }
+
+                tiles[x, y, layer] = new Tile(Tile.type.Air, pos, layer);
             }
 
             int ID = (int) Tile.type.Air;
-            for (int i = 0; i < 3; i++) {
-                Chunk.mapData[i][blockX, blockY] = ID;
-            }
+            Chunk.mapData[layer][blockX, blockY] = ID;
         }
 
         public static int mapWidth() {

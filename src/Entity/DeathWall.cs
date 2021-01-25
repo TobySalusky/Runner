@@ -57,10 +57,12 @@ namespace Runner {
             Point from = ChunkMap.blockIndices(topCrush - crusherDimen / 2);
             Point to = ChunkMap.blockIndices(topCrush + crusherDimen / 2);
 
+            int layer = getLayer();
+            
             for (int x = from.X; x <= to.X; x++) {
                 for (int y = from.Y; y <= to.Y; y++) {
                     Vector2 blockPos = new Vector2(x, y);
-                    Runner.map.removeBlocks(blockPos, new Vector2(10, 10));
+                    Runner.map.removeBlock(blockPos, new Vector2(10, 10), layer);
                 }
             }
             from = ChunkMap.blockIndices(bottomCrush - crusherDimen / 2);
@@ -68,7 +70,7 @@ namespace Runner {
             for (int x = from.X; x <= to.X; x++) {
                 for (int y = from.Y; y <= to.Y; y++) {
                     Vector2 blockPos = new Vector2(x, y);
-                    Runner.map.removeBlocks(blockPos, new Vector2(10, -10));
+                    Runner.map.removeBlock(blockPos, new Vector2(10, -10), layer);
                 }
             }
 

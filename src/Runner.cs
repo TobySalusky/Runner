@@ -56,7 +56,9 @@ namespace Runner
         public static Effect gaussianBlurShader;
         public RenderTarget2D renderTarget;
 
-        public bool paused = false;
+        public static bool paused = false;
+
+        public static float attemptTime;
         
         public Runner()
         {
@@ -80,9 +82,13 @@ namespace Runner
         public static void resetLevel() {
             
             loadLevelMap();
+
+            // TODO: Fix: (currently says that you finished next level) {I'm lazy rn}
+            Logger.log(levelName + ": " + ((player.dead) ? "Died" : "Finished") + " with time of: " + attemptTime);
+            attemptTime = 0;
             
             player.deathReset();
-            
+
             updatedEntities.Clear();
             updatedEntities.Add(player);
 
@@ -316,6 +322,9 @@ namespace Runner
             
             // Must Be Un-paused to Run Following Code =======
             if (paused) return;
+            
+            if (!player.dead)
+                attemptTime += deltaTime;
 
             adjustMusicFade();
 

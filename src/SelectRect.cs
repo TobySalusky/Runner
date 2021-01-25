@@ -57,7 +57,7 @@ namespace Runner {
                     break;
                 
                 default:
-                    tileFunc = tile => Logger.log("Activation Select Rect marking nothing!!?");
+                    tileFunc = tile => Stats.uselessActivationSelectRectTiles++;
                     break;
             }
 

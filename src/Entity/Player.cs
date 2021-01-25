@@ -45,7 +45,6 @@ namespace Runner {
             
             deathTime -= deltaTime;
             if (dead && deathTime <= 0) {
-                dead = false;
                 Runner.resetLevel();
             }
 
@@ -232,6 +231,8 @@ namespace Runner {
         }
 
         public void deathReset() {
+            dead = false;
+            
             pos = Runner.playerStartPos();
             zPos = -1;
             vel = Vector2.Zero;
