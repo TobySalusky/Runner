@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/BaseFont.spritefont</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/Blur.fx</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/File.fx</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/Gaussian.fx</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/icewallcave.wav</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/icewalllab.wav</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/Pixel.fx</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/TexDark.fx</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/the_snake.wav</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File>Vertex.fx</File>
+    <File>OffPixel.fx</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\joshu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\joshu\Documents\GitHub\Runner" t="IncludeRecursive">
+    <e p="C:\Users\Tobafett\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Tobafett\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Tobafett\Documents\GitHub\Runner" t="IncludeRecursive">
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
         <e p="GameData" t="Include">
           <e p="JoshWiring.xml" t="Include" />
+          <e p="OldWiring.xml" t="Include" />
+          <e p="SamWiring.xml" t="Include" />
           <e p="Settings.xml" t="Include" />
         </e>
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
           <e p="ButtonPress.wav" t="Include" />
-          <e p="calmrunner.wav" t="Include" />
-          <e p="chaosrunner.wav" t="Include" />
+          <e p="CalmSong.wav" t="Include" />
+          <e p="ChaosSong.wav" t="Include" />
           <e p="DoorFlip.wav" t="Include" />
           <e p="Explosion.wav" t="Include" />
           <e p="Jump.wav" t="Include" />
@@ -26,18 +28,31 @@
           <e p="autosaves" t="Include">
             <e p="autosave Untitled 1028.art" t="Include" />
             <e p="autosave Untitled 1861.art" t="Include" />
+            <e p="autosave Untitled 196.art" t="Include" />
             <e p="autosave Untitled 2121.art" t="Include" />
+            <e p="autosave Untitled 2321.art" t="Include" />
             <e p="autosave Untitled 3160.art" t="Include" />
+            <e p="autosave Untitled 3206.art" t="Include" />
+            <e p="autosave Untitled 3233.art" t="Include" />
             <e p="autosave Untitled 3400.art" t="Include" />
+            <e p="autosave Untitled 3645.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
             <e p="autosave Untitled 4105.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
+            <e p="autosave Untitled 4858.art" t="Include" />
+            <e p="autosave Untitled 5148.art" t="Include" />
+            <e p="autosave Untitled 5410.art" t="Include" />
+            <e p="autosave Untitled 5526.art" t="Include" />
             <e p="autosave Untitled 5751.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
             <e p="autosave Untitled 6880.art" t="Include" />
+            <e p="autosave Untitled 7458.art" t="Include" />
             <e p="autosave Untitled 783.art" t="Include" />
             <e p="autosave Untitled 8259.art" t="Include" />
             <e p="autosave Untitled 8479.art" t="Include" />
+            <e p="autosave Untitled 8551.art" t="Include" />
+            <e p="autosave Untitled 9083.art" t="Include" />
+            <e p="autosave Untitled 9182.art" t="Include" />
           </e>
           <e p="brokenRocc.png" t="Include" />
           <e p="button.png" t="Include" />
@@ -58,6 +73,7 @@
             <e p="SamMapData1.png" t="Include" />
             <e p="SamMapData2.png" t="Include" />
           </e>
+          <e p="NextStage.png" t="Include" />
           <e p="null.png" t="Include" />
           <e p="Player" t="Include">
             <e p="Blink0.png" t="Include" />
@@ -68,18 +84,56 @@
           <e p="SmallBrokenRocc.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
+          <e p="SubmissionGoogleDriveDownloadLink.txt" t="Include" />
         </e>
       </e>
       <e p="bin" t="ExcludeRecursive" />
       <e p="Content" t="Include">
-        <e p="Content.mgcb" t="Include" />
-        <e p="obj" t="Include">
+        <e p="BaseFont.spritefont" t="Include" />
+        <e p="bin" t="Include">
           <e p="DesktopGL" t="Include">
             <e p="Content" t="Include">
-              <e p=".mgstats" t="Include" />
+              <e p="BaseFont.xnb" t="Include" />
+              <e p="Gaussian.xnb" t="Include" />
+              <e p="icewallcave.ogg" t="Include" />
+              <e p="icewallcave.xnb" t="Include" />
+              <e p="icewalllab.ogg" t="Include" />
+              <e p="icewalllab.xnb" t="Include" />
+              <e p="OffPixel.xnb" t="Include" />
+              <e p="Pixel.xnb" t="Include" />
+              <e p="TexDark.xnb" t="Include" />
+              <e p="the_snake.ogg" t="Include" />
+              <e p="the_snake.xnb" t="Include" />
+              <e p="Vertex.xnb" t="Include" />
             </e>
           </e>
         </e>
+        <e p="Blur.fx" t="Include" />
+        <e p="Content.mgcb" t="Include" />
+        <e p="File.fx" t="Include" />
+        <e p="Gaussian.fx" t="Include" />
+        <e p="icewallcave.wav" t="Include" />
+        <e p="icewalllab.wav" t="Include" />
+        <e p="obj" t="Include">
+          <e p="DesktopGL" t="Include">
+            <e p="Content" t="Include">
+              <e p=".mgcontent" t="Include" />
+              <e p=".mgstats" t="Include" />
+              <e p="BaseFont.mgcontent" t="Include" />
+              <e p="Gaussian.mgcontent" t="Include" />
+              <e p="icewallcave.mgcontent" t="Include" />
+              <e p="icewalllab.mgcontent" t="Include" />
+              <e p="OffPixel.mgcontent" t="Include" />
+              <e p="Pixel.mgcontent" t="Include" />
+              <e p="TexDark.mgcontent" t="Include" />
+              <e p="the_snake.mgcontent" t="Include" />
+              <e p="Vertex.mgcontent" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Pixel.fx" t="Include" />
+        <e p="TexDark.fx" t="Include" />
+        <e p="the_snake.wav" t="Include" />
       </e>
       <e p="Icon.bmp" t="Include" />
       <e p="Icon.ico" t="Include" />
@@ -112,6 +166,7 @@
           <e p="XnaSerializer.cs" t="Include" />
         </e>
         <e p="Particles" t="Include">
+          <e p="BlockParticle.cs" t="Include" />
           <e p="Particle.cs" t="Include" />
           <e p="PixelParticle.cs" t="Include" />
           <e p="RubbleParticle.cs" t="Include" />
@@ -121,6 +176,7 @@
         <e p="Runner.cs" t="Include" />
         <e p="SelectRect.cs" t="Include" />
         <e p="Settings.cs" t="Include" />
+        <e p="Shaders.cs" t="Include" />
         <e p="SoundEffects" t="Include">
           <e p="SoundPlayer.cs" t="Include" />
         </e>

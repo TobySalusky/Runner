@@ -40,14 +40,14 @@ namespace Runner {
             NextStage
         }
 
-        public static type[] nonSolid = {
+        public static readonly type[] nonSolid = {
             type.Air,
             type.Spike,
             type.Button,
             type.NextStage
         };
         
-        public static type[] nonFullBlock = {
+        public static readonly type[] nonFullBlock = {
             type.Air,
             type.Spike,
             type.Button,

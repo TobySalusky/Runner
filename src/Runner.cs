@@ -53,6 +53,11 @@ namespace Runner
         public static int levelIndex = 0;
         public static string levelName = levels[levelIndex];
 
+        public static Effect gaussianBlurShader;
+        public RenderTarget2D renderTarget;
+
+        public bool paused = false;
+        
         public Runner()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -142,8 +147,8 @@ namespace Runner
             Textures.loadTextures();
             SoundPlayer.loadEffects();
             
-            calm = SoundPlayer.getEffect("calmrunner");
-            chaos = SoundPlayer.getEffect("chaosrunner");
+            calm = SoundPlayer.getEffect("CalmSong");
+            chaos = SoundPlayer.getEffect("ChaosSong");
 
             calmI = calm.CreateInstance();
             chaosI = chaos.CreateInstance();
@@ -164,6 +169,14 @@ namespace Runner
             }
 
             resetLevel();
+            
+            renderTarget = new RenderTarget2D(
+                GraphicsDevice,
+                GraphicsDevice.PresentationParameters.BackBufferWidth,
+                GraphicsDevice.PresentationParameters.BackBufferHeight,
+                false,
+                GraphicsDevice.PresentationParameters.BackBufferFormat,
+                DepthFormat.Depth24);
         }
 
         public static Vector2 playerStartPos() {
@@ -179,6 +192,8 @@ namespace Runner
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            gaussianBlurShader = Shaders.gaussianBlur(Content);
         }
 
         private float delta(GameTime gameTime) {
@@ -259,6 +274,8 @@ namespace Runner
         }
 
         protected override void Update(GameTime gameTime) {
+            
+            base.Update(gameTime);
 
             float deltaTime = delta(gameTime);
 
@@ -267,11 +284,18 @@ namespace Runner
 
             KeyInfo keys = new KeyInfo(keyState, lastKeyState);
             MouseInfo mouse = new MouseInfo(mouseState, lastMouseState);
+            
+            lastKeyState = keyState;
+            lastMouseState = mouseState;
 
             if (keys.down(Keys.Escape))
                 Exit();
             if (keys.pressed(Keys.P))
+                paused = !paused;
+            
+            if (keys.pressed(Keys.L)) 
                 startEditMode();
+            
             if (keys.pressed(Keys.S) && keys.down(Keys.LeftControl))
                 wiringEditor?.saveWiring(levelName);
 
@@ -283,9 +307,15 @@ namespace Runner
                 Settings settings = new Settings(3);
                 settings.save();
             }
-
-            lastKeyState = keyState;
-            lastMouseState = mouseState;
+            
+            // debug change level
+            if (keys.pressed(Keys.Left))
+                lastLevel();
+            if (keys.pressed(Keys.Right))
+                nextLevel();
+            
+            // Must Be Un-paused to Run Following Code =======
+            if (paused) return;
 
             adjustMusicFade();
 
@@ -311,10 +341,6 @@ namespace Runner
             float clampCameraY = ChunkMap.mapHeight() - 1 - diff.Y;
             camera.pos.Y = Math.Min(camera.pos.Y,clampCameraY);
 
-            base.Update(gameTime);
-
-
-            
             for (int i = 0; i < entities.Length; i++) {
                 entities[i] = new List<Entity>();
             }
@@ -322,13 +348,6 @@ namespace Runner
             foreach (var entity in updatedEntities) {
                 sortIntoEntities(entity);
             }
-            
-            
-            // debug change level
-            if (keys.pressed(Keys.Left))
-                nextLevel();
-            if (keys.pressed(Keys.Right))
-                nextLevel();
         }
 
         public static void lastLevel() {
@@ -355,10 +374,11 @@ namespace Runner
 
         protected override void Draw(GameTime gameTime)
         {
+
+            GraphicsDevice.SetRenderTarget(renderTarget);
+            
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
+            
             spriteBatch.Begin(SpriteSortMode.Deferred,
                 BlendState.NonPremultiplied,
                 SamplerState.PointClamp,
@@ -383,7 +403,26 @@ namespace Runner
             
             spriteBatch.End();
             
+            GraphicsDevice.SetRenderTarget(null);
+            
+            
+            // POST-PROCESSING
+            Effect shader = shouldBlur() ? gaussianBlurShader : null;
+
+            spriteBatch.Begin(SpriteSortMode.Deferred,
+                BlendState.NonPremultiplied,
+                SamplerState.PointClamp,
+                null, null, shader, null);
+            
+            spriteBatch.Draw(renderTarget, new Rectangle(0,0,1920,1080), Color.White);
+            
+            spriteBatch.End();
+            
             base.Draw(gameTime);
+        }
+
+        public bool shouldBlur() {
+            return paused;
         }
     }
 }

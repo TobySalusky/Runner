@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
@@ -23,14 +24,14 @@ namespace Runner {
             Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
             spriteBatch.Draw(texture, camera.toScreen(pos, zPos), null, tint, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
         }
-        
+
         public static void render(Texture2D texture, Vector2 pos, Vector2 dimen, float zPos, float rotation, Camera camera, SpriteBatch spriteBatch, Color tint, Rectangle rect) {
             
             Vector2 textureSize = textureVec(texture);
             Vector2 scale = dimen * camera.scale * camera.farMult(zPos) / textureSize;
-            spriteBatch.Draw(texture, camera.toScreen(pos, zPos), rect, tint, rotation, textureSize / 2F, scale,  SpriteEffects.None, 0);
+            spriteBatch.Draw(texture, camera.toScreen(pos, zPos), rect, tint, rotation, new Vector2(rect.Width, rect.Height) / 2F, scale,  SpriteEffects.None, 0);
         }
-        
+
         public static float nearestAngle(float angle, float targetAngle) {
             float diff = targetAngle - angle;
             if (Math.Abs(diff) < Maths.PI) {
@@ -55,6 +56,10 @@ namespace Runner {
 
         public static int randomIntPN() {
             return randInt(0, 2) * 2 - 1;
+        }
+
+        public static bool between(Vector2 val, Vector2 tl, Vector2 br) {
+            return val.X > tl.X && val.X < br.X && val.Y > tl.Y && val.Y < br.Y;
         }
 
         // TODO: optimise, honestly seems super inefficient

@@ -38,7 +38,7 @@ namespace Runner {
             }
         }
 
-        public void removeBlocks(Vector2 position) {
+        public void removeBlocks(Vector2 position, Vector2 vel) {
 
             Point blockInd = ChunkMap.blockIndices(position);
             var (blockX, blockY) = blockInd;
@@ -56,10 +56,16 @@ namespace Runner {
                 Vector2 pos = tiles[x, y, 0].pos;
                 for (int i = 0; i < 3; i++) {
                     Tile tile = tiles[x, y, i];
+
+                    Camera camera = Runner.camera;
+                    Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(i - 2));
                     
-                    //if (tile.tileType != Tile.type.Air)
-                        //Runner.particles[i].Add(new BlockParticle(tile, new Vector2(10, 10)));
-                    
+
+                    if (Util.between(pos, camera.pos - diff, camera.pos + diff)) { // checks if on-screen before creating particle
+                        if (tile.tileType != Tile.type.Air)
+                            Runner.particles[i].Add(new BlockParticle(tile, vel));
+                    }
+
                     tiles[x, y, i] = new Tile(Tile.type.Air, pos, i);
                 }
             }

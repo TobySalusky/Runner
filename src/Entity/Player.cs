@@ -277,10 +277,10 @@ namespace Runner {
             if (keys.down(Keys.D))
                 inputX++;
             
-            if (keys.pressed(Keys.W))
+            if (keys.pressed(Keys.W) || keys.pressed(Keys.Up))
                 startSwitchTo(zPos - 1);
             
-            if (keys.pressed(Keys.S))
+            if (keys.pressed(Keys.S) || keys.pressed(Keys.Down))
                 startSwitchTo(zPos + 1);
            
             
