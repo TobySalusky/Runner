@@ -23,27 +23,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Stats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DebugStats.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SmallBrokenRocc.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/CrackedBrick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/SubmissionGoogleDriveDownloadLink.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/brokenRocc.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/CrackedBrickFull.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Runner.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Runner.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/DeathWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DeathWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Drawable3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Drawable3D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/FileUtil.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KeyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/KeyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/LevelSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Logger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Maths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/MouseInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Paths.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SelectRect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SelectRect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SelectRect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/SelectRect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shaders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Shaders.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Tile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Textures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Textures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Util.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WiringEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Editor/WiringEditor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,43 +62,52 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Logger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DebugStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Runner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/WiringEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Outside/XnaSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Outside/Simplex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/SelectRect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Shaders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/DeathWall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/KeyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/WiringEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/PixelParticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/Particle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Terrain/ChunkMap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Outside/Simplex.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Terrain/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Terrain/Tile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/SelectRect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Shaders.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/DeathWall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Particles/RubbleParticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Textures.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/BlockParticle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/KeyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/FileUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Drawable3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/FileUtil.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Drawable3D.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
         <option value="$PROJECT_DIR$/Content/Gaussian.fx" />
         <option value="$PROJECT_DIR$/src/Shaders.cs" />
         <option value="$PROJECT_DIR$/src/Particles/BlockParticle.cs" />
         <option value="$PROJECT_DIR$/src/Util.cs" />
         <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
         <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
-        <option value="$PROJECT_DIR$/src/Stats.cs" />
         <option value="$PROJECT_DIR$/src/SelectRect.cs" />
+        <option value="$PROJECT_DIR$/src/DebugStats.cs" />
+        <option value="$PROJECT_DIR$/src/Stats.cs" />
+        <option value="$PROJECT_DIR$/src/Editor/SelectRect.cs" />
+        <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
         <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
         <option value="$PROJECT_DIR$/src/Runner.cs" />
+        <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
       </list>
     </option>
   </component>
@@ -157,7 +174,8 @@
       <workItem from="1611500285719" duration="13160000" />
       <workItem from="1611513551894" duration="7605000" />
       <workItem from="1611521927857" duration="3802000" />
-      <workItem from="1611594178950" duration="3263000" />
+      <workItem from="1611594178950" duration="6637000" />
+      <workItem from="1611629913329" duration="2858000" />
     </task>
     <servers />
   </component>
@@ -182,25 +200,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1611597407885">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1611632821106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611597407885" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1611597407885">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611632821106" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1611632821106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611597407885" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1611597407885">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611632821106" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1611632821105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611597407885" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1611597407885">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611632821105" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1611632821106">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611597407885" />
-    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1611596922290">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611632821106" />
+    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1611632671568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611596922290" />
+    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611632671568" />
   </component>
 </project>

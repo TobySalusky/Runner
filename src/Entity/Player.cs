@@ -55,6 +55,7 @@ namespace Runner {
             base.update(deltaTime);
             
             collideInsides();
+            collideTouching();
 
             if (pos.Y > ChunkMap.mapHeight() - 10) {
                 vel = -Vector2.UnitY * 20;
@@ -123,6 +124,30 @@ namespace Runner {
             }
         }
         
+        public void collideTouching() { // includes inside blocks TODO: dont?
+            Vector2 diff = dimen / 2 + Vector2.One * 0.2F;
+            Point from = ChunkMap.blockIndices(pos - diff);
+            Point to = ChunkMap.blockIndices(pos + diff);
+
+            for (int i = from.X; i <= to.X; i++) {
+                for (int j = from.Y; j <= to.Y; j++) {
+                    Tile tile = Runner.map.getTile(new Point(i, j), getLayer(zPos));
+
+                    if (tile.tileType != Tile.type.Air) {
+                        collideTouching(tile);
+                    }
+                }
+            }
+        }
+
+        public void collideTouching(Tile tile) {
+            Tile.type tileType = tile.tileType;
+
+            if (tileType == Tile.type.CrackedBrick) {
+                ((FallingBlock)tile).startFall();
+            }
+        }
+
         public void checkOclusion() {
             Camera camera = Runner.camera;
             Vector2 diff = dimen / 2 * camera.scaleAt(zPos);
@@ -201,7 +226,7 @@ namespace Runner {
             }
             
             if (tile.tileType == Tile.type.Button) {
-                (tile as ButtonTile).activate();
+                ((ButtonTile)tile).activate();
             }
 
             if (tile.tileType == Tile.type.NextStage) {

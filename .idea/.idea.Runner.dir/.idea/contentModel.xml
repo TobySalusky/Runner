@@ -12,6 +12,7 @@
           <e p="OldWiring.xml" t="Include" />
           <e p="SamWiring.xml" t="Include" />
           <e p="Settings.xml" t="Include" />
+          <e p="Stats.xml" t="Include" />
         </e>
         <e p="SoundEffects" t="Include">
           <e p="Bonk.wav" t="Include" />
@@ -35,9 +36,13 @@
             <e p="autosave Untitled 3206.art" t="Include" />
             <e p="autosave Untitled 3233.art" t="Include" />
             <e p="autosave Untitled 3400.art" t="Include" />
+            <e p="autosave Untitled 3408.art" t="Include" />
             <e p="autosave Untitled 3645.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
+            <e p="autosave Untitled 3954.art" t="Include" />
             <e p="autosave Untitled 4105.art" t="Include" />
+            <e p="autosave Untitled 4167.art" t="Include" />
+            <e p="autosave Untitled 4314.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
             <e p="autosave Untitled 4858.art" t="Include" />
             <e p="autosave Untitled 5148.art" t="Include" />
@@ -45,27 +50,38 @@
             <e p="autosave Untitled 5526.art" t="Include" />
             <e p="autosave Untitled 5751.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
+            <e p="autosave Untitled 6744.art" t="Include" />
             <e p="autosave Untitled 6880.art" t="Include" />
+            <e p="autosave Untitled 7017.art" t="Include" />
+            <e p="autosave Untitled 7154.art" t="Include" />
+            <e p="autosave Untitled 7330.art" t="Include" />
             <e p="autosave Untitled 7458.art" t="Include" />
             <e p="autosave Untitled 783.art" t="Include" />
             <e p="autosave Untitled 8259.art" t="Include" />
             <e p="autosave Untitled 8479.art" t="Include" />
             <e p="autosave Untitled 8551.art" t="Include" />
+            <e p="autosave Untitled 8802.art" t="Include" />
+            <e p="autosave Untitled 8884.art" t="Include" />
             <e p="autosave Untitled 9083.art" t="Include" />
             <e p="autosave Untitled 9182.art" t="Include" />
           </e>
-          <e p="brokenRocc.png" t="Include" />
           <e p="button.png" t="Include" />
           <e p="Clouds.png" t="Include" />
+          <e p="CrackedBrick.png" t="Include" />
+          <e p="CrackedBrickFull.png" t="Include" />
           <e p="DeathWallArm.png" t="Include" />
           <e p="DeathWallCrusher.png" t="Include" />
           <e p="Door.png" t="Include" />
           <e p="glASS.png" t="Include" />
           <e p="lEvEr.png" t="Include" />
           <e p="Maps" t="Include">
+            <e p="FourthMapData0.png" t="Include" />
+            <e p="FourthMapData1.png" t="Include" />
+            <e p="FourthMapData2.png" t="Include" />
             <e p="JoshMapData0.png" t="Include" />
             <e p="JoshMapData1.png" t="Include" />
             <e p="JoshMapData2.png" t="Include" />
+            <e p="NewestUpdateFourth.art" t="Include" />
             <e p="OldMapData0.png" t="Include" />
             <e p="OldMapData1.png" t="Include" />
             <e p="OldMapData2.png" t="Include" />
@@ -81,10 +97,9 @@
             <e p="Blink2.png" t="Include" />
             <e p="Player.png" t="Include" />
           </e>
-          <e p="SmallBrokenRocc.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
-          <e p="SubmissionGoogleDriveDownloadLink.txt" t="Include" />
+          <e p="TilePalette.png" t="Include" />
         </e>
       </e>
       <e p="bin" t="ExcludeRecursive" />
@@ -149,18 +164,18 @@
       <e p="Runner.csproj" t="IncludeRecursive" />
       <e p="src" t="Include">
         <e p="Camera.cs" t="Include" />
-        <e p="Drawable3D.cs" t="Include" />
+        <e p="DebugStats.cs" t="Include" />
+        <e p="Editor" t="Include">
+          <e p="LevelSettings.cs" t="Include" />
+          <e p="SelectRect.cs" t="Include" />
+          <e p="WiringEditor.cs" t="Include" />
+        </e>
         <e p="Entity" t="Include">
           <e p="DeathWall.cs" t="Include" />
+          <e p="Drawable3D.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
-        <e p="FileUtil.cs" t="Include" />
-        <e p="KeyInfo.cs" t="Include" />
-        <e p="LevelSettings.cs" t="Include" />
-        <e p="Logger.cs" t="Include" />
-        <e p="Maths.cs" t="Include" />
-        <e p="MouseInfo.cs" t="Include" />
         <e p="Outside" t="Include">
           <e p="Simplex.cs" t="Include" />
           <e p="XnaSerializer.cs" t="Include" />
@@ -171,12 +186,9 @@
           <e p="PixelParticle.cs" t="Include" />
           <e p="RubbleParticle.cs" t="Include" />
         </e>
-        <e p="Paths.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Runner.cs" t="Include" />
-        <e p="SelectRect.cs" t="Include" />
         <e p="Settings.cs" t="Include" />
-        <e p="Shaders.cs" t="Include" />
         <e p="SoundEffects" t="Include">
           <e p="SoundPlayer.cs" t="Include" />
         </e>
@@ -186,9 +198,17 @@
           <e p="ChunkMap.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
         </e>
-        <e p="Textures.cs" t="Include" />
-        <e p="Util.cs" t="Include" />
-        <e p="WiringEditor.cs" t="Include" />
+        <e p="Util" t="Include">
+          <e p="FileUtil.cs" t="Include" />
+          <e p="KeyInfo.cs" t="Include" />
+          <e p="Logger.cs" t="Include" />
+          <e p="Maths.cs" t="Include" />
+          <e p="MouseInfo.cs" t="Include" />
+          <e p="Paths.cs" t="Include" />
+          <e p="Shaders.cs" t="Include" />
+          <e p="Textures.cs" t="Include" />
+          <e p="Util.cs" t="Include" />
+        </e>
       </e>
     </e>
   </component>

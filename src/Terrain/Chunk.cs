@@ -100,6 +100,9 @@ namespace Runner {
 
             Tile.type tileType = (Tile.type) ID;
 
+            if (tileType == Tile.type.CrackedBrick)
+                return new FallingBlock(tileType, new Vector2(x, y), layer);
+            
             if (tileType == Tile.type.Button)
                 return new ButtonTile(tileType, new Vector2(x, y), layer);
             

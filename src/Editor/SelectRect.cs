@@ -41,7 +41,7 @@ namespace Runner {
 
             Tile first = Runner.map.getRawTile(from, layer);
 
-            Action<Tile> tileFunc;
+            Action<Tile> tileFunc = tile => DebugStats.uselessActivationSelectRectTiles++;
 
             
             switch (first.tileType) {
@@ -54,10 +54,6 @@ namespace Runner {
                     }
 
                     tileFunc = tile => ((ButtonTile)tile).button = button;
-                    break;
-                
-                default:
-                    tileFunc = tile => Stats.uselessActivationSelectRectTiles++;
                     break;
             }
 

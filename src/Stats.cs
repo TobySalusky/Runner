@@ -1,5 +1,9 @@
 namespace Runner {
-    public static class Stats {
-        public static int uselessActivationSelectRectTiles;
+    public class Stats {
+
+        public float test;
+        
+        public Stats() { }
+
     }
 }

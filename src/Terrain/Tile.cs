@@ -37,7 +37,8 @@ namespace Runner {
             Spike,
             Button,
             Door,
-            NextStage
+            NextStage,
+            CrackedBrick,
         }
 
         public static readonly type[] nonSolid = {
@@ -64,14 +65,61 @@ namespace Runner {
         public static Dictionary<Color, int> genTileTable() {
             var table = new Dictionary<Color, int>();
 
-            tableAdd(table, Color.Red, type.StoneBrick);
+            tableAdd(table, Color.Red, type.StoneBrick); // TODO: add cracked brick
             tableAdd(table, Color.White, type.Glass);
             tableAdd(table, Color.Black, type.Spike);
             tableAdd(table, Color.Blue, type.Button);
             tableAdd(table, new Color(0F, 1F, 0F, 1F), type.Door);
             tableAdd(table, new Color(1F, 1F, 0F, 1F), type.NextStage);
+            tableAdd(table, Color.Aqua, type.CrackedBrick);
 
             return table;
+        }
+
+        public static void exportTilePalette() {
+            Textures.exportTexture(scaleUp(tilePalette(genTileTable()), 3), Paths.texturePath, "TilePalette");
+        }
+
+        public static Texture2D scaleUp(Texture2D texture, int mult) {
+            Texture2D newTexture = new Texture2D(Runner.getGraphicsDeviceManager(), texture.Width * mult, texture.Height * mult);
+            
+            var col = new Color[newTexture.Width * newTexture.Height];
+
+            var oldCol = Util.colorArray(texture);
+            for (int x = 0; x < texture.Width; x++) {
+                for (int y = 0; y < texture.Height; y++) {
+                    Color thisCol = oldCol[x + y * texture.Width];
+
+                    for (int i = 0; i < mult; i++) {
+                        for (int j = 0; j < mult; j++) {
+                            int index = (x * mult + i) + (y * mult + j) * newTexture.Width;
+                            col[index] = thisCol;
+                        }
+                    }
+                }
+            }
+
+            newTexture.SetData(col);
+            return newTexture;
+        }
+        
+        public static Texture2D tilePalette(Dictionary<Color, int> dict) {
+            Texture2D texture = new Texture2D(Runner.getGraphicsDeviceManager(), 4, dict.Keys.Count / 4 + 1);
+            
+            var col = new Color[texture.Width * texture.Height];
+
+            for (int i = 0; i < col.Length; i++) { 
+                col[i] = new Color(1F,1F,1F,0F);
+            }
+
+            int j = 0;
+            foreach (Color key in dict.Keys) {
+                col[j] = key;
+                j++;
+            }
+
+            texture.SetData(col);
+            return texture;
         }
 
         public static void genAtlas() {
@@ -278,6 +326,60 @@ namespace Runner {
 
         public virtual bool updateNeeded() {
             return false;
+        }
+    }
+
+    public class FallingBlock : Tile {
+        public FallingBlock(type tileType, Vector2 pos, int layer) : base(tileType, pos, layer) { }
+
+        public bool triggered;
+        public float timeLeft;
+
+        public override int findAtlasIndex() {
+            if (sameLeft() && sameRight()) return 1;
+            if (sameRight()) return 0;
+
+            return 2;
+        }
+
+        public override bool updateNeeded() {
+            return true;
+        }
+
+        public override void update(float deltaTime) {
+            base.update(deltaTime);
+
+            if (triggered) {
+                timeLeft -= deltaTime;
+
+                if (timeLeft <= 0) { 
+                    Runner.map.removeBlock(pos, Vector2.Zero, layer); // TODO: only make chunk update while trigger is true
+                    chainFall(-Vector2.UnitX, layer);
+                    chainFall(Vector2.UnitX, layer);
+                    chainFall(-Vector2.UnitY, layer);
+                    chainFall(Vector2.UnitY, layer);
+                    if (layer != 0) chainFall(Vector2.Zero, layer - 1);
+                    if (layer != 2) chainFall(Vector2.Zero, layer + 1);
+                }
+            }
+        }
+
+        public void chainFall(Vector2 offset, int layer) {
+            Tile tile = Runner.map.getRawTile(pos + offset, layer);
+            if (tile.tileType == tileType) {
+                ((FallingBlock)tile).startFall();
+            }
+        }
+
+        public void startFall() {
+            if (!triggered) {
+                triggered = true;
+                timeLeft = 0.5F;
+            }
+        }
+
+        public override void buttonPulsed() {
+            startFall();
         }
     }
 

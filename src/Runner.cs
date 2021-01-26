@@ -47,7 +47,8 @@ namespace Runner
         public static string[] levels = {
             "Old",
             "Sam",
-            "Josh"
+            "Josh",
+            "Fourth"
         };
 
         public static int levelIndex = 0;
@@ -89,6 +90,10 @@ namespace Runner
             
             player.deathReset();
 
+            foreach (var list in particles) {
+                list.Clear();
+            }
+            
             updatedEntities.Clear();
             updatedEntities.Add(player);
 
@@ -151,6 +156,7 @@ namespace Runner
             base.Initialize();
 
             Textures.loadTextures();
+            Tile.exportTilePalette();
             SoundPlayer.loadEffects();
             
             calm = SoundPlayer.getEffect("CalmSong");
@@ -309,9 +315,8 @@ namespace Runner
                 wiringEditor?.applyWiring();
             }
 
-            if (keys.pressed(Keys.G)) {
-                Settings settings = new Settings(3);
-                settings.save();
+            if (keys.pressed(Keys.G)) { // testing key
+                
             }
             
             // debug change level
