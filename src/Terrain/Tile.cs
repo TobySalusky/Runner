@@ -336,8 +336,8 @@ namespace Runner {
         public float timeLeft;
 
         public override int findAtlasIndex() {
-            if (sameLeft() && sameRight()) return 1;
-            if (sameRight()) return 0;
+            if (!airLeft() && !airRight()) return 1;
+            if (!airRight()) return 0;
 
             return 2;
         }

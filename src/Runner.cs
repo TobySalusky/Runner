@@ -57,9 +57,18 @@ namespace Runner
         public static Effect gaussianBlurShader;
         public RenderTarget2D renderTarget;
 
-        public static bool paused = false;
+        public static bool paused = false, endingPause = false;
 
         public static float attemptTime;
+        
+        
+        // UI
+        public static List<UIElement> gameUI = new List<UIElement>();
+        public static List<UIElement> pauseUI = new List<UIElement>();
+        
+        public static List<UIElement> uiElements = gameUI;
+
+        public static List<UITransition> uiTransitions = new List<UITransition>();
         
         public Runner()
         {
@@ -189,6 +198,11 @@ namespace Runner
                 false,
                 GraphicsDevice.PresentationParameters.BackBufferFormat,
                 DepthFormat.Depth24);
+
+            // UI
+            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(300, 200), new Vector2(300, 100)));
+            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(400, 310), new Vector2(300, 100)));
+            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(500, 420), new Vector2(300, 100)));
         }
 
         public static Vector2 playerStartPos() {
@@ -302,9 +316,7 @@ namespace Runner
 
             if (keys.down(Keys.Escape))
                 Exit();
-            if (keys.pressed(Keys.P))
-                paused = !paused;
-            
+
             if (keys.pressed(Keys.L)) 
                 startEditMode();
             
@@ -315,9 +327,6 @@ namespace Runner
                 wiringEditor?.applyWiring();
             }
 
-            if (keys.pressed(Keys.G)) { // testing key
-                
-            }
             
             // debug change level
             if (keys.pressed(Keys.Left))
@@ -325,6 +334,43 @@ namespace Runner
             if (keys.pressed(Keys.Right))
                 nextLevel();
             
+            
+            // UI
+            for (int i = uiTransitions.Count - 1; i >= 0; i--) {
+                UITransition transition = uiTransitions[i];
+
+                if (transition.deleteFlag) {
+                    uiTransitions.RemoveAt(i);
+                    continue;
+                }
+
+                transition.update(deltaTime);
+            }
+            
+            foreach (var element in uiElements) {
+                element.update(mouse, keys, deltaTime);
+            }
+            
+            if (keys.pressed(Keys.P)) {
+
+                if (!paused) {
+                    paused = true;
+                    uiElements = pauseUI;
+                    UI.transitionAll(uiElements, element => new SlideIn(element) {endTime = 0.4F});
+                }
+                else {
+                    endingPause = true;
+                    UI.transitionAll(uiElements, element => new SlideOut(element) {endTime = 0.4F});
+                }
+            }
+
+            if (paused && endingPause && uiTransitions.Count == 0) {
+                paused = false;
+                endingPause = false;
+                uiElements = gameUI;
+            }
+
+
             // Must Be Un-paused to Run Following Code =======
             if (paused) return;
             
@@ -430,6 +476,17 @@ namespace Runner
             
             spriteBatch.Draw(renderTarget, new Rectangle(0,0,1920,1080), Color.White);
             
+            spriteBatch.End();
+            
+            
+            // Rendering UI
+            spriteBatch.Begin(SpriteSortMode.Deferred,
+                BlendState.NonPremultiplied,
+                SamplerState.PointClamp,
+                null, null, null, null);
+            foreach (var element in uiElements) {
+                element.render(spriteBatch);
+            }
             spriteBatch.End();
             
             base.Draw(gameTime);

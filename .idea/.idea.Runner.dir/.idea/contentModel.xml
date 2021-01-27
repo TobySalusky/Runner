@@ -198,6 +198,12 @@
           <e p="ChunkMap.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
         </e>
+        <e p="UI" t="Include">
+          <e p="UI.cs" t="Include" />
+          <e p="UIButton.cs" t="Include" />
+          <e p="UIElement.cs" t="Include" />
+          <e p="UITransition.cs" t="Include" />
+        </e>
         <e p="Util" t="Include">
           <e p="FileUtil.cs" t="Include" />
           <e p="KeyInfo.cs" t="Include" />

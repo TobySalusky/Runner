@@ -115,6 +115,14 @@ namespace Runner {
             return from + sinSmooth(valTime, maxTime) * (to - from);
         }
         
+        public static Vector2 sinLerp(float valTime, float maxTime, Vector2 from, Vector2 to) {
+            return from + sinSmooth(valTime, maxTime) * (to - from);
+        }
+        
+        public static Vector2 sinLerp(float val, Vector2 from, Vector2 to) {
+            return from + sinSmooth(val, 1) * (to - from);
+        }
+        
         
         public static float revSinSmooth(float val, float max) {
             return (float) Math.Sin((1 - val / max) * Maths.halfPI);
