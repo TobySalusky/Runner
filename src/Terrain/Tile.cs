@@ -39,20 +39,23 @@ namespace Runner {
             Door,
             NextStage,
             CrackedBrick,
+            GravityButton,
         }
 
         public static readonly type[] nonSolid = {
             type.Air,
             type.Spike,
             type.Button,
-            type.NextStage
+            type.NextStage,
+            type.GravityButton
         };
         
         public static readonly type[] nonFullBlock = {
             type.Air,
             type.Spike,
             type.Button,
-            type.NextStage
+            type.NextStage,
+            type.GravityButton
         };
         
         public static type[] transparent = {
@@ -72,6 +75,7 @@ namespace Runner {
             tableAdd(table, new Color(0F, 1F, 0F, 1F), type.Door);
             tableAdd(table, new Color(1F, 1F, 0F, 1F), type.NextStage);
             tableAdd(table, Color.Aqua, type.CrackedBrick);
+            tableAdd(table, Color.Purple, type.GravityButton);
 
             return table;
         }
@@ -237,14 +241,14 @@ namespace Runner {
         public virtual int findAtlasIndex() {
 
             if (tileType == type.Spike) { // DIRECTIONAL BLOCKS
-                if (airAbove() && !airBelow() && airLeft() && airRight())
+                if (!airBelow())
                     return 1;
-                if (airAbove() && airBelow() && airLeft() && !airRight())
-                    return 3;
-                if (airAbove() && airBelow() && !airLeft() && airRight())
-                    return 5;
-                if (!airAbove() && airBelow() && airLeft() && airRight())
+                if (!airAbove())
                     return 7;
+                if (!airRight())
+                    return 3;
+                if (!airLeft())
+                    return 5;
                 return 1;
             }
 
@@ -327,6 +331,8 @@ namespace Runner {
         public virtual bool updateNeeded() {
             return false;
         }
+
+        public virtual void blockUpdate() { }
     }
 
     public class FallingBlock : Tile {
@@ -369,6 +375,9 @@ namespace Runner {
             if (tile.tileType == tileType) {
                 ((FallingBlock)tile).startFall();
             }
+            else {
+                tile.blockUpdate();
+            }
         }
 
         public void startFall() {
@@ -409,6 +418,38 @@ namespace Runner {
         }
         
         
+    }
+    
+    public class GravitySwitcher : Tile {
+
+        public bool pressed;
+        
+        public GravitySwitcher(type tileType, Vector2 pos, int layer) : base(tileType, pos, layer) {
+        }
+
+        public override int findAtlasIndex() {
+            int index = pressed ? 1 : 0;
+
+            if (!airAbove()) index += 3;
+
+            return index;
+        }
+
+        public void activate() {
+            if (!pressed) {
+                SoundPlayer.play("ButtonPress");
+                pressed = true;
+                Runner.player.gravityDir = (!airBelow()) ? -1 : 1;
+
+                findTexture();
+            }
+        }
+        
+        public override void blockUpdate() {
+            if (airAbove() && airBelow()) {
+                Runner.map.removeBlock(pos, Vector2.Zero, layer);
+            }
+        }
     }
 
     public class ButtonTile : Tile {

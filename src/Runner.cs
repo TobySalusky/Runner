@@ -48,7 +48,8 @@ namespace Runner
             "Old",
             "Sam",
             "Josh",
-            "Fourth"
+            "Fourth",
+            "Gravity"
         };
 
         public static int levelIndex = 0;
@@ -156,6 +157,7 @@ namespace Runner
             // level settings
             levelSettingsDict["Old"] = new LevelSettings {playerStartPos = new Vector2(30, 40)};
             levelSettingsDict["Sam"] = new LevelSettings { playerStartPos = new Vector2(10, 70) };
+            levelSettingsDict["Gravity"] = new LevelSettings { playerStartPos = new Vector2(15, 94) };
             
             foreach (var level in levels) {
                 if (!levelSettingsDict.Keys.Contains(level)) {
@@ -329,6 +331,9 @@ namespace Runner
                 wiringEditor?.applyWiring();
             }
 
+            if (keys.pressed(Keys.R))
+                player.die();
+
             
             // debug change level
             if (keys.pressed(Keys.Left))
@@ -391,6 +396,10 @@ namespace Runner
 
             adjustMusicFade();
 
+            if (mouse.leftPressed) {
+                player.pos = camera.toWorld(mouse.pos, player.zPos);
+            }
+
             player.input(keys, deltaTime);
 
             if (editMode)
@@ -410,8 +419,9 @@ namespace Runner
             }
 
             Vector2 diff = camera.screenCenter / (camera.scale * camera.farMult(-2));
-            float clampCameraY = ChunkMap.mapHeight() - 1 - diff.Y;
-            camera.pos.Y = Math.Min(camera.pos.Y,clampCameraY);
+            float clampCameraBottom = ChunkMap.mapHeight() - 1 - diff.Y;
+            float clampCameraTop = 1 + diff.Y;
+            camera.pos.Y = Math.Clamp(camera.pos.Y, clampCameraTop, clampCameraBottom);
 
             for (int i = 0; i < entities.Length; i++) {
                 entities[i] = new List<Entity>();

@@ -106,6 +106,9 @@ namespace Runner {
             if (tileType == Tile.type.Button)
                 return new ButtonTile(tileType, new Vector2(x, y), layer);
             
+            if (tileType == Tile.type.GravityButton)
+                return new GravitySwitcher(tileType, new Vector2(x, y), layer);
+            
             if (tileType == Tile.type.Door)
                 return new Door(tileType, new Vector2(x, y), layer);
             

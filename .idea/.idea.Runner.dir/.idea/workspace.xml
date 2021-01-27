@@ -23,18 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Gaussian.fx" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Gaussian.fx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/Gaussian.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/Gaussian.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Gaussian.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Gaussian.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/Gaussian.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/Gaussian.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/TilePalette.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/TilePalette.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DeathWall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/DeathWall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Shaders.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Shaders.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Chunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Chunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Tile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,21 +89,23 @@
         <option value="$PROJECT_DIR$/src/Particles/BlockParticle.cs" />
         <option value="$PROJECT_DIR$/src/Util.cs" />
         <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
         <option value="$PROJECT_DIR$/src/SelectRect.cs" />
         <option value="$PROJECT_DIR$/src/DebugStats.cs" />
         <option value="$PROJECT_DIR$/src/Stats.cs" />
         <option value="$PROJECT_DIR$/src/Editor/SelectRect.cs" />
-        <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
-        <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
         <option value="$PROJECT_DIR$/src/UI/UI.cs" />
         <option value="$PROJECT_DIR$/src/Util/Util.cs" />
         <option value="$PROJECT_DIR$/src/UI/UIElement.cs" />
         <option value="$PROJECT_DIR$/src/UI/UIButton.cs" />
         <option value="$PROJECT_DIR$/src/UI/UITransition.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
         <option value="$PROJECT_DIR$/Content/Gaussian.fx" />
         <option value="$PROJECT_DIR$/src/Util/Shaders.cs" />
+        <option value="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" />
+        <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
+        <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
+        <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
+        <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+        <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
         <option value="$PROJECT_DIR$/src/Runner.cs" />
       </list>
     </option>
@@ -172,7 +176,8 @@
       <workItem from="1611594178950" duration="6637000" />
       <workItem from="1611629913329" duration="3667000" />
       <workItem from="1611669582466" duration="6528000" />
-      <workItem from="1611707698048" duration="3486000" />
+      <workItem from="1611707698048" duration="5475000" />
+      <workItem from="1611783196831" duration="6270000" />
     </task>
     <servers />
   </component>
@@ -197,26 +202,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1611711254072">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom" timestamp="1611789967935">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711254072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1611711254072">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611789967935" />
+    <state width="1877" height="144" key="GridCell.Tab.0.center" timestamp="1611789967934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711254072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1611711254072">
+    <state width="1877" height="144" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611789967934" />
+    <state width="1877" height="144" key="GridCell.Tab.0.left" timestamp="1611789967934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711254072" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1611711254072">
+    <state width="1877" height="144" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611789967934" />
+    <state width="1877" height="144" key="GridCell.Tab.0.right" timestamp="1611789967934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711254072" />
-    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1611711168990">
+    <state width="1877" height="144" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611789967934" />
+    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1611790113466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711168990" />
+    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611790113466" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611711084692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

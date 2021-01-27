@@ -24,9 +24,9 @@ namespace Runner
         
         public static SoundEffect getEffect(string identifier) {
             
-            effects.TryGetValue(identifier, out var SoundEffect);
+            effects.TryGetValue(identifier, out var effect);
             
-            return (SoundEffect == null) ? effects["null"] : SoundEffect;
+            return effect ?? effects["null"];
         }
         
         public static void loadEffects() {

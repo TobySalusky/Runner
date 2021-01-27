@@ -61,6 +61,11 @@ namespace Runner {
                 vel = -Vector2.UnitY * 20;
                 die();
             }
+            
+            if (pos.Y < 10) {
+                vel = Vector2.UnitY * 20;
+                die();
+            }
 
 
             if (!dead) {
@@ -228,6 +233,10 @@ namespace Runner {
             if (tile.tileType == Tile.type.Button) {
                 ((ButtonTile)tile).activate();
             }
+            
+            if (tile.tileType == Tile.type.GravityButton) {
+                ((GravitySwitcher)tile).activate();
+            }
 
             if (tile.tileType == Tile.type.NextStage) {
                 Runner.nextLevel();
@@ -265,10 +274,12 @@ namespace Runner {
 
             rotation = 0;
             rotSpeed = 0;
+
+            gravityDir = 1;
         }
 
         public virtual void jump(float jumpHeight) {
-            vel.Y = -Util.heightToJumpPower(jumpHeight, gravity);
+            vel.Y = -Util.heightToJumpPower(jumpHeight, gravity) * gravityDir;
             SoundPlayer.play("Jump",0.7F);
             jumpTime = jumpTimeStart;
         }
@@ -323,7 +334,7 @@ namespace Runner {
 
             if (!grounded && keys.down(Keys.Space) && jumpTime > 0) {
                 float fade = jumpTime / jumpTimeStart;
-                vel.Y -= 50F * deltaTime * fade;
+                vel.Y -= 50F * deltaTime * fade * gravityDir;
             }
         }
     }

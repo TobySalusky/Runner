@@ -9,6 +9,7 @@ namespace Runner {
         public Vector2 crusherDimen, armDimen;
         public Texture2D crusher, armSegment;
 
+        public int crushInc = 1;
         public float crushTimer;
         public Vector2 topCrush, bottomCrush;
         
@@ -74,6 +75,11 @@ namespace Runner {
                 }
             }
 
+
+            if ((int) crushTimer > crushInc + 1) {
+                crushInc = (int) crushTimer;
+                //SoundPlayer.play("Explosion", 0.1F);
+            }
         }
 
         public void renderArm(Camera camera, SpriteBatch spriteBatch, Vector2 start, int dir) {

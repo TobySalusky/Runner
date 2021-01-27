@@ -15,6 +15,7 @@ namespace Runner {
 
         public bool deleteFlag;
         public bool hasGravity = true, hasCollision = true;
+        public int gravityDir = 1;
         
         public Entity(Vector2 pos, float zPos) {
             this.pos = pos;
@@ -79,9 +80,9 @@ namespace Runner {
 
         public virtual void update(float deltaTime) {
             
-            grounded = collidesAt(pos + Vector2.UnitY * 0.1F);
+            grounded = collidesAt(pos + Vector2.UnitY * 0.1F * gravityDir);
             if (hasGravity)
-                vel.Y += gravity * deltaTime; // gravity
+                vel.Y += gravity * deltaTime * gravityDir; // gravity
 
             if (hasCollision) {
                 collisionMove(vel * deltaTime);

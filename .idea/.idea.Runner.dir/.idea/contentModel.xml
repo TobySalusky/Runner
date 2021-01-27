@@ -28,42 +28,60 @@
         <e p="Textures" t="Include">
           <e p="autosaves" t="Include">
             <e p="autosave Untitled 1028.art" t="Include" />
+            <e p="autosave Untitled 1829.art" t="Include" />
             <e p="autosave Untitled 1861.art" t="Include" />
             <e p="autosave Untitled 196.art" t="Include" />
             <e p="autosave Untitled 2121.art" t="Include" />
             <e p="autosave Untitled 2321.art" t="Include" />
+            <e p="autosave Untitled 2547.art" t="Include" />
+            <e p="autosave Untitled 2676.art" t="Include" />
             <e p="autosave Untitled 3160.art" t="Include" />
             <e p="autosave Untitled 3206.art" t="Include" />
             <e p="autosave Untitled 3233.art" t="Include" />
+            <e p="autosave Untitled 3342.art" t="Include" />
             <e p="autosave Untitled 3400.art" t="Include" />
             <e p="autosave Untitled 3408.art" t="Include" />
             <e p="autosave Untitled 3645.art" t="Include" />
             <e p="autosave Untitled 3836.art" t="Include" />
             <e p="autosave Untitled 3954.art" t="Include" />
+            <e p="autosave Untitled 4050.art" t="Include" />
             <e p="autosave Untitled 4105.art" t="Include" />
             <e p="autosave Untitled 4167.art" t="Include" />
+            <e p="autosave Untitled 4262.art" t="Include" />
             <e p="autosave Untitled 4314.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
+            <e p="autosave Untitled 4487.art" t="Include" />
             <e p="autosave Untitled 4858.art" t="Include" />
             <e p="autosave Untitled 5148.art" t="Include" />
             <e p="autosave Untitled 5410.art" t="Include" />
+            <e p="autosave Untitled 5439.art" t="Include" />
             <e p="autosave Untitled 5526.art" t="Include" />
             <e p="autosave Untitled 5751.art" t="Include" />
+            <e p="autosave Untitled 587.art" t="Include" />
+            <e p="autosave Untitled 591.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
+            <e p="autosave Untitled 6644.art" t="Include" />
+            <e p="autosave Untitled 6712.art" t="Include" />
             <e p="autosave Untitled 6744.art" t="Include" />
+            <e p="autosave Untitled 6794.art" t="Include" />
             <e p="autosave Untitled 6880.art" t="Include" />
             <e p="autosave Untitled 7017.art" t="Include" />
             <e p="autosave Untitled 7154.art" t="Include" />
             <e p="autosave Untitled 7330.art" t="Include" />
             <e p="autosave Untitled 7458.art" t="Include" />
+            <e p="autosave Untitled 7825.art" t="Include" />
             <e p="autosave Untitled 783.art" t="Include" />
             <e p="autosave Untitled 8259.art" t="Include" />
             <e p="autosave Untitled 8479.art" t="Include" />
             <e p="autosave Untitled 8551.art" t="Include" />
+            <e p="autosave Untitled 8570.art" t="Include" />
+            <e p="autosave Untitled 8606.art" t="Include" />
             <e p="autosave Untitled 8802.art" t="Include" />
             <e p="autosave Untitled 8884.art" t="Include" />
             <e p="autosave Untitled 9083.art" t="Include" />
             <e p="autosave Untitled 9182.art" t="Include" />
+            <e p="autosave Untitled 9270.art" t="Include" />
+            <e p="autosave Untitled 9721.art" t="Include" />
           </e>
           <e p="button.png" t="Include" />
           <e p="Clouds.png" t="Include" />
@@ -73,11 +91,17 @@
           <e p="DeathWallCrusher.png" t="Include" />
           <e p="Door.png" t="Include" />
           <e p="glASS.png" t="Include" />
+          <e p="GravityButton.png" t="Include" />
+          <e p="GravityMapFile.art" t="Include" />
+          <e p="GravityMapv2.art" t="Include" />
           <e p="lEvEr.png" t="Include" />
           <e p="Maps" t="Include">
             <e p="FourthMapData0.png" t="Include" />
             <e p="FourthMapData1.png" t="Include" />
             <e p="FourthMapData2.png" t="Include" />
+            <e p="GravityMapData0.png" t="Include" />
+            <e p="GravityMapData1.png" t="Include" />
+            <e p="GravityMapData2.png" t="Include" />
             <e p="JoshMapData0.png" t="Include" />
             <e p="JoshMapData1.png" t="Include" />
             <e p="JoshMapData2.png" t="Include" />
