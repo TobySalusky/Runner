@@ -2,7 +2,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/BaseFont.spritefont","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/BaseFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,37922,0.3086987
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/Blur.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/Vertex.xnb","EffectProcessor","CompiledEffectContent",1080,867,0.3326989
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/File.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/OffPixel.xnb","EffectProcessor","CompiledEffectContent",864,644,0.3257115
-"C:/Users/Tobafett/Documents/GitHub/Runner/Content/Gaussian.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/Gaussian.xnb","EffectProcessor","CompiledEffectContent",921,5972,0.4924025
+"C:/Users/Tobafett/Documents/GitHub/Runner/Content/Gaussian.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/Gaussian.xnb","EffectProcessor","CompiledEffectContent",921,11204,0.9612051
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/icewallcave.wav","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/icewallcave.xnb","SongProcessor","SongContent",18407102,129,2.2447126
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/icewalllab.wav","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/icewalllab.xnb","SongProcessor","SongContent",19139762,128,2.056074
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/Pixel.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/Pixel.xnb","EffectProcessor","CompiledEffectContent",1567,28736,0.6865921

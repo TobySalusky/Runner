@@ -58,6 +58,8 @@ namespace Runner
         public RenderTarget2D renderTarget;
 
         public static bool paused = false, endingPause = false;
+        public static float pauseTimer;
+        public const float pauseTransitionTime = 0.4F;
 
         public static float attemptTime;
         
@@ -355,12 +357,13 @@ namespace Runner
 
                 if (!paused) {
                     paused = true;
+                    pauseTimer = 0;
                     uiElements = pauseUI;
-                    UI.transitionAll(uiElements, element => new SlideIn(element) {endTime = 0.4F});
+                    UI.transitionAll(uiElements, element => new SlideIn(element) {endTime = pauseTransitionTime});
                 }
                 else {
                     endingPause = true;
-                    UI.transitionAll(uiElements, element => new SlideOut(element) {endTime = 0.4F});
+                    UI.transitionAll(uiElements, element => new SlideOut(element) {endTime = pauseTransitionTime});
                 }
             }
 
@@ -369,6 +372,15 @@ namespace Runner
                 endingPause = false;
                 uiElements = gameUI;
             }
+
+            if (paused) {
+                if (endingPause)
+                    pauseTimer -= deltaTime;
+                else
+                    pauseTimer += deltaTime;
+            }
+
+            pauseTimer = Math.Min(pauseTimer, pauseTransitionTime);
 
 
             // Must Be Un-paused to Run Following Code =======
@@ -444,10 +456,6 @@ namespace Runner
                 SamplerState.PointClamp,
                 null, null, null, null);
 
-            /*for (int i = 0; i < drawables.Count; i++) {
-                drawables[i].render(camera, spriteBatch);
-            }*/
-            
             map.render(camera, spriteBatch, 0);
             renderEntities(entities[0]);
             renderParticles(particles[0]);
@@ -468,6 +476,10 @@ namespace Runner
             
             // POST-PROCESSING
             Effect shader = shouldBlur() ? gaussianBlurShader : null;
+
+            if (shouldBlur()) {
+                Shaders.setGaussianOffsets(2 * Util.sinSmooth(pauseTimer, pauseTransitionTime));
+            }
 
             spriteBatch.Begin(SpriteSortMode.Deferred,
                 BlendState.NonPremultiplied,

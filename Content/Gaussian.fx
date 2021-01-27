@@ -14,7 +14,7 @@ sampler2D SpriteTextureSampler = sampler_state
 	Texture = <SpriteTexture>;
 };
 
-#define samples 25
+#define samples 49
 float2 sampleOffsets[samples];
 float sampleWeights[samples];
 
