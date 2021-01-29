@@ -72,6 +72,8 @@ namespace Runner
         public static List<UIElement> uiElements = gameUI;
 
         public static List<UITransition> uiTransitions = new List<UITransition>();
+
+        public static UIScreen uiScreen;
         
         public Runner()
         {
@@ -204,9 +206,27 @@ namespace Runner
                 DepthFormat.Depth24);
 
             // UI
-            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(300, 200), new Vector2(300, 100)));
-            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(400, 310), new Vector2(300, 100)));
-            pauseUI.Add(new UIButton(() => Logger.log("hi"), new Vector2(500, 420), new Vector2(300, 100)));
+            pauseUI.Add(new UIButton(unPauseClicked, new Vector2(200, 200), new Vector2(300, 100), "Resume"));
+            pauseUI.Add(new UIButton(() => {
+                restartRun();
+                unPauseClicked();
+            }, new Vector2(250, 310), new Vector2(300, 100), "Restart"));
+            pauseUI.Add(new UIButton(() => uiScreen = new MainMenuScreen(), new Vector2(300, 420), new Vector2(300, 100), "Main Menu"));
+            pauseUI.Add(new UIButton(() => uiScreen = new LevelSelectScreen(), new Vector2(350, 530), new Vector2(300, 100), "Level Select"));
+            pauseUI.Add(new UIButton(exitGame, new Vector2(400, 640), new Vector2(300, 100), "Exit Game"));
+        }
+
+        public void restartRun() {
+            player.die();
+        }
+
+        public void exitGame() {
+            Exit();
+        }
+
+        public static void unPauseClicked() {
+            endingPause = true;
+            UI.transitionAll(uiElements, element => new SlideOut(element) {endTime = pauseTransitionTime});
         }
 
         public static Vector2 playerStartPos() {
@@ -224,6 +244,8 @@ namespace Runner
             // TODO: use this.Content to load your game content here
 
             gaussianBlurShader = Shaders.gaussianBlur(Content);
+            
+            Fonts.arial = Content.Load<SpriteFont>("BaseFont");
         }
 
         private float delta(GameTime gameTime) {
@@ -319,8 +341,16 @@ namespace Runner
             lastMouseState = mouseState;
 
             if (keys.down(Keys.Escape))
-                Exit();
+                exitGame();
+            
 
+            if (uiScreen != null) {
+                uiScreen.update(mouse, keys, deltaTime);
+                return;
+            }
+            
+            
+            
             if (keys.pressed(Keys.L)) 
                 startEditMode();
             
@@ -332,7 +362,7 @@ namespace Runner
             }
 
             if (keys.pressed(Keys.R))
-                player.die();
+                restartRun();
 
             
             // debug change level
@@ -367,8 +397,7 @@ namespace Runner
                     UI.transitionAll(uiElements, element => new SlideIn(element) {endTime = pauseTransitionTime});
                 }
                 else {
-                    endingPause = true;
-                    UI.transitionAll(uiElements, element => new SlideOut(element) {endTime = pauseTransitionTime});
+                    unPauseClicked();
                 }
             }
 
@@ -386,7 +415,7 @@ namespace Runner
             }
 
             pauseTimer = Math.Min(pauseTimer, pauseTransitionTime);
-
+            
 
             // Must Be Un-paused to Run Following Code =======
             if (paused) return;
@@ -456,6 +485,10 @@ namespace Runner
 
         protected override void Draw(GameTime gameTime)
         {
+            if (uiScreen != null) {
+                uiScreen.render(this, spriteBatch);
+                return;
+            }
 
             GraphicsDevice.SetRenderTarget(renderTarget);
             

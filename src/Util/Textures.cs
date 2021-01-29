@@ -16,6 +16,7 @@ namespace Runner {
             textures = new Dictionary<string, Texture2D>();
 
             textures["pixel"] = genRect(Color.White);
+            textures["UIButton"] = genRect(new Color(Color.Black, 0.5F));
             textures["invis"] = genRect(new Color(1F,1F,1F,0F));
 
             processFolder(Paths.texturePath);

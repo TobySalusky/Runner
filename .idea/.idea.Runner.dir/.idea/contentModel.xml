@@ -223,6 +223,9 @@
           <e p="Tile.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
+          <e p="Screens" t="Include">
+            <e p="UIScreen.cs" t="Include" />
+          </e>
           <e p="UI.cs" t="Include" />
           <e p="UIButton.cs" t="Include" />
           <e p="UIElement.cs" t="Include" />
@@ -230,6 +233,7 @@
         </e>
         <e p="Util" t="Include">
           <e p="FileUtil.cs" t="Include" />
+          <e p="Fonts.cs" t="Include" />
           <e p="KeyInfo.cs" t="Include" />
           <e p="Logger.cs" t="Include" />
           <e p="Maths.cs" t="Include" />
