@@ -13,13 +13,14 @@ namespace Runner {
         public const float hoverMult = 1.1F;
         public string name;
         
-        public UIButton(Action clickFunc, Vector2 pos, Vector2 dimen, string name = "Untitiled", bool hoverGrow = true) {
+        public UIButton(Action clickFunc, Vector2 pos, Vector2 dimen, string name = "Untitiled") {
             this.clickFunc = clickFunc;
             this.pos = pos;
             this.dimen = dimen;
-            this.hoverGrow = hoverGrow;
             this.name = name;
 
+            hoverGrow = true;
+            
             startPos = pos;
             startDimen = dimen;
             
@@ -28,7 +29,8 @@ namespace Runner {
 
         public override void render(SpriteBatch spriteBatch) {
             base.render(spriteBatch);
-            spriteBatch.DrawString(Fonts.arial, name, pos, Color.White);
+            Vector2 nameDimen = Fonts.arial.MeasureString(name);
+            spriteBatch.DrawString(Fonts.arial, name, pos - nameDimen / 2, Color.White);
         }
 
         public override void update(MouseInfo mouse, KeyInfo keys, float deltaTime) {

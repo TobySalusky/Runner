@@ -102,3 +102,4 @@ C:\Users\Tobafett\Documents\GitHub\Runner\bin\Debug\netcoreapp3.1\Content\TexDar
 C:\Users\Tobafett\Documents\GitHub\Runner\bin\Debug\netcoreapp3.1\Content\the_snake.ogg
 C:\Users\Tobafett\Documents\GitHub\Runner\bin\Debug\netcoreapp3.1\Content\the_snake.xnb
 C:\Users\Tobafett\Documents\GitHub\Runner\bin\Debug\netcoreapp3.1\Content\Vertex.xnb
+C:\Users\Tobafett\Documents\GitHub\Runner\bin\Debug\netcoreapp3.1\Content\TimerFont.xnb

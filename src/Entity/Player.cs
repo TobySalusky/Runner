@@ -26,6 +26,8 @@ namespace Runner {
 
         public float animationTimer = 3;
 
+        public bool godMode = false;
+
         public Player(Vector2 pos) : base(pos, -1) {
 
             texture = Textures.get("Player");
@@ -35,6 +37,9 @@ namespace Runner {
         }
 
         public override void update(float deltaTime) {
+
+            hasCollision = !godMode;
+            hasGravity = !godMode;
             
             float rotMult = (grounded) ? 1 : 0.5F;
             float toRotSpeed = (vel.X / 20) * Maths.twoPI * rotMult;
@@ -286,7 +291,7 @@ namespace Runner {
         
         public bool tryMoveToZ(float toZ) {
             //Checks if player can move to next layer
-            if (!collidesAt(pos, getLayer(toZ))) {
+            if (!hasCollision || !collidesAt(pos, getLayer(toZ))) {
                 //moves to next layer if possible
                 zPos = toZ;
                 return true;
@@ -307,13 +312,13 @@ namespace Runner {
             if (dead) {
                 return;
             }
-            
+
             int inputX = 0;
             if (keys.down(Keys.A))
                 inputX--;
             if (keys.down(Keys.D))
                 inputX++;
-            
+
             if (keys.pressed(Keys.W) || keys.pressed(Keys.Up))
                 startSwitchTo(zPos - 1);
             
@@ -325,16 +330,28 @@ namespace Runner {
             vel.X += ((inputX * speed) - vel.X) * deltaTime * accelSpeed;
 
 
-            jumpTime -= deltaTime;
-            
-            if (grounded && vel.Y >= 0 && keys.down(Keys.Space) && jumpTime < jumpTimeStart - 0.1F) {
+            if (!godMode) {
+                jumpTime -= deltaTime;
 
-                jump(jumpHeight);
+                if (grounded && vel.Y >= 0 && keys.down(Keys.Space) && jumpTime < jumpTimeStart - 0.1F) {
+
+                    jump(jumpHeight);
+                }
+
+                if (!grounded && keys.down(Keys.Space) && jumpTime > 0) {
+                    float fade = jumpTime / jumpTimeStart;
+                    vel.Y -= 50F * deltaTime * fade * gravityDir;
+                }
             }
+            else {
 
-            if (!grounded && keys.down(Keys.Space) && jumpTime > 0) {
-                float fade = jumpTime / jumpTimeStart;
-                vel.Y -= 50F * deltaTime * fade * gravityDir;
+                int inputY = 0;
+                if (keys.down(Keys.Space))
+                    inputY--;
+                if (keys.down(Keys.LeftShift))
+                    inputY++;
+                
+                vel.Y += ((inputY * speed) - vel.Y) * deltaTime * accelSpeed;
             }
         }
     }

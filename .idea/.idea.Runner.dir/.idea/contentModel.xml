@@ -52,6 +52,8 @@
             <e p="autosave Untitled 4379.art" t="Include" />
             <e p="autosave Untitled 4487.art" t="Include" />
             <e p="autosave Untitled 4858.art" t="Include" />
+            <e p="autosave Untitled 4984.art" t="Include" />
+            <e p="autosave Untitled 5067.art" t="Include" />
             <e p="autosave Untitled 5148.art" t="Include" />
             <e p="autosave Untitled 5410.art" t="Include" />
             <e p="autosave Untitled 5439.art" t="Include" />
@@ -78,10 +80,12 @@
             <e p="autosave Untitled 8606.art" t="Include" />
             <e p="autosave Untitled 8802.art" t="Include" />
             <e p="autosave Untitled 8884.art" t="Include" />
+            <e p="autosave Untitled 8977.art" t="Include" />
             <e p="autosave Untitled 9083.art" t="Include" />
             <e p="autosave Untitled 9182.art" t="Include" />
             <e p="autosave Untitled 9270.art" t="Include" />
             <e p="autosave Untitled 9721.art" t="Include" />
+            <e p="autosave Untitled 9823.art" t="Include" />
           </e>
           <e p="button.png" t="Include" />
           <e p="Clouds.png" t="Include" />
@@ -90,6 +94,11 @@
           <e p="DeathWallArm.png" t="Include" />
           <e p="DeathWallCrusher.png" t="Include" />
           <e p="Door.png" t="Include" />
+          <e p="Eye Segments" t="Include">
+            <e p="EyeBody.png" t="Include" />
+            <e p="EyeCenter.png" t="Include" />
+            <e p="EyeOuter.png" t="Include" />
+          </e>
           <e p="glASS.png" t="Include" />
           <e p="GravityButton.png" t="Include" />
           <e p="GravityMapFile.art" t="Include" />
@@ -143,6 +152,7 @@
               <e p="TexDark.xnb" t="Include" />
               <e p="the_snake.ogg" t="Include" />
               <e p="the_snake.xnb" t="Include" />
+              <e p="TimerFont.xnb" t="Include" />
               <e p="Vertex.xnb" t="Include" />
             </e>
           </e>
@@ -166,6 +176,7 @@
               <e p="Pixel.mgcontent" t="Include" />
               <e p="TexDark.mgcontent" t="Include" />
               <e p="the_snake.mgcontent" t="Include" />
+              <e p="TimerFont.mgcontent" t="Include" />
               <e p="Vertex.mgcontent" t="Include" />
             </e>
           </e>
@@ -173,6 +184,7 @@
         <e p="Pixel.fx" t="Include" />
         <e p="TexDark.fx" t="Include" />
         <e p="the_snake.wav" t="Include" />
+        <e p="TimerFont.spritefont" t="Include" />
       </e>
       <e p="Icon.bmp" t="Include" />
       <e p="Icon.ico" t="Include" />

@@ -147,11 +147,12 @@ namespace Runner
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            
             graphics.PreferredBackBufferHeight = 1080;
             graphics.PreferredBackBufferWidth = 1920;
             Window.IsBorderless = false;
             Window.AllowUserResizing = true;
+            
 
             graphics.ApplyChanges();
             
@@ -246,6 +247,7 @@ namespace Runner
             gaussianBlurShader = Shaders.gaussianBlur(Content);
             
             Fonts.arial = Content.Load<SpriteFont>("BaseFont");
+            Fonts.timer = Content.Load<SpriteFont>("TimerFont");
         }
 
         private float delta(GameTime gameTime) {
@@ -361,6 +363,10 @@ namespace Runner
                 wiringEditor?.applyWiring();
             }
 
+            if (keys.pressed(Keys.G)) {
+                player.godMode = !player.godMode;
+            }
+            
             if (keys.pressed(Keys.R))
                 restartRun();
 
@@ -425,7 +431,7 @@ namespace Runner
 
             adjustMusicFade();
 
-            if (mouse.leftPressed) {
+            if (mouse.leftPressed && keys.down(Keys.LeftShift)) {
                 player.pos = camera.toWorld(mouse.pos, player.zPos);
             }
 
@@ -496,8 +502,7 @@ namespace Runner
             
             spriteBatch.Begin(SpriteSortMode.Deferred,
                 BlendState.NonPremultiplied,
-                SamplerState.PointClamp,
-                null, null, null, null);
+                SamplerState.PointClamp);
 
             map.render(camera, spriteBatch, 0);
             renderEntities(entities[0]);
@@ -542,6 +547,12 @@ namespace Runner
             foreach (var element in uiElements) {
                 element.render(spriteBatch);
             }
+            
+            // Timer
+            SpriteFont font = Fonts.timer;
+            string timerStr = attemptTime.ToString("F");
+            spriteBatch.DrawString(font, timerStr, new Vector2(1920 - 50 - font.MeasureString(timerStr).X, 50), Color.White);
+            
             spriteBatch.End();
             
             base.Draw(gameTime);

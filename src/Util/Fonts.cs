@@ -2,6 +2,6 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Runner {
     public static class Fonts {
-        public static SpriteFont arial;
+        public static SpriteFont arial, timer;
     }
 }

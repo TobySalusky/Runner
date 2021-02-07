@@ -8,3 +8,4 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/Pixel.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/Pixel.xnb","EffectProcessor","CompiledEffectContent",1567,28736,0.6865921
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/TexDark.fx","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/TexDark.xnb","EffectProcessor","CompiledEffectContent",2333,386,0.4794428
 "C:/Users/Tobafett/Documents/GitHub/Runner/Content/the_snake.wav","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/the_snake.xnb","SongProcessor","SongContent",15346946,127,1.7737185
+"C:/Users/Tobafett/Documents/GitHub/Runner/Content/TimerFont.spritefont","C:/Users/Tobafett/Documents/GitHub/Runner/Content/bin/DesktopGL/Content/TimerFont.xnb","FontDescriptionProcessor","SpriteFontContent",2016,136226,0.264147

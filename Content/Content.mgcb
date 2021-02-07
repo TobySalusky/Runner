@@ -20,13 +20,13 @@
 /processorParam:TextureFormat=Compressed
 /build:BaseFont.spritefont
 
-#begin Blur.fx
+#begin Blur.fx;Vertex.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
 /build:Blur.fx;Vertex.fx
 
-#begin File.fx
+#begin File.fx;OffPixel.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
@@ -67,4 +67,11 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:the_snake.wav
+
+#begin TimerFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:TimerFont.spritefont
 

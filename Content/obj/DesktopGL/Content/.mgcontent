@@ -13,11 +13,13 @@
     <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/Pixel.fx</File>
     <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/TexDark.fx</File>
     <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/the_snake.wav</File>
+    <File>C:/Users/Tobafett/Documents/GitHub/Runner/Content/TimerFont.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File>Vertex.fx</File>
     <File>OffPixel.fx</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

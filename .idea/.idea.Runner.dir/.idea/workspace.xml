@@ -23,18 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Util/Fonts.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Content.mgcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/UIButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Textures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Textures.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Fonts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Fonts.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +63,8 @@
     <setting file="file://$PROJECT_DIR$/src/Util/KeyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/MouseInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Editor/WiringEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Stats.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -67,6 +72,7 @@
     <setting file="file://$PROJECT_DIR$/src/Particles/PixelParticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/Particle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Util/Paths.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Camera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/UI/UIElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Util/Maths.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Terrain/ChunkMap.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,13 +108,13 @@
         <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
         <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
         <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
         <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
-        <option value="$PROJECT_DIR$/src/Util/Fonts.cs" />
         <option value="$PROJECT_DIR$/src/UI/UIElement.cs" />
-        <option value="$PROJECT_DIR$/src/UI/UIButton.cs" />
         <option value="$PROJECT_DIR$/src/Util/Textures.cs" />
         <option value="$PROJECT_DIR$/src/UI/Screens/LevelSelectScreen.cs" />
+        <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+        <option value="$PROJECT_DIR$/src/UI/UIButton.cs" />
+        <option value="$PROJECT_DIR$/src/Util/Fonts.cs" />
         <option value="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" />
         <option value="$PROJECT_DIR$/src/Runner.cs" />
       </list>
@@ -182,7 +188,13 @@
       <workItem from="1611669582466" duration="6528000" />
       <workItem from="1611707698048" duration="5475000" />
       <workItem from="1611783196831" duration="9943000" />
-      <workItem from="1611937588932" duration="4285000" />
+      <workItem from="1611937588932" duration="6112000" />
+      <workItem from="1611989550827" duration="587000" />
+      <workItem from="1612025721822" duration="600000" />
+      <workItem from="1612068577104" duration="2645000" />
+      <workItem from="1612109679482" duration="3950000" />
+      <workItem from="1612220372523" duration="1668000" />
+      <workItem from="1612586382082" duration="1013000" />
     </task>
     <servers />
   </component>
@@ -207,26 +219,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="144" key="GridCell.Tab.0.bottom" timestamp="1611941941434">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom" timestamp="1612130139577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611941941434" />
-    <state width="1877" height="144" key="GridCell.Tab.0.center" timestamp="1611941941433">
+    <state width="1877" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
+    <state width="1877" height="144" key="GridCell.Tab.0.center" timestamp="1612130139577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611941941433" />
-    <state width="1877" height="144" key="GridCell.Tab.0.left" timestamp="1611941941432">
+    <state width="1877" height="144" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
+    <state width="1877" height="144" key="GridCell.Tab.0.left" timestamp="1612130139577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611941941432" />
-    <state width="1877" height="144" key="GridCell.Tab.0.right" timestamp="1611941941433">
+    <state width="1877" height="144" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
+    <state width="1877" height="144" key="GridCell.Tab.0.right" timestamp="1612130139577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611941941433" />
-    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1611941326452">
+    <state width="1877" height="144" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
+    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1612112776762">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611941326452" />
+    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612112776762" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611711084692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
