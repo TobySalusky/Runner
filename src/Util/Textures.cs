@@ -9,7 +9,7 @@ namespace Runner {
     public class Textures {
 
         private static Dictionary<string, Texture2D> textures;
-        public static Texture2D nullTexture;
+        public static Texture2D nullTexture, rect;
 
         public static void loadTextures() {
 
@@ -21,6 +21,7 @@ namespace Runner {
 
             processFolder(Paths.texturePath);
 
+            rect = textures["pixel"];
             nullTexture = textures["null"];
         }
 

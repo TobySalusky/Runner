@@ -8,6 +8,8 @@ namespace Runner {
         public Vector2 startPos, startDimen;
         public Texture2D texture;
 
+        public bool selectable = true;
+        
         public virtual void update(MouseInfo mouse, KeyInfo keys, float deltaTime) {
             
             if (mouseOver(mouse.pos)) { 

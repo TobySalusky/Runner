@@ -36,6 +36,35 @@ namespace Runner {
             hasStep = false;
         }
 
+        public override void bonkY(Vector2 newPos) {
+            bonk(newPos);
+
+            if (vel.Y > 0) {
+                Point from = ChunkMap.blockIndices(pos + new Vector2(-0.5F, 0.5F) * dimen);
+                Point to = ChunkMap.blockIndices(pos + new Vector2(0.5F, 0.5F) * dimen);
+
+                bool allRubber = true;
+                
+                for (int i = from.X; i <= to.X; i++) {
+                    for (int j = from.Y; j <= to.Y; j++) {
+                        Tile tile = Runner.map.getTile(new Point(i, j), getLayer(zPos));
+
+                        if (tile.tileType != Tile.type.Rubber) {
+                            allRubber = false;
+                            goto loopEnd;
+                        }
+                    }
+                }
+                loopEnd:
+                if (allRubber) {
+                    vel.Y *= -0.9F;
+                    return;
+                }
+            }
+
+            vel.Y = 0;
+        }
+
         public override void update(float deltaTime) {
 
             hasCollision = !godMode;
@@ -50,7 +79,7 @@ namespace Runner {
             
             deathTime -= deltaTime;
             if (dead && deathTime <= 0) {
-                Runner.resetLevel();
+                Runner.failLevel();
             }
 
             if (dead) {
@@ -244,7 +273,7 @@ namespace Runner {
             }
 
             if (tile.tileType == Tile.type.NextStage) {
-                Runner.nextLevel();
+                Runner.finishLevel();
             }
         }
 
@@ -301,7 +330,7 @@ namespace Runner {
             return false;
         }
 
-        public override void render(Camera camera, SpriteBatch spriteBatch) {
+        public override void render(Camera camera, SpriteBatch spriteBatch) { // TODO: tint player to color of layer
             
             Util.render(texture, pos, dimen, zPos, rotation, camera, spriteBatch);
         }

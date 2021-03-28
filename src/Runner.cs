@@ -75,13 +75,20 @@ namespace Runner
 
         public static UIScreen uiScreen;
         
+        // DEBUG
+        public static FrameCounter fpsCounter = new FrameCounter();
+        public static int secondsPassed;
+        
+        // STATS
+        public static Stats stats;
+        
         public Runner()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             
-            
+            // REMOVES LIMIT FROM FPS
             graphics.SynchronizeWithVerticalRetrace = false;
             IsFixedTimeStep = false;
             
@@ -98,8 +105,6 @@ namespace Runner
             
             loadLevelMap();
 
-            // TODO: Fix: (currently says that you finished next level) {I'm lazy rn}
-            Logger.log(levelName + ": " + ((player.dead) ? "Died" : "Finished") + " with time of: " + attemptTime);
             attemptTime = 0;
             
             player.deathReset();
@@ -215,6 +220,17 @@ namespace Runner
             pauseUI.Add(new UIButton(() => uiScreen = new MainMenuScreen(), new Vector2(300, 420), new Vector2(300, 100), "Main Menu"));
             pauseUI.Add(new UIButton(() => uiScreen = new LevelSelectScreen(), new Vector2(350, 530), new Vector2(300, 100), "Level Select"));
             pauseUI.Add(new UIButton(exitGame, new Vector2(400, 640), new Vector2(300, 100), "Exit Game"));
+            
+            pauseUI.Add(new PauseStats(new Vector2(1920 - 250, 1080 / 2F), new Vector2(400, 1080 - 400)));
+            
+            // stats
+            try {
+                stats = new Stats(DataSerializer.Deserialize<StatData>("Stats"));
+            }
+            catch (Exception e) {
+                stats = new Stats();
+                Logger.warn("Found no pre-existing stats!, making new instance");
+            }
         }
 
         public void restartRun() {
@@ -222,6 +238,7 @@ namespace Runner
         }
 
         public void exitGame() {
+            DataSerializer.Serialize("Stats", stats.genData());
             Exit();
         }
 
@@ -332,6 +349,12 @@ namespace Runner
             base.Update(gameTime);
 
             float deltaTime = delta(gameTime);
+            
+            fpsCounter.update(deltaTime);
+            if ((int) gameTime.TotalGameTime.TotalSeconds > secondsPassed) {
+                secondsPassed = (int) gameTime.TotalGameTime.TotalSeconds;
+                Window.Title = "FPS: " + (int) fpsCounter.AverageFramesPerSecond;
+            }
 
             KeyboardState keyState = Keyboard.GetState();
             MouseState mouseState = Mouse.GetState();
@@ -483,6 +506,23 @@ namespace Runner
             levelName = levels[levelIndex];
             
             changeLevel(levelName);
+        }
+
+        public static void finishLevel() {
+            LevelStats levelStats = stats.getLevelStates(levelName);
+
+            levelStats.timesCompleted++;
+            levelStats.bestTime = Math.Min(attemptTime, levelStats.bestTime);
+            
+            // TODO: UI
+            nextLevel();
+        }
+        
+        public static void failLevel() {
+            LevelStats levelStats = stats.getLevelStates(levelName);
+            levelStats.timesFailed++;
+            
+            resetLevel();
         }
 
         public void sortIntoEntities(Entity entity) {

@@ -13,7 +13,7 @@ namespace Runner {
         public bool grounded;
         public const float gravity = 70F;
 
-        public bool deleteFlag;
+        public bool deleteFlag = false;
         public bool hasGravity = true, hasCollision = true;
         public int gravityDir = 1;
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Tobafett\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Tobafett\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Tobafett\Documents\GitHub\Runner" t="IncludeRecursive">
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Toby\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Toby\Documents\GitHub\Runner" t="IncludeRecursive">
       <e p=".gitattributes" t="Include" />
       <e p="app.manifest" t="Include" />
       <e p="Assets" t="Include">
@@ -51,6 +51,7 @@
             <e p="autosave Untitled 4314.art" t="Include" />
             <e p="autosave Untitled 4379.art" t="Include" />
             <e p="autosave Untitled 4487.art" t="Include" />
+            <e p="autosave Untitled 4648.art" t="Include" />
             <e p="autosave Untitled 4858.art" t="Include" />
             <e p="autosave Untitled 4984.art" t="Include" />
             <e p="autosave Untitled 5067.art" t="Include" />
@@ -61,8 +62,10 @@
             <e p="autosave Untitled 5751.art" t="Include" />
             <e p="autosave Untitled 587.art" t="Include" />
             <e p="autosave Untitled 591.art" t="Include" />
+            <e p="autosave Untitled 6175.art" t="Include" />
             <e p="autosave Untitled 6592.art" t="Include" />
             <e p="autosave Untitled 6644.art" t="Include" />
+            <e p="autosave Untitled 6700.art" t="Include" />
             <e p="autosave Untitled 6712.art" t="Include" />
             <e p="autosave Untitled 6744.art" t="Include" />
             <e p="autosave Untitled 6794.art" t="Include" />
@@ -71,6 +74,7 @@
             <e p="autosave Untitled 7154.art" t="Include" />
             <e p="autosave Untitled 7330.art" t="Include" />
             <e p="autosave Untitled 7458.art" t="Include" />
+            <e p="autosave Untitled 7745.art" t="Include" />
             <e p="autosave Untitled 7825.art" t="Include" />
             <e p="autosave Untitled 783.art" t="Include" />
             <e p="autosave Untitled 8259.art" t="Include" />
@@ -83,11 +87,13 @@
             <e p="autosave Untitled 8977.art" t="Include" />
             <e p="autosave Untitled 9083.art" t="Include" />
             <e p="autosave Untitled 9182.art" t="Include" />
+            <e p="autosave Untitled 9196.art" t="Include" />
             <e p="autosave Untitled 9270.art" t="Include" />
             <e p="autosave Untitled 9721.art" t="Include" />
             <e p="autosave Untitled 9823.art" t="Include" />
           </e>
           <e p="button.png" t="Include" />
+          <e p="CannonBall.png" t="Include" />
           <e p="Clouds.png" t="Include" />
           <e p="CrackedBrick.png" t="Include" />
           <e p="CrackedBrickFull.png" t="Include" />
@@ -130,6 +136,7 @@
             <e p="Blink2.png" t="Include" />
             <e p="Player.png" t="Include" />
           </e>
+          <e p="Rubber.png" t="Include" />
           <e p="Spike.png" t="Include" />
           <e p="StoneBrick.png" t="Include" />
           <e p="TilePalette.png" t="Include" />
@@ -207,12 +214,16 @@
           <e p="WiringEditor.cs" t="Include" />
         </e>
         <e p="Entity" t="Include">
+          <e p="CannonBall.cs" t="Include" />
           <e p="DeathWall.cs" t="Include" />
           <e p="Drawable3D.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
         </e>
+        <e p="LevelStats.cs" t="Include" />
         <e p="Outside" t="Include">
+          <e p="FrameCounter.cs" t="Include" />
           <e p="Simplex.cs" t="Include" />
           <e p="XnaSerializer.cs" t="Include" />
         </e>
@@ -228,6 +239,7 @@
         <e p="SoundEffects" t="Include">
           <e p="SoundPlayer.cs" t="Include" />
         </e>
+        <e p="StatData.cs" t="Include" />
         <e p="Stats.cs" t="Include" />
         <e p="Terrain" t="Include">
           <e p="Chunk.cs" t="Include" />
@@ -235,6 +247,7 @@
           <e p="Tile.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
+          <e p="PauseStats.cs" t="Include" />
           <e p="Screens" t="Include">
             <e p="UIScreen.cs" t="Include" />
           </e>
@@ -244,6 +257,7 @@
           <e p="UITransition.cs" t="Include" />
         </e>
         <e p="Util" t="Include">
+          <e p="Colors.cs" t="Include" />
           <e p="FileUtil.cs" t="Include" />
           <e p="Fonts.cs" t="Include" />
           <e p="KeyInfo.cs" t="Include" />

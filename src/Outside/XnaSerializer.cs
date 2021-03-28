@@ -7,7 +7,6 @@ namespace Runner {
     {
         public static void Serialize<T>(string absolutePath, T data)
         {
-
             var serializer = new XmlSerializer(data.GetType());
             using (var writer = XmlWriter.Create(absolutePath))
             {

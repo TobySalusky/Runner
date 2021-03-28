@@ -23,21 +23,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fe74345-ce1c-47d1-b0f6-bacb87da5364" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/CannonBall.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Textures/Rubber.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/CannonBall.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Projectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LevelStats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Outside/FrameCounter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StatData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/PauseStats.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Util/Colors.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Content.mgcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameData/Stats.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/TilePalette.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/TilePalette.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/icewallcave.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/icewallcave.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/icewalllab.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/icewalllab.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/the_snake.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/the_snake.ogg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgcontent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/.mgstats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/BaseFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/BaseFont.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Gaussian.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Gaussian.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/OffPixel.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/OffPixel.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Pixel.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Pixel.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/TexDark.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/TexDark.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/TimerFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/TimerFont.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Vertex.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/Vertex.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/icewallcave.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/icewallcave.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/icewalllab.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/icewalllab.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/the_snake.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/the_snake.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/icewallcave.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/icewallcave.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/icewalllab.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/icewalllab.ogg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/the_snake.ogg" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Content/the_snake.ogg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Runner.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Runner.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Runner.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Runner.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Runner.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Runner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Runner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Terrain/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Terrain/Tile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/UIButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/Fonts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Fonts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/UIElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/UIElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Logger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/Textures.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/Textures.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,77 +94,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Util/Logger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DebugStats.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Settings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Runner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Outside/XnaSerializer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Outside/Simplex.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Editor/SelectRect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/Shaders.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/DeathWall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/Util.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/KeyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Util/MouseInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Editor/WiringEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Stats.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Editor/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Particles/PixelParticle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Particles/Particle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Util/Paths.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Camera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/UI/UIElement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/Maths.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Terrain/ChunkMap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/UI/UITransition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Terrain/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Terrain/Tile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Shaders.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Textures.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Util.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/UI/UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/UI/UIButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/UI/UIElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/UI/UITransition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Runner.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/SelectRect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Editor/WiringEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Runner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Outside/Simplex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Outside/XnaSerializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/DeathWall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Drawable3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Particles/Particle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Particles/PixelParticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/RubbleParticle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/Textures.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Util/Fonts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Entity/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Stats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Colors.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Terrain/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DebugStats.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Terrain/ChunkMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Terrain/Tile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Particles/BlockParticle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Util/FileUtil.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Entity/Drawable3D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Fonts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/KeyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Logger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Util/Maths.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/Shaders.cs" />
-        <option value="$PROJECT_DIR$/src/Particles/BlockParticle.cs" />
-        <option value="$PROJECT_DIR$/src/Util.cs" />
-        <option value="$PROJECT_DIR$/src/Terrain/ChunkMap.cs" />
-        <option value="$PROJECT_DIR$/src/SelectRect.cs" />
-        <option value="$PROJECT_DIR$/src/DebugStats.cs" />
-        <option value="$PROJECT_DIR$/src/Stats.cs" />
-        <option value="$PROJECT_DIR$/src/Editor/SelectRect.cs" />
-        <option value="$PROJECT_DIR$/src/UI/UI.cs" />
-        <option value="$PROJECT_DIR$/src/Util/Util.cs" />
-        <option value="$PROJECT_DIR$/src/UI/UITransition.cs" />
-        <option value="$PROJECT_DIR$/Content/Gaussian.fx" />
-        <option value="$PROJECT_DIR$/src/Util/Shaders.cs" />
-        <option value="$PROJECT_DIR$/src/SoundEffects/SoundPlayer.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/DeathWall.cs" />
-        <option value="$PROJECT_DIR$/src/Terrain/Chunk.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
-        <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
-        <option value="$PROJECT_DIR$/src/UI/UIElement.cs" />
-        <option value="$PROJECT_DIR$/src/Util/Textures.cs" />
-        <option value="$PROJECT_DIR$/src/UI/Screens/LevelSelectScreen.cs" />
-        <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
-        <option value="$PROJECT_DIR$/src/UI/UIButton.cs" />
-        <option value="$PROJECT_DIR$/src/Util/Fonts.cs" />
-        <option value="$PROJECT_DIR$/src/UI/Screens/UIScreen.cs" />
-        <option value="$PROJECT_DIR$/src/Runner.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/src/Entity/Entity.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Projectile.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/CannonBall.cs" />
+      <option value="$PROJECT_DIR$/src/Outside/FrameCounter.cs" />
+      <option value="$PROJECT_DIR$/src/LevelStats.cs" />
+      <option value="$PROJECT_DIR$/src/Util/Textures.cs" />
+      <option value="$PROJECT_DIR$/src/Util/Colors.cs" />
+      <option value="$PROJECT_DIR$/src/UI/UIButton.cs" />
+      <option value="$PROJECT_DIR$/src/StatData.cs" />
+      <option value="$PROJECT_DIR$/src/Outside/XnaSerializer.cs" />
+      <option value="$PROJECT_DIR$/src/Stats.cs" />
+      <option value="$PROJECT_DIR$/src/Util/Logger.cs" />
+      <option value="$PROJECT_DIR$/src/Runner.cs" />
+      <option value="$PROJECT_DIR$/src/UI/UIElement.cs" />
+      <option value="$PROJECT_DIR$/src/UI/PauseStats.cs" />
+      <option value="$PROJECT_DIR$/src/Terrain/Tile.cs" />
+      <option value="$PROJECT_DIR$/src/Entity/Player.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1nTcmiodap0VIl3H2EJzrcZl3Z1" />
   <component name="ProjectLevelVcsManager">
@@ -159,7 +195,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -195,11 +231,18 @@
       <workItem from="1612109679482" duration="3950000" />
       <workItem from="1612220372523" duration="1668000" />
       <workItem from="1612586382082" duration="1013000" />
+      <workItem from="1612899453267" duration="650000" />
+      <workItem from="1613071429696" duration="90000" />
+      <workItem from="1614228619322" duration="46000" />
+      <workItem from="1614358801832" duration="1500000" />
+      <workItem from="1614361126889" duration="4489000" />
+      <workItem from="1614365670390" duration="239000" />
+      <workItem from="1614365950004" duration="3970000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -217,31 +260,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1877" height="144" key="GridCell.Tab.0.bottom" timestamp="1612130139577">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
-    <state width="1877" height="144" key="GridCell.Tab.0.center" timestamp="1612130139577">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
-    <state width="1877" height="144" key="GridCell.Tab.0.left" timestamp="1612130139577">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
-    <state width="1877" height="144" key="GridCell.Tab.0.right" timestamp="1612130139577">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="144" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612130139577" />
-    <state x="638" y="253" width="644" height="534" key="find.popup" timestamp="1612112776762">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="638" y="253" width="644" height="534" key="find.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1612112776762" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611711084692">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1611711084692" />
   </component>
 </project>

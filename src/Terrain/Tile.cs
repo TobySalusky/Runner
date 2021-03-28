@@ -21,7 +21,10 @@ namespace Runner {
         
         public bool solid;
 
+        // TODO: add layer color skins
         public static Color[] baseLayerColors = {new Color(179, 153, 218), new Color(172, 195, 214), new Color(166, 202, 162)};
+        //public static Color[] baseLayerColors = {Color.DarkGray, Color.Cyan, Color.DarkGray};
+        //public static Color[] baseLayerColors = {Color.HotPink, Color.LightPink, Color.LightGray};
         public static Color[] layerColors = new Color[3];
         
         static Tile() {
@@ -40,6 +43,7 @@ namespace Runner {
             NextStage,
             CrackedBrick,
             GravityButton,
+            Rubber
         }
 
         public static readonly type[] nonSolid = {
@@ -76,6 +80,7 @@ namespace Runner {
             tableAdd(table, new Color(1F, 1F, 0F, 1F), type.NextStage);
             tableAdd(table, Color.Aqua, type.CrackedBrick);
             tableAdd(table, Color.Purple, type.GravityButton);
+            tableAdd(table, Color.Pink, type.Rubber);
 
             return table;
         }
